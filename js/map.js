@@ -1,6 +1,13 @@
 // Zarpen entdecken – Testkarte: Redder & Hundewiese
+// Zarpen entdecken – Testkarte: Redder & Hundewiese
 
 const start = [53.870530, 10.517432];
+
+const map = L.map('map').setView(start, 15);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap'
+}).addTo(map);
 
 new L.GPX("gpx/redder-hundewiese.gpx", {
     async: true,
@@ -10,9 +17,9 @@ new L.GPX("gpx/redder-hundewiese.gpx", {
         opacity: 1
     },
     marker_options: {
-        startIconUrl: null,
-        endIconUrl: null,
-        shadowUrl: null
+        startIconUrl: "",
+        endIconUrl: "",
+        shadowUrl: ""
     }
 })
 .on("loaded", function(e) {
