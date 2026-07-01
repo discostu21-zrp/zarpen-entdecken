@@ -5,22 +5,25 @@ const start = [53.870530, 10.517432];
 new L.GPX("gpx/redder-hundewiese.gpx", {
     async: true,
     polyline_options: {
-        color: "#2e7d32",
-        weight: 6,
-        opacity: 0.85,
-        lineCap: "round",
-        lineJoin: "round"
+        color: "red",
+        weight: 8,
+        opacity: 1
     },
     marker_options: {
-        startIconUrl: "",
-        endIconUrl: "",
-        shadowUrl: ""
+        startIconUrl: null,
+        endIconUrl: null,
+        shadowUrl: null
     }
-}).on("loaded", function(e) {
-    map.fitBounds(e.target.getBounds(), {
-        padding: [30, 30]
-    });
-}).addTo(map);
+})
+.on("loaded", function(e) {
+    console.log("GPX geladen");
+    map.fitBounds(e.target.getBounds(), { padding: [30, 30] });
+})
+.on("error", function(e) {
+    console.error("GPX Fehler:", e);
+    alert("GPX konnte nicht geladen werden.");
+})
+.addTo(map);
 
 const icons = {
   start: { symbol: '📍', className: 'marker-start' },
