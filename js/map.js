@@ -20,47 +20,7 @@ new L.GPX("gpx/redder-hundewiese.gpx", {
     map.fitBounds(e.target.getBounds(), {
         padding: [30, 30]
     });
-}).addTo(map);
-const routeRedderHundewiese = [
-  [53.870530, 10.517432],
-  [53.871170, 10.518207],
-  [53.870733, 10.518173],
-  [53.870307, 10.518309],
-  [53.869246, 10.521122],
-  [53.868123, 10.520449],
-  [53.868087, 10.520323],
-  [53.864012, 10.517699],
-  [53.863603, 10.515461],
-  [53.864732, 10.514596],
-  [53.864562, 10.513940],
-  [53.864248, 10.513769],
-  [53.863902, 10.513556],
-  [53.864808, 10.511883],
-  [53.866325, 10.508122],
-  [53.867084, 10.508363],
-  [53.867974, 10.513137],
-  [53.870127, 10.514563],
-  [53.870957, 10.516943],
-  [53.870530, 10.517432]
-];
 
-const routeLine = L.polyline(routeRedderHundewiese, {
-  color: '#2e7d32',
-  weight: 6,
-  opacity: 0.9,
-  lineCap: 'round',
-  lineJoin: 'round'
-}).addTo(map);
-
-// Dezente zweite Linie als Kontrast
-L.polyline(routeRedderHundewiese, {
-  color: '#ffffff',
-  weight: 10,
-  opacity: 0.45,
-  lineCap: 'round',
-  lineJoin: 'round'
-}).addTo(map).bringToBack();
-routeLine.bringToFront();
 
 const icons = {
   start: { symbol: '📍', className: 'marker-start' },
@@ -131,7 +91,6 @@ places.forEach(place => {
     .bindPopup(`<b>${place.name}</b><br>${place.text}<br><span class="popup-type">${typeLabel}</span>`);
 });
 
-map.fitBounds(routeLine.getBounds(), { padding: [28, 28] });
 
 // Infobox oben links
 const tourPanel = L.control({ position: 'topleft' });
