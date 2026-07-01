@@ -11,10 +11,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 new L.GPX("gpx/redder-hundewiese.gpx", {
     async: true,
-    polyline_options: {
-        color: "red",
-        weight: 8,
-        opacity: 1
+   polyline_options: {
+    color: "#2e7d32",
+    weight: 6,
+    opacity: 0.9,
+    lineCap: "round",
+    lineJoin: "round"
+},
     },
     marker_options: {
         startIconUrl: "",
