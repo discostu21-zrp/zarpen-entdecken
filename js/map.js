@@ -20,7 +20,7 @@ new L.GPX("gpx/redder-hundewiese.gpx", {
     map.fitBounds(e.target.getBounds(), {
         padding: [30, 30]
     });
-
+}).addTo(map);
 
 const icons = {
   start: { symbol: '📍', className: 'marker-start' },
