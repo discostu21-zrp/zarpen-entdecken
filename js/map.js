@@ -2,16 +2,25 @@
 
 const start = [53.870530, 10.517432];
 
-const map = L.map('map', {
-  scrollWheelZoom: true
-}).setView(start, 15);
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution: '© OpenStreetMap-Mitwirkende'
+new L.GPX("gpx/redder-hundewiese.gpx", {
+    async: true,
+    polyline_options: {
+        color: "#2e7d32",
+        weight: 6,
+        opacity: 0.85,
+        lineCap: "round",
+        lineJoin: "round"
+    },
+    marker_options: {
+        startIconUrl: "",
+        endIconUrl: "",
+        shadowUrl: ""
+    }
+}).on("loaded", function(e) {
+    map.fitBounds(e.target.getBounds(), {
+        padding: [30, 30]
+    });
 }).addTo(map);
-
-// Grob nachgezeichneter Verlauf anhand deiner Punkte.
-// Später ersetzen wir diese Linie durch die exakte GPX-Datei aus Komoot.
 const routeRedderHundewiese = [
   [53.870530, 10.517432],
   [53.871170, 10.518207],
