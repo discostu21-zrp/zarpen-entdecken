@@ -1,16 +1,164 @@
+// Zarpen entdecken – Testkarte: Redder & Hundewiese
 
-// Karte erzeugen
-const map = L.map('map').setView([53.870530, 10.517432], 15);
+const start = [53.870530, 10.517432];
 
-// OpenStreetMap
-L.tileLayer(
-    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
-    {
-        attribution: '© OpenStreetMap'
-    }
-).addTo(map);
+const map = L.map('map', {
+  scrollWheelZoom: true
+}).setView(start, 15);
 
-// Marker Marktplatz
-L.marker([53.870530, 10.517432])
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '© OpenStreetMap-Mitwirkende'
+}).addTo(map);
+
+// Grob nachgezeichneter Verlauf anhand deiner Punkte.
+// Später ersetzen wir diese Linie durch die exakte GPX-Datei aus Komoot.
+const routeRedderHundewiese = [
+  [53.870530, 10.517432],
+  [53.871170, 10.518207],
+  [53.870733, 10.518173],
+  [53.870307, 10.518309],
+  [53.869246, 10.521122],
+  [53.868123, 10.520449],
+  [53.868087, 10.520323],
+  [53.864012, 10.517699],
+  [53.863603, 10.515461],
+  [53.864732, 10.514596],
+  [53.864562, 10.513940],
+  [53.864248, 10.513769],
+  [53.863902, 10.513556],
+  [53.864808, 10.511883],
+  [53.866325, 10.508122],
+  [53.867084, 10.508363],
+  [53.867974, 10.513137],
+  [53.870127, 10.514563],
+  [53.870957, 10.516943],
+  [53.870530, 10.517432]
+];
+
+const routeLine = L.polyline(routeRedderHundewiese, {
+  color: '#2e7d32',
+  weight: 6,
+  opacity: 0.9,
+  lineCap: 'round',
+  lineJoin: 'round'
+}).addTo(map);
+
+// Dezente zweite Linie als Kontrast
+L.polyline(routeRedderHundewiese, {
+  color: '#ffffff',
+  weight: 10,
+  opacity: 0.45,
+  lineCap: 'round',
+  lineJoin: 'round'
+}).addTo(map).bringToBack();
+routeLine.bringToFront();
+
+const icons = {
+  start: { symbol: '📍', className: 'marker-start' },
+  sehenswuerdigkeit: { symbol: '⛪', className: 'marker-sehenswuerdigkeit' },
+  service: { symbol: 'ℹ️', className: 'marker-service' },
+  gastronomie: { symbol: '🍴', className: 'marker-gastronomie' },
+  warnung: { symbol: '!', className: 'marker-warnung' },
+  rast: { symbol: '🪑', className: 'marker-rast' },
+  hund: { symbol: '🐕', className: 'marker-hund' },
+  natur: { symbol: '🌿', className: 'marker-natur' },
+  bruecke: { symbol: '🌉', className: 'marker-bruecke' },
+  oeffentlich: { symbol: '🏛️', className: 'marker-oeffentlich' }
+};
+
+function makeIcon(type) {
+  const icon = icons[type] || icons.service;
+  return L.divIcon({
+    className: '',
+    html: `<div class="custom-marker ${icon.className}"><span>${icon.symbol}</span></div>`,
+    iconSize: [34, 34],
+    iconAnchor: [17, 34],
+    popupAnchor: [0, -32]
+  });
+}
+
+const places = [
+  { name: 'Marktplatz Zarpen', type: 'start', lat: 53.870530, lng: 10.517432, text: 'Start- und Zielpunkt der Tour. Von hier hat man einen schönen Blick auf die Dorfkirche.' },
+  { name: 'Wegweiser-Schild', type: 'service', lat: 53.871213, lng: 10.518067, text: 'Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen.' },
+  { name: 'Schaukasten SPD', type: 'service', lat: 53.871170, lng: 10.518207, text: 'Schaukasten des SPD-Ortsvereins.' },
+  { name: 'Schaukasten FKW', type: 'service', lat: 53.870733, lng: 10.518173, text: 'Schaukasten der FKW Zarpen an der Ampelquerung.' },
+  { name: 'Kirche Zarpen', type: 'sehenswuerdigkeit', lat: 53.870548, lng: 10.517290, text: 'Die über 800 Jahre alte Dorfkirche prägt den Ortskern.' },
+  { name: 'Landgasthof EckKrug', type: 'gastronomie', lat: 53.870307, lng: 10.518309, text: 'Traditionsreicher Landgasthof im Ortskern.' },
+  { name: 'Heilsau', type: 'natur', lat: 53.869246, lng: 10.521122, text: 'Über die Heilsaubrücke geht es in Richtung Redder.' },
+  { name: 'Achtung: Straße überqueren', type: 'warnung', lat: 53.868123, lng: 10.520449, text: 'An der Kreuzung Lübecker Straße / Redder gibt es keine gesicherte Querung. Bitte besonders auf den Verkehr achten.' },
+  { name: 'Schaukasten SoVD', type: 'service', lat: 53.868087, lng: 10.520323, text: 'Schaukasten des Sozialverbandes Zarpen.' },
+  { name: 'Sitzbank im Grünen', type: 'rast', lat: 53.864012, lng: 10.517699, text: 'Rastmöglichkeit im Redder mit Blick ins Grüne.' },
+  { name: 'Mülleimer & Hundekotbeutel-Station', type: 'hund', lat: 53.863603, lng: 10.515461, text: 'Servicepunkt am Zugang zur Hundewiese.' },
+  { name: 'Holzbrücke', type: 'bruecke', lat: 53.864732, lng: 10.514596, text: 'Die Bürgervereins-Holzbrücke führt direkt in Richtung Hundespielwiese.' },
+  { name: 'Sitzbank im Grünen', type: 'rast', lat: 53.864819, lng: 10.514596, text: 'Sitzgelegenheit nahe der Holzbrücke.' },
+  { name: 'Insektenhotel', type: 'natur', lat: 53.864562, lng: 10.513940, text: 'Schönes Insektenhotel auf der Hundespielwiese.' },
+  { name: 'Hundespielwiese', type: 'hund', lat: 53.864248, lng: 10.513769, text: 'Eingezäunte Freilauffläche für Hunde mit Sitzgelegenheiten.' },
+  { name: 'Sitzbank im Grünen', type: 'rast', lat: 53.863902, lng: 10.513556, text: 'Weitere Sitzbank auf der Hundespielwiese.' },
+  { name: 'Feldweg mit Blick ins Dorf', type: 'natur', lat: 53.864808, lng: 10.511883, text: 'Schöner Blick über die Felder in Richtung Kirche und Dorfmitte.' },
+  { name: 'Mülleimer & Hundekotbeutel-Station', type: 'hund', lat: 53.866325, lng: 10.508122, text: 'Servicepunkt am Ende des Feldwegs Richtung Hauptstraße.' },
+  { name: 'Baumschule Zarpen', type: 'natur', lat: 53.867084, lng: 10.508363, text: 'Vorbei an der Baumschule führt die Route zurück in den Ort.' },
+  { name: 'Sitzbank', type: 'rast', lat: 53.867974, lng: 10.513137, text: 'Sitzmöglichkeit an der Teichstraße / Beek.' },
+  { name: 'Freiwillige Feuerwehr Zarpen', type: 'oeffentlich', lat: 53.870127, lng: 10.514563, text: 'Standort der Freiwilligen Feuerwehr Zarpen.' },
+  { name: 'Kindergarten', type: 'oeffentlich', lat: 53.870957, lng: 10.516943, text: 'Kindergarten nahe der Teichstraße.' },
+  { name: 'Kindergarten', type: 'oeffentlich', lat: 53.871673, lng: 10.518307, text: 'Kindergarten im Bereich Dorfmitte.' }
+];
+
+places.forEach(place => {
+  const typeLabel = {
+    start: 'Start/Ziel',
+    sehenswuerdigkeit: 'Sehenswürdigkeit',
+    service: 'Information',
+    gastronomie: 'Gastronomie',
+    warnung: 'Hinweis',
+    rast: 'Rastplatz',
+    hund: 'Hunde-Service',
+    natur: 'Natur & Aussicht',
+    bruecke: 'Brücke',
+    oeffentlich: 'Öffentliche Einrichtung'
+  }[place.type] || 'Ort';
+
+  L.marker([place.lat, place.lng], { icon: makeIcon(place.type) })
     .addTo(map)
-    .bindPopup("<b>📍 Marktplatz Zarpen</b><br>Start- und Zielpunkt aller Touren.");
+    .bindPopup(`<b>${place.name}</b><br>${place.text}<br><span class="popup-type">${typeLabel}</span>`);
+});
+
+map.fitBounds(routeLine.getBounds(), { padding: [28, 28] });
+
+// Infobox oben links
+const tourPanel = L.control({ position: 'topleft' });
+tourPanel.onAdd = function () {
+  const div = L.DomUtil.create('div', 'tour-panel');
+  div.innerHTML = `
+    <h1>Redder & Hundewiese</h1>
+    <div class="subtitle">Zarpen entdecken – Spaziergang</div>
+    <div class="facts">
+      <div class="fact"><b>2,92 km</b><br>Distanz</div>
+      <div class="fact"><b>ca. 36 Min.</b><br>Dauer</div>
+      <div class="fact"><b>leicht</b><br>Schwierigkeit</div>
+      <div class="fact"><b>10 m</b><br>Höhenmeter</div>
+    </div>
+    <p>Abwechslungsreiche Runde durch den Redder, über die Hundespielwiese und zurück durch die Feldmark ins Dorf.</p>
+  `;
+  L.DomEvent.disableClickPropagation(div);
+  return div;
+};
+tourPanel.addTo(map);
+
+// Legende unten rechts
+const legend = L.control({ position: 'bottomright' });
+legend.onAdd = function () {
+  const div = L.DomUtil.create('div', 'legend');
+  div.innerHTML = `
+    <div class="legend-title">Legende</div>
+    <div>🟢 Route</div>
+    <div>📍 Start/Ziel</div>
+    <div>⛪ Sehenswürdigkeit</div>
+    <div>🪑 Sitzbank</div>
+    <div>🐕 Hunde-Service</div>
+    <div>🌿 Natur & Aussicht</div>
+    <div>⚠️ Hinweis</div>
+  `;
+  L.DomEvent.disableClickPropagation(div);
+  return div;
+};
+legend.addTo(map);
