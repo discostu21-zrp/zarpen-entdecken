@@ -128,15 +128,14 @@ tourPanel.addTo(map);
 
 // Legende unten rechts
 const legend = L.control({ position: 'bottomright' });
+
 legend.onAdd = function () {
   const div = L.DomUtil.create('div', 'legend');
+
   div.innerHTML = `
     <div class="legend-title">Legende</div>
-
     <div>🟢 Route</div>
-
     <hr>
-
     <div>📍 Start/Ziel</div>
     <div>⛪ Sehenswürdigkeit</div>
     <div>🍴 Gastronomie</div>
@@ -147,7 +146,9 @@ legend.onAdd = function () {
     <div>🌿 Natur & Aussicht</div>
     <div>⚠️ Hinweis</div>
   `;
+
   L.DomEvent.disableClickPropagation(div);
   return div;
 };
+
 legend.addTo(map);
