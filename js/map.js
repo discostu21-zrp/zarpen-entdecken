@@ -11,13 +11,13 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 
 new L.GPX("gpx/redder-hundewiese.gpx", {
     async: true,
-   polyline_options: {
-    color: "#2e7d32",
-    weight: 6,
-    opacity: 0.9,
-    lineCap: "round",
-    lineJoin: "round"
-},
+    polyline_options: {
+        color: "#2e7d32",
+        weight: 6,
+        opacity: 0.9,
+        lineCap: "round",
+        lineJoin: "round"
+    },
     marker_options: {
         startIconUrl: "",
         endIconUrl: "",
@@ -26,11 +26,13 @@ new L.GPX("gpx/redder-hundewiese.gpx", {
 })
 .on("loaded", function(e) {
     console.log("GPX geladen");
-    map.fitBounds(e.target.getBounds(), { padding: [30, 30] });
+
+    map.fitBounds(e.target.getBounds(), {
+        padding: [30, 30]
+    });
 })
 .on("error", function(e) {
-    console.error("GPX Fehler:", e);
-    alert("GPX konnte nicht geladen werden.");
+    console.error(e);
 })
 .addTo(map);
 
