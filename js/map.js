@@ -146,7 +146,6 @@ legend.onAdd = function () {
     <div>🐕 Hunde-Service</div>
     <div>🌿 Natur & Aussicht</div>
     <div>⚠️ Hinweis</div>
-`;
   `;
   L.DomEvent.disableClickPropagation(div);
   return div;
