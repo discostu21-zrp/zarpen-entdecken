@@ -18,7 +18,6 @@ new L.GPX("gpx/redder-hundewiese.gpx", {
     lineCap: "round",
     lineJoin: "round"
 },
-    },
     marker_options: {
         startIconUrl: "",
         endIconUrl: "",
@@ -131,13 +130,21 @@ legend.onAdd = function () {
   const div = L.DomUtil.create('div', 'legend');
   div.innerHTML = `
     <div class="legend-title">Legende</div>
+
     <div>🟢 Route</div>
+
+    <hr>
+
     <div>📍 Start/Ziel</div>
     <div>⛪ Sehenswürdigkeit</div>
+    <div>🍴 Gastronomie</div>
+    <div>ℹ️ Information / Schaukasten</div>
+    <div>🏛️ Öffentliche Einrichtung</div>
     <div>🪑 Sitzbank</div>
     <div>🐕 Hunde-Service</div>
     <div>🌿 Natur & Aussicht</div>
     <div>⚠️ Hinweis</div>
+`;
   `;
   L.DomEvent.disableClickPropagation(div);
   return div;
