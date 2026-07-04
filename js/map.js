@@ -3,6 +3,10 @@
 
 const start = [53.870530, 10.517432];
 
+const params = new URLSearchParams(window.location.search);
+const mode = params.get("mode") || "detail";
+const isDetail = mode === "detail";
+
 const map = L.map('map').setView(start, 15);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -124,7 +128,9 @@ tourPanel.onAdd = function () {
   L.DomEvent.disableClickPropagation(div);
   return div;
 };
-tourPanel.addTo(map);
+if (isDetail) {
+  tourPanel.addTo(map);
+}
 
 // Legende unten rechts
 const legend = L.control({ position: 'bottomright' });
@@ -151,4 +157,6 @@ legend.onAdd = function () {
   return div;
 };
 
-legend.addTo(map);
+if (isDetail) {
+  legend.addTo(map);
+}
