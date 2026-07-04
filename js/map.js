@@ -5,7 +5,7 @@ const start = [53.870530, 10.517432];
 
 const params = new URLSearchParams(window.location.search);
 const mode = params.get("mode") || "detail";
-const isDetail = mode === "detail";
+const isDetail = false;
 
 const map = L.map('map').setView(start, 15);
 
