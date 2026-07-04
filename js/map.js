@@ -78,12 +78,12 @@ const places = [
   { name: 'Hundespielwiese', type: 'hund', lat: 53.864248, lng: 10.513769, text: 'Freilauffläche für Hunde.' },
   { name: 'Sitzbank im Grünen', type: 'rast', lat: 53.863902, lng: 10.513556, text: 'Weitere Sitzbank auf der Hundespielwiese.' },
   { name: 'Feldweg mit Blick ins Dorf', type: 'natur', lat: 53.864808, lng: 10.511883, text: 'Schöner Blick über die Felder in Richtung Kirche und Dorfmitte.' },
-  { name: 'Mülleimer & Hundekotbeutel-Station', type: 'hund', lat: 53.866325, lng: 10.508122, text: 'Ende des Feldwegs Richtung Hauptstraße.' },
+  { name: 'Mülleimer & Hundekotbeutel-Station', type: 'hund', lat: 53.866325, lng: 10.508122, text: 'Zugang zur Hundewiese Hauptstraße.' },
   { name: 'Baumschule Zarpen', type: 'natur', lat: 53.867084, lng: 10.508363, text: 'Vorbei an der Baumschule führt die Route zurück in den Ort.' },
   { name: 'Sitzbank', type: 'rast', lat: 53.867974, lng: 10.513137, text: 'Sitzmöglichkeit an der Teichstraße.' },
-  { name: 'Freiwillige Feuerwehr Zarpen', type: 'oeffentlich', lat: 53.870127, lng: 10.514563, text: 'Freiwilligen Feuerwehr Zarpen.' },
-  { name: 'Kindergarten', type: 'oeffentlich', lat: 53.870957, lng: 10.516943, text: 'Kindergarten.' },
-  { name: 'Kindergarten', type: 'oeffentlich', lat: 53.871673, lng: 10.518307, text: 'Kindergarten.' }
+  { name: 'Freiwillige Feuerwehr Zarpen', type: 'oeffentlich', lat: 53.870127, lng: 10.514563, text: 'Gerätehaus der FF Zarpen.' },
+  { name: 'Kindergarten', type: 'oeffentlich', lat: 53.870957, lng: 10.516943, text: 'Ev. Kindertagesstätte Arche Noah.' },
+  { name: 'Kindergarten', type: 'oeffentlich', lat: 53.871673, lng: 10.518307, text: 'Villa Kunterbunt" DRK Stormarn.' }
 ];
 
 places.forEach(place => {
@@ -134,7 +134,7 @@ legend.onAdd = function () {
 
   div.innerHTML = `
     <div class="legend-title">Legende</div>
-    <div>🟢 Route</div>
+    <div>🟢 Streckenverlauf</div>
     <hr>
     <div>📍 Start/Ziel</div>
     <div>⛪ Sehenswürdigkeit</div>
