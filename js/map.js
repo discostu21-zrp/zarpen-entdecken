@@ -62,23 +62,28 @@ new L.GPX("gpx/redder-hundewiese.gpx", {
 .addTo(map);
 
 const icons = {
-  start: { symbol: '📍', className: 'marker-start' },
-  sehenswuerdigkeit: { symbol: '⛪', className: 'marker-sehenswuerdigkeit' },
-  service: { symbol: 'ℹ️', className: 'marker-service' },
-  gastronomie: { symbol: '🍴', className: 'marker-gastronomie' },
-  warnung: { symbol: '!', className: 'marker-warnung' },
-  rast: { symbol: '🪑', className: 'marker-rast' },
-  hund: { symbol: '🐕', className: 'marker-hund' },
-  natur: { symbol: '🌿', className: 'marker-natur' },
-  bruecke: { symbol: '🌉', className: 'marker-bruecke' },
-  oeffentlich: { symbol: '🏛️', className: 'marker-oeffentlich' }
+  start: { file: 'start.svg', className: 'marker-start' },
+  sehenswuerdigkeit: { file: 'church.svg', className: 'marker-sehenswuerdigkeit' },
+  service: { file: 'info.svg', className: 'marker-service' },
+  gastronomie: { file: 'restaurant.svg', className: 'marker-gastronomie' },
+  warnung: { file: 'warning.svg', className: 'marker-warnung' },
+  rast: { file: 'bench.svg', className: 'marker-rast' },
+  hund: { file: 'dog.svg', className: 'marker-hund' },
+  natur: { file: 'leaf.svg', className: 'marker-natur' },
+  bruecke: { file: 'bridge.svg', className: 'marker-bruecke' },
+  oeffentlich: { file: 'building.svg', className: 'marker-oeffentlich' }
 };
 
 function makeIcon(type) {
   const icon = icons[type] || icons.service;
+
   return L.divIcon({
     className: '',
-    html: `<div class="custom-marker ${icon.className}"><span>${icon.symbol}</span></div>`,
+    html: `
+      <div class="custom-marker ${icon.className}">
+        <img src="icons/${icon.file}" alt="">
+      </div>
+    `,
     iconSize: [34, 34],
     iconAnchor: [17, 34],
     popupAnchor: [0, -32]
