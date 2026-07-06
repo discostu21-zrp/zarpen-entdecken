@@ -7,7 +7,13 @@ const params = new URLSearchParams(window.location.search);
 const mode = params.get("mode") || "detail";
 const isDetail = mode === "detail";
 
-const map = L.map('map').setView(start, 15);
+const map = L.map('map', {
+  zoomControl: isDetail,
+  scrollWheelZoom: isDetail,
+  dragging: true,
+  doubleClickZoom: isDetail,
+  touchZoom: true
+}).setView(start, 15);
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
