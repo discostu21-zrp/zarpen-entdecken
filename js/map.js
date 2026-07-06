@@ -131,27 +131,25 @@ tourPanel.onAdd = function () {
     <p>Abwechslungsreiche Runde durch den Redder, über die Hundespielwiese und zurück ins Dorf.</p>
     <hr style="margin:18px 0;">
 
-<h3 style="margin:0 0 10px;">Legende</h3>
+<h3 style="margin:18px 0 10px;">Legende</h3>
 
-<div class="legend-item"><span class="legend-dot route"></span> Streckenverlauf</div>
+<div class="legend-item"><span class="legend-icon marker-start">📍</span>Start/Ziel</div>
 
-<div class="legend-item"><span class="legend-dot start"></span> Start/Ziel</div>
+<div class="legend-item"><span class="legend-icon marker-sehenswuerdigkeit">⛪</span>Sehenswürdigkeit</div>
 
-<div class="legend-item"><span class="legend-dot sehenswuerdigkeit"></span> Sehenswürdigkeit</div>
+<div class="legend-item"><span class="legend-icon marker-gastronomie">🍴</span>Gastronomie</div>
 
-<div class="legend-item"><span class="legend-dot gastronomie"></span> Gastronomie</div>
+<div class="legend-item"><span class="legend-icon marker-service">ℹ️</span>Information / Schaukasten</div>
 
-<div class="legend-item"><span class="legend-dot service"></span> Information / Schaukasten</div>
+<div class="legend-item"><span class="legend-icon marker-oeffentlich">🏛️</span>Öffentliche Einrichtung</div>
 
-<div class="legend-item"><span class="legend-dot oeffentlich"></span> Öffentliche Einrichtung</div>
+<div class="legend-item"><span class="legend-icon marker-rast">🪑</span>Sitzbank</div>
 
-<div class="legend-item"><span class="legend-dot rast"></span> Sitzbank</div>
+<div class="legend-item"><span class="legend-icon marker-hund">🐕</span>Hunde-Service</div>
 
-<div class="legend-item"><span class="legend-dot hund"></span> Hunde-Service</div>
+<div class="legend-item"><span class="legend-icon marker-natur">🌿</span>Natur & Aussicht</div>
 
-<div class="legend-item"><span class="legend-dot natur"></span> Natur & Aussicht</div>
-
-<div class="legend-item"><span class="legend-dot warnung"></span> Hinweis</div>
+<div class="legend-item"><span class="legend-icon marker-warnung">!</span>Hinweis</div>
   `;
   L.DomEvent.disableClickPropagation(div);
   return div;
