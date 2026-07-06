@@ -150,32 +150,3 @@ tourPanel.onAdd = function () {
 if (isDetail) {
   tourPanel.addTo(map);
 }
-
-// Legende unten rechts
-const legend = L.control({ position: 'bottomright' });
-
-legend.onAdd = function () {
-  const div = L.DomUtil.create('div', 'legend');
-
-  div.innerHTML = `
-    <div class="legend-title">Legende</div>
-    <div>🟢 Streckenverlauf</div>
-    <hr>
-    <div>📍 Start/Ziel</div>
-    <div>⛪ Sehenswürdigkeit</div>
-    <div>🍴 Gastronomie</div>
-    <div>ℹ️ Information / Schaukasten</div>
-    <div>🏛️ Öffentliche Einrichtung</div>
-    <div>🪑 Sitzbank</div>
-    <div>🐕 Hunde-Service</div>
-    <div>🌿 Natur & Aussicht</div>
-    <div>⚠️ Hinweis</div>
-  `;
-
-  L.DomEvent.disableClickPropagation(div);
-  return div;
-};
-
-if (isDetail) {
-  legend.addTo(map);
-}
