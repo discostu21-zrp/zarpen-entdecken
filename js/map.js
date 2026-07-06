@@ -141,7 +141,7 @@ tourPanel.onAdd = function () {
 <div class="legend-item"><span class="legend-icon marker-rast">🪑</span>Sitzbank</div>
 <div class="legend-item"><span class="legend-icon marker-hund">🐕</span>Hunde-Service</div>
 <div class="legend-item"><span class="legend-icon marker-natur">🌿</span>Natur & Aussicht</div>
-<div class="legend-item"><span class="legend-icon marker-warnung">!</span>Hinweis</div>
+<div class="legend-item"><span class="legend-icon marker-warnung">!!!</span>Hinweis</div>
   `;
   L.DomEvent.disableClickPropagation(div);
   return div;
