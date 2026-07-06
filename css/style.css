@@ -159,51 +159,37 @@ html, body {
 /* ---------- Tourpanel ---------- */
 
 .tour-details summary{
-
-display:none;
-
+  display:none;
 }
 
 /* ---------- Smartphone ---------- */
 
 @media (max-width:768px){
 
-.tour-panel{
+  .tour-panel{
+    width:270px;
+    max-height:75vh;
+    overflow:auto;
+  }
 
-width:270px;
+  .tour-details{
+    background:white;
+  }
 
-max-height:75vh;
+  .tour-details:not([open]) > *:not(summary){
+    display:none;
+  }
 
-overflow:auto;
-
-}
-
-.tour-details{
-
-background:white;
-
-}
-
-.tour-details summary{
-
-display:block;
-
-cursor:pointer;
-
-background:#17c945;
-
-color:white;
-
-padding:12px;
-
-border-radius:10px;
-
-font-size:16px;
-
-font-weight:bold;
-
-margin-bottom:12px;
-
-}
+  .tour-details summary{
+    display:block;
+    cursor:pointer;
+    background:#17c945;
+    color:white;
+    padding:12px;
+    border-radius:10px;
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:12px;
+  }
 
 }
