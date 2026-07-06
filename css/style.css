@@ -145,3 +145,14 @@ html, body {
   background:#e7f8ec;
   font-weight:bold;
 }
+.custom-marker img{
+  width:18px;
+  height:18px;
+  display:block;
+  filter: brightness(0) invert(1);
+  pointer-events:none;
+}
+
+.marker-warnung img{
+  filter:none;
+}
