@@ -133,16 +133,25 @@ tourPanel.onAdd = function () {
 
 <h3 style="margin:0 0 10px;">Legende</h3>
 
-<div>🟢 Streckenverlauf</div>
-<div>📍 Start/Ziel</div>
-<div>⛪ Sehenswürdigkeit</div>
-<div>🍴 Gastronomie</div>
-<div>ℹ️ Information / Schaukasten</div>
-<div>🏛️ Öffentliche Einrichtung</div>
-<div>🪑 Sitzbank</div>
-<div>🐕 Hunde-Service</div>
-<div>🌿 Natur & Aussicht</div>
-<div>⚠️ Hinweis</div>
+<div class="legend-item"><span class="legend-dot route"></span> Streckenverlauf</div>
+
+<div class="legend-item"><span class="legend-dot start"></span> Start/Ziel</div>
+
+<div class="legend-item"><span class="legend-dot sehenswuerdigkeit"></span> Sehenswürdigkeit</div>
+
+<div class="legend-item"><span class="legend-dot gastronomie"></span> Gastronomie</div>
+
+<div class="legend-item"><span class="legend-dot service"></span> Information / Schaukasten</div>
+
+<div class="legend-item"><span class="legend-dot oeffentlich"></span> Öffentliche Einrichtung</div>
+
+<div class="legend-item"><span class="legend-dot rast"></span> Sitzbank</div>
+
+<div class="legend-item"><span class="legend-dot hund"></span> Hunde-Service</div>
+
+<div class="legend-item"><span class="legend-dot natur"></span> Natur & Aussicht</div>
+
+<div class="legend-item"><span class="legend-dot warnung"></span> Hinweis</div>
   `;
   L.DomEvent.disableClickPropagation(div);
   return div;
