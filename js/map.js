@@ -185,7 +185,6 @@ function highlightType(type) {
 
 // Infobox oben links
 const tourPanel = L.control({ position: 'topleft' });
-const tourPanel = L.control({ position: 'topleft' });
 
 tourPanel.onAdd = function () {
 
@@ -193,7 +192,7 @@ tourPanel.onAdd = function () {
 
   div.innerHTML = `
 
-<details class="tour-details">
+<details class="tour-details" open>
 
 <summary>🌿 Tourinformationen</summary>
 
