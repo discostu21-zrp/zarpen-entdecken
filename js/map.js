@@ -27,11 +27,6 @@ new L.GPX("gpx/redder-hundewiese.gpx", {
         opacity: 1,
         lineCap: "round",
         lineJoin: "round"
-    },
-    marker_options: {
-        startIconUrl: "",
-        endIconUrl: "",
-        shadowUrl: ""
     }
 }).addTo(map);
 
@@ -44,11 +39,6 @@ new L.GPX("gpx/redder-hundewiese.gpx", {
         opacity: 0.95,
         lineCap: "round",
         lineJoin: "round"
-    },
-    marker_options: {
-        startIconUrl: "",
-        endIconUrl: "",
-        shadowUrl: ""
     }
 })
 .on("loaded", function(e) {
@@ -60,24 +50,7 @@ new L.GPX("gpx/redder-hundewiese.gpx", {
     console.error(e);
 })
 .addTo(map);
-    marker_options: {
-        startIconUrl: "",
-        endIconUrl: "",
-        shadowUrl: ""
-    }
-})
-.on("loaded", function(e) {
-    console.log("GPX geladen");
-
-    map.fitBounds(e.target.getBounds(), {
-        padding: [30, 30]
-    });
-})
-.on("error", function(e) {
-    console.error(e);
-})
-.addTo(map);
-
+   
 const icons = {
   start: { symbol: '📍', className: 'marker-start' },
   sehenswuerdigkeit: { symbol: '⛪', className: 'marker-sehenswuerdigkeit' },
