@@ -156,3 +156,54 @@ html, body {
 .marker-warnung img{
   filter:none;
 }
+/* ---------- Tourpanel ---------- */
+
+.tour-details summary{
+
+display:none;
+
+}
+
+/* ---------- Smartphone ---------- */
+
+@media (max-width:768px){
+
+.tour-panel{
+
+width:270px;
+
+max-height:75vh;
+
+overflow:auto;
+
+}
+
+.tour-details{
+
+background:white;
+
+}
+
+.tour-details summary{
+
+display:block;
+
+cursor:pointer;
+
+background:#17c945;
+
+color:white;
+
+padding:12px;
+
+border-radius:10px;
+
+font-size:16px;
+
+font-weight:bold;
+
+margin-bottom:12px;
+
+}
+
+}
