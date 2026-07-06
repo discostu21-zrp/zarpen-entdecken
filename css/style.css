@@ -102,55 +102,33 @@ html, body {
 .legend-item{
     display:flex;
     align-items:center;
-    gap:8px;
-    margin:6px 0;
+    gap:10px;
+    margin:7px 0;
     font-size:14px;
 }
 
-.legend-dot{
-    width:14px;
-    height:14px;
+.legend-icon{
+    width:26px;
+    height:26px;
     border-radius:50%;
-    display:inline-block;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
     border:2px solid #fff;
-    box-shadow:0 1px 3px rgba(0,0,0,.25);
-}
-.legend-dot.route{
-    background:#2e7d32;
+    box-shadow:0 2px 6px rgba(0,0,0,.25);
+    flex-shrink:0;
 }
 
-.legend-dot.start{
-    background:#d81b60;
-}
-
-.legend-dot.sehenswuerdigkeit{
-    background:#c62828;
-}
-
-.legend-dot.gastronomie{
-    background:#ef6c00;
-}
-
-.legend-dot.service{
-    background:#3f7de8;
-}
-
-.legend-dot.oeffentlich{
-    background:#5d4037;
-}
-
-.legend-dot.rast{
-    background:#1565c0;
-}
-
-.legend-dot.hund{
-    background:#6a1b9a;
-}
-
-.legend-dot.natur{
-    background:#388e3c;
-}
-
-.legend-dot.warnung{
-    background:#f9a825;
-}
+.legend-icon.marker-start{background:#2e7d32;}
+.legend-icon.marker-sehenswuerdigkeit{background:#c62828;}
+.legend-icon.marker-service{background:#546e7a;}
+.legend-icon.marker-gastronomie{background:#ef6c00;}
+.legend-icon.marker-warnung{background:#f9a825;color:#000;}
+.legend-icon.marker-rast{background:#1565c0;}
+.legend-icon.marker-hund{background:#6a1b9a;}
+.legend-icon.marker-natur{background:#388e3c;}
+.legend-icon.marker-bruecke{background:#00838f;}
+.legend-icon.marker-oeffentlich{background:#5d4037;}
