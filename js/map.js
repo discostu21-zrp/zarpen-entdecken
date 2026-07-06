@@ -3,8 +3,7 @@
 
 const start = [53.870530, 10.517432];
 
-const params = new URLSearchParams(window.location.search);
-const mode = params.get("mode") || "detail";
+const mode = window.ZARPEN_MODE || "detail";
 const isDetail = mode === "detail";
 
 const map = L.map('map', {
