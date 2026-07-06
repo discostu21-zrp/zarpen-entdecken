@@ -129,6 +129,20 @@ tourPanel.onAdd = function () {
       <div class="fact"><b>10 m</b><br>Höhenmeter</div>
     </div>
     <p>Abwechslungsreiche Runde durch den Redder, über die Hundespielwiese und zurück ins Dorf.</p>
+    <hr style="margin:18px 0;">
+
+<h3 style="margin:0 0 10px;">Legende</h3>
+
+<div>🟢 Streckenverlauf</div>
+<div>📍 Start/Ziel</div>
+<div>⛪ Sehenswürdigkeit</div>
+<div>🍴 Gastronomie</div>
+<div>ℹ️ Information / Schaukasten</div>
+<div>🏛️ Öffentliche Einrichtung</div>
+<div>🪑 Sitzbank</div>
+<div>🐕 Hunde-Service</div>
+<div>🌿 Natur & Aussicht</div>
+<div>⚠️ Hinweis</div>
   `;
   L.DomEvent.disableClickPropagation(div);
   return div;
