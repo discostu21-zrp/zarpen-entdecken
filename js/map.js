@@ -18,15 +18,48 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
   attribution: '© OpenStreetMap'
 }).addTo(map);
 
+// Weiße Kontur
+new L.GPX("gpx/redder-hundewiese.gpx", {
+    async: true,
+    polyline_options: {
+        color: "#fafafa",
+        weight: 10,
+        opacity: 1,
+        lineCap: "round",
+        lineJoin: "round"
+    },
+    marker_options: {
+        startIconUrl: "",
+        endIconUrl: "",
+        shadowUrl: ""
+    }
+}).addTo(map);
+
+// Grüne Route
 new L.GPX("gpx/redder-hundewiese.gpx", {
     async: true,
     polyline_options: {
         color: "#2e7d32",
         weight: 6,
-        opacity: 0.9,
+        opacity: 0.95,
         lineCap: "round",
         lineJoin: "round"
     },
+    marker_options: {
+        startIconUrl: "",
+        endIconUrl: "",
+        shadowUrl: ""
+    }
+})
+.on("loaded", function(e) {
+    map.fitBounds(e.target.getBounds(), {
+        padding: [30,30]
+    });
+})
+.on("error", function(e){
+    console.error(e);
+})
+.addTo(map);
     marker_options: {
         startIconUrl: "",
         endIconUrl: "",
