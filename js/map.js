@@ -192,7 +192,7 @@ tourPanel.onAdd = function () {
 
   div.innerHTML = `
 
-<details class="tour-details" open>
+<details class="tour-details">
 
 <summary>🌿 Tourinformationen</summary>
 
