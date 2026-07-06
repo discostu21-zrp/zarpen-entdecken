@@ -99,3 +99,58 @@ html, body {
     color:#666;
     font-size:12px;
 }
+.legend-item{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    margin:6px 0;
+    font-size:14px;
+}
+
+.legend-dot{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    display:inline-block;
+    border:2px solid #fff;
+    box-shadow:0 1px 3px rgba(0,0,0,.25);
+}
+.legend-dot.route{
+    background:#2e7d32;
+}
+
+.legend-dot.start{
+    background:#d81b60;
+}
+
+.legend-dot.sehenswuerdigkeit{
+    background:#c62828;
+}
+
+.legend-dot.gastronomie{
+    background:#ef6c00;
+}
+
+.legend-dot.service{
+    background:#3f7de8;
+}
+
+.legend-dot.oeffentlich{
+    background:#5d4037;
+}
+
+.legend-dot.rast{
+    background:#1565c0;
+}
+
+.legend-dot.hund{
+    background:#6a1b9a;
+}
+
+.legend-dot.natur{
+    background:#388e3c;
+}
+
+.legend-dot.warnung{
+    background:#f9a825;
+}
