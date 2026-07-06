@@ -95,6 +95,8 @@ const places = [
   { name: 'Kindergarten', type: 'oeffentlich', lat: 53.871673, lng: 10.518307, text: 'Villa Kunterbunt" DRK Stormarn.' }
 ];
 
+const markerLayers = {};
+
 places.forEach(place => {
   const typeLabel = {
     start: 'Start/Ziel',
@@ -109,10 +111,54 @@ places.forEach(place => {
     oeffentlich: 'Öffentliche Einrichtung'
   }[place.type] || 'Ort';
 
-  L.marker([place.lat, place.lng], { icon: makeIcon(place.type) })
+  const marker = L.marker([place.lat, place.lng], { icon: makeIcon(place.type) })
     .addTo(map)
     .bindPopup(`<b>${place.name}</b><br>${place.text}<br><span class="popup-type">${typeLabel}</span>`);
+
+  if (!markerLayers[place.type]) {
+    markerLayers[place.type] = [];
+  }
+
+  markerLayers[place.type].push(marker);
 });
+let activeLegendType = null;
+
+function highlightType(type) {
+  activeLegendType = activeLegendType === type ? null : type;
+
+  Object.keys(markerLayers).forEach(markerType => {
+    markerLayers[markerType].forEach(marker => {
+      const el = marker.getElement();
+
+      if (!el) return;
+
+      if (!activeLegendType) {
+        el.style.opacity = "1";
+        el.style.filter = "none";
+        el.style.zIndex = "";
+      } else if (markerType === activeLegendType) {
+        el.style.opacity = "1";
+        el.style.filter = "none";
+        el.style.zIndex = "1000";
+      } else {
+        el.style.opacity = "0.22";
+        el.style.filter = "grayscale(100%)";
+        el.style.zIndex = "1";
+      }
+    });
+  });
+
+  document.querySelectorAll(".legend-item").forEach(item => {
+    item.classList.remove("legend-active");
+  });
+
+  if (activeLegendType) {
+    const activeItem = document.querySelector(`[data-type="${activeLegendType}"]`);
+    if (activeItem) {
+      activeItem.classList.add("legend-active");
+    }
+  }
+}
 
 
 // Infobox oben links
@@ -133,15 +179,15 @@ tourPanel.onAdd = function () {
 
 <h3 style="margin:18px 0 10px;">Legende</h3>
 
-<div class="legend-item"><span class="legend-icon marker-start">📍</span>Start/Ziel</div>
-<div class="legend-item"><span class="legend-icon marker-sehenswuerdigkeit">⛪</span>Sehenswürdigkeit</div>
-<div class="legend-item"><span class="legend-icon marker-gastronomie">🍴</span>Gastronomie</div>
-<div class="legend-item"><span class="legend-icon marker-service">ℹ️</span>Information / Schaukasten</div>
-<div class="legend-item"><span class="legend-icon marker-oeffentlich">🏛️</span>Öffentliche Einrichtung</div>
-<div class="legend-item"><span class="legend-icon marker-rast">🪑</span>Sitzbank</div>
-<div class="legend-item"><span class="legend-icon marker-hund">🐕</span>Hunde-Service</div>
-<div class="legend-item"><span class="legend-icon marker-natur">🌿</span>Natur & Aussicht</div>
-<div class="legend-item"><span class="legend-icon marker-warnung">!!!</span>Hinweis</div>
+<div class="legend-item" data-type="start" onclick="highlightType('start')"><span class="legend-icon marker-start">📍</span>Start/Ziel</div>
+<div class="legend-item" data-type="sehenswuerdigkeit" onclick="highlightType('sehenswuerdigkeit')"><span class="legend-icon marker-sehenswuerdigkeit">⛪</span>Sehenswürdigkeit</div>
+<div class="legend-item" data-type="gastronomie" onclick="highlightType('gastronomie')"><span class="legend-icon marker-gastronomie">🍴</span>Gastronomie</div>
+<div class="legend-item" data-type="service" onclick="highlightType('service')"><span class="legend-icon marker-service">ℹ️</span>Information / Schaukasten</div>
+<div class="legend-item" data-type="oeffentlich" onclick="highlightType('oeffentlich')"><span class="legend-icon marker-oeffentlich">🏛️</span>Öffentliche Einrichtung</div>
+<div class="legend-item" data-type="rast" onclick="highlightType('rast')"><span class="legend-icon marker-rast">🪑</span>Sitzbank</div>
+<div class="legend-item" data-type="hund" onclick="highlightType('hund')"><span class="legend-icon marker-hund">🐕</span>Hunde-Service</div>
+<div class="legend-item" data-type="natur" onclick="highlightType('natur')"><span class="legend-icon marker-natur">🌿</span>Natur & Aussicht</div>
+<div class="legend-item" data-type="warnung" onclick="highlightType('warnung')"><span class="legend-icon marker-warnung">!</span>Hinweis</div>
   `;
   L.DomEvent.disableClickPropagation(div);
   return div;
