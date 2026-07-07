@@ -192,6 +192,19 @@ html, body {
     margin-bottom:12px;
     position:relative;
   }
+  
+  .tour-details summary::after{
+  content:"▼";
+  position:absolute;
+  right:14px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:18px;
+}
+
+.tour-details[open] summary::after{
+  content:"▲";
+}
 
   .summary-hint{
     display:block;
