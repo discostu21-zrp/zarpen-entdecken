@@ -185,11 +185,24 @@ html, body {
     cursor:pointer;
     background:#17c945;
     color:white;
-    padding:12px;
+    padding:12px 42px 12px 12px;
     border-radius:10px;
     font-size:16px;
     font-weight:bold;
     margin-bottom:12px;
+    position:relative;
+  }
+
+  .summary-hint{
+    display:block;
+    font-size:12px;
+    font-weight:normal;
+    opacity:.9;
+    margin-top:3px;
+  }
+
+  .tour-details[open] .summary-hint{
+    display:none;
   }
 
 }
