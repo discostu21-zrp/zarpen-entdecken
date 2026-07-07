@@ -5,6 +5,7 @@ const start = [53.870530, 10.517432];
 
 const mode = window.ZARPEN_MODE || "detail";
 const isDetail = mode === "detail";
+const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 const map = L.map('map', {
   zoomControl: isDetail,
@@ -192,9 +193,12 @@ tourPanel.onAdd = function () {
 
   div.innerHTML = `
 
-<details class="tour-details">
+<details class="tour-details" ${isMobile ? "" : "open"}>
 
-<summary>🌿 Tourinformationen</summary>
+<summary>
+  <span>🌿 Tourinformationen</span>
+  <span class="summary-hint">Tippen zum Öffnen</span>
+</summary>
 
 <h1>Redder & Hundewiese</h1>
 
