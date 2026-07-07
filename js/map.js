@@ -5,6 +5,11 @@ const start = [53.870530, 10.517432];
 
 const mode = window.ZARPEN_MODE || "detail";
 const isDetail = mode === "detail";
+const overviewMarkerNames = [
+  "Marktplatz Zarpen",
+  "Hundespielwiese",
+  "Achtung: Straße überqueren"
+];
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 const map = L.map('map', {
@@ -121,6 +126,9 @@ const places = [
 const markerLayers = {};
 
 places.forEach(place => {
+    if (!isDetail && !overviewMarkerNames.includes(place.name)) {
+    return;
+  }
   const typeLabel = {
     start: 'Start/Ziel',
     sehenswuerdigkeit: 'Sehenswürdigkeit',
