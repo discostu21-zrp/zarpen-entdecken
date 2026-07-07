@@ -219,3 +219,46 @@ html, body {
   }
 
 }
+.popup-card{
+  min-width:210px;
+  max-width:260px;
+}
+
+.popup-title{
+  font-size:17px;
+  font-weight:700;
+  color:#1b5e20;
+  margin-bottom:3px;
+}
+
+.popup-category{
+  display:inline-block;
+  font-size:12px;
+  color:#fff;
+  background:#17c945;
+  padding:3px 8px;
+  border-radius:999px;
+  margin-bottom:8px;
+}
+
+.popup-text{
+  font-size:14px;
+  line-height:1.4;
+  color:#333;
+  margin-bottom:10px;
+}
+
+.popup-link{
+  display:inline-block;
+  background:#17c945;
+  color:#fff !important;
+  text-decoration:none;
+  font-weight:700;
+  padding:7px 11px;
+  border-radius:999px;
+  font-size:13px;
+}
+
+.popup-link:hover{
+  background:#119b35;
+}
