@@ -118,7 +118,7 @@ const places = [
   { name: 'Mülleimer & Hundekotbeutel-Station', type: 'hund', lat: 53.866325, lng: 10.508122, text: 'Zugang zur Hundewiese Hauptstraße.' },
   { name: 'Baumschule Zarpen', type: 'natur', lat: 53.867084, lng: 10.508363, text: 'Vorbei an der Baumschule führt die Route zurück in den Ort.' },
   { name: 'Sitzbank', type: 'rast', lat: 53.867974, lng: 10.513137, text: 'Sitzmöglichkeit an der Teichstraße.' },
-  { name: 'Freiwillige Feuerwehr Zarpen', type: 'oeffentlich', lat: 53.870127, lng: 10.514563, text: 'Gerätehaus der FF Zarpen.' },
+  { name: 'Freiwillige Feuerwehr Zarpen', type: 'oeffentlich', lat: 53.870127, lng: 10.514563, text: 'Gerätehaus der FF Zarpen., link: 'https://ffzarpen.de/' },
   { name: 'Kindergarten', type: 'oeffentlich', lat: 53.870957, lng: 10.516943, text: 'Ev. Kindertagesstätte Arche Noah.' },
   { name: 'Kindergarten', type: 'oeffentlich', lat: 53.871673, lng: 10.518307, text: 'Villa Kunterbunt" DRK Stormarn.' }
 ];
@@ -142,9 +142,20 @@ places.forEach(place => {
     oeffentlich: 'Öffentliche Einrichtung'
   }[place.type] || 'Ort';
 
-  const marker = L.marker([place.lat, place.lng], { icon: makeIcon(place.type) })
-    .addTo(map)
-    .bindPopup(`<b>${place.name}</b><br>${place.text}<br><span class="popup-type">${typeLabel}</span>`);
+const linkButton = place.link
+  ? `<a class="popup-link" href="${place.link}" target="_blank" rel="noopener">Webseite öffnen</a>`
+  : "";
+
+const marker = L.marker([place.lat, place.lng], { icon: makeIcon(place.type) })
+  .addTo(map)
+  .bindPopup(`
+    <div class="popup-card">
+      <div class="popup-title">${place.name}</div>
+      <div class="popup-category">${typeLabel}</div>
+      <div class="popup-text">${place.text}</div>
+      ${linkButton}
+    </div>
+  `);
 
   if (!markerLayers[place.type]) {
     markerLayers[place.type] = [];
