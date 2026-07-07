@@ -148,14 +148,13 @@ const linkButton = place.link
 
 const marker = L.marker([place.lat, place.lng], { icon: makeIcon(place.type) })
   .addTo(map)
-  .bindPopup(`
-    <div class="popup-card">
-      <div class="popup-title">${place.name}</div>
-      <div class="popup-category">${typeLabel}</div>
-      <div class="popup-text">${place.text}</div>
-      ${linkButton}
-    </div>
-  `);
+.bindPopup(`
+  <div class="popup-card">
+    <div class="popup-title">${place.name}</div>
+    <div class="popup-text">${place.text}</div>
+    ${linkButton}
+  </div>
+`);
 
   if (!markerLayers[place.type]) {
     markerLayers[place.type] = [];
