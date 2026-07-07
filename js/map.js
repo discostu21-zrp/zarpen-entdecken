@@ -197,7 +197,7 @@ tourPanel.onAdd = function () {
 
 <summary>
   <span>🌿 Tourinformationen</span>
-  <span class="summary-hint">Tippen zum Öffnen</span>
+  <span class="summary-hint"> / Tippen zum Öffnen</span>
 </summary>
 
 <h1>Redder & Hundewiese</h1>
