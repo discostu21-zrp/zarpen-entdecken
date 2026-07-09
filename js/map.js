@@ -340,7 +340,7 @@ Hinweis
 if (isDetail) {
     tourPanel.addTo(map);
 }
-map.on("click", function () {
+function closeMobilePanel() {
   if (!isMobile) return;
 
   const details = document.querySelector(".tour-details");
@@ -348,4 +348,8 @@ map.on("click", function () {
   if (details && details.open) {
     details.removeAttribute("open");
   }
-});
+}
+
+map.on("click", closeMobilePanel);
+map.on("touchstart", closeMobilePanel);
+map.on("movestart", closeMobilePanel);
