@@ -164,8 +164,16 @@ const marker = L.marker([place.lat, place.lng], { icon: makeIcon(place.type) })
 });
 let activeLegendType = null;
 
+const activeLegendTypes = new Set();
+
 function highlightType(type) {
-  activeLegendType = activeLegendType === type ? null : type;
+  if (activeLegendTypes.has(type)) {
+    activeLegendTypes.delete(type);
+  } else {
+    activeLegendTypes.add(type);
+  }
+
+  const hasActiveFilters = activeLegendTypes.size > 0;
 
   Object.keys(markerLayers).forEach(markerType => {
     markerLayers[markerType].forEach(marker => {
@@ -173,16 +181,16 @@ function highlightType(type) {
 
       if (!el) return;
 
-      if (!activeLegendType) {
+      if (!hasActiveFilters) {
         el.style.opacity = "1";
         el.style.filter = "none";
         el.style.zIndex = "";
-      } else if (markerType === activeLegendType) {
+      } else if (activeLegendTypes.has(markerType)) {
         el.style.opacity = "1";
         el.style.filter = "none";
         el.style.zIndex = "1000";
       } else {
-        el.style.opacity = "0.22";
+        el.style.opacity = "0.18";
         el.style.filter = "grayscale(100%)";
         el.style.zIndex = "1";
       }
@@ -190,15 +198,14 @@ function highlightType(type) {
   });
 
   document.querySelectorAll(".legend-item").forEach(item => {
-    item.classList.remove("legend-active");
-  });
+    const itemType = item.getAttribute("data-type");
 
-  if (activeLegendType) {
-    const activeItem = document.querySelector(`[data-type="${activeLegendType}"]`);
-    if (activeItem) {
-      activeItem.classList.add("legend-active");
+    if (activeLegendTypes.has(itemType)) {
+      item.classList.add("legend-active");
+    } else {
+      item.classList.remove("legend-active");
     }
-  }
+  });
 }
 
 
