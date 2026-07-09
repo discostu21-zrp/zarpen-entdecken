@@ -146,7 +146,27 @@ const linkButton = place.link
   ? `<a class="popup-link" href="${place.link}" target="_blank" rel="noopener">Webseite öffnen</a>`
   : "";
 
-const marker = L.marker([place.lat, place.lng], { icon: makeIcon(place.type) })
+const markerLat = place.offsetLat || place.lat;
+const markerLng = place.offsetLng || place.lng;
+
+if (place.offsetLat && place.offsetLng) {
+  L.polyline(
+    [
+      [place.lat, place.lng],
+      [markerLat, markerLng]
+    ],
+    {
+      color: "#777",
+      weight: 1,
+      opacity: 0.8,
+      dashArray: "4,4"
+    }
+  ).addTo(map);
+}
+
+const marker = L.marker([markerLat, markerLng], {
+    icon: makeIcon(place.type)
+})
   .addTo(map)
 .bindPopup(`
   <div class="popup-card">
