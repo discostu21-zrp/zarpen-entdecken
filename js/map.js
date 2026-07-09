@@ -333,3 +333,12 @@ Hinweis
 if (isDetail) {
     tourPanel.addTo(map);
 }
+map.on("click", function () {
+  if (!isMobile) return;
+
+  const details = document.querySelector(".tour-details");
+
+  if (details && details.open) {
+    details.removeAttribute("open");
+  }
+});
