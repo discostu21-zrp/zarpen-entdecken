@@ -103,8 +103,8 @@ const places = [
   lat: 53.871249,
   lng: 10.517969,
 
-  offsetLat: 53.871390,
-  offsetLng: 10.517780,
+offsetLat: 53.871900,
+offsetLng: 10.517150,
 
   text: 'Start- und Zielpunkt der Tour. Von hier hat man einen schönen Blick auf die Dorfkirche.'
 },
@@ -114,8 +114,8 @@ const places = [
   lat: 53.871213,
   lng: 10.518067,
 
-  offsetLat: 53.871340,
-  offsetLng: 10.518120,
+offsetLat: 53.871900,
+offsetLng: 10.518400,
 
   text: 'Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen.'
 },
@@ -125,14 +125,14 @@ const places = [
   lat: 53.871170,
   lng: 10.518207,
 
-  offsetLat: 53.871120,
-  offsetLng: 10.518440,
+offsetLat: 53.871350,
+offsetLng: 10.519300,
 
   text: 'Schaukasten des SPD-Ortsvereins.',
   link: 'https://spd-zarpen.de/content/index.php'
 },
   { name: 'Schaukasten FKW', type: 'service', lat: 53.870733, lng: 10.518173, text: 'Schaukasten der FKW Zarpen.', link: 'https://www.fkw-zarpen.de/' },
-  { name: 'Kirche Zarpen', type: 'sehenswuerdigkeit', lat: 53.870548, lng: 10.517290, offsetLat: 53.870850, offsetLng: 10.516850, text: 'Die über 800 Jahre alte Dorfkirche prägt den Ortskern.', link: 'https://www.kirche-ps.de/zarpen/' },
+  { name: 'Kirche Zarpen', type: 'sehenswuerdigkeit', lat: 53.870548, lng: 10.517290, offsetLat: 53.870750, offsetLng: 10.515950, text: 'Die über 800 Jahre alte Dorfkirche prägt den Ortskern.', link: 'https://www.kirche-ps.de/zarpen/' },
   { name: 'Landgasthof EckKrug', type: 'gastronomie', lat: 53.870307, lng: 10.518309, text: 'Traditionsreicher Landgasthof im Ortskern.', link: 'https://zum-eckkrug.de/' },
   { name: 'Heilsau', type: 'natur', lat: 53.869246, lng: 10.521122, text: 'Über die Heilsaubrücke geht es in Richtung Redder.' },
  {
@@ -141,8 +141,8 @@ const places = [
   lat: 53.868123,
   lng: 10.520449,
 
-  offsetLat: 53.868250,
-  offsetLng: 10.520660,
+offsetLat: 53.868550,
+offsetLng: 10.521450,
 
   text: 'An der Kreuzung Lübecker Straße / Redder gibt es keine gesicherte Querung. Bitte besonders auf den Verkehr achten.'
 },
@@ -156,8 +156,8 @@ const places = [
   lat: 53.864819,
   lng: 10.514596,
 
-  offsetLat: 53.864950,
-  offsetLng: 10.514760,
+offsetLat: 53.865350,
+offsetLng: 10.515100,
 
   text: 'Sitzgelegenheit nahe der Holzbrücke.'
 },
@@ -168,8 +168,8 @@ const places = [
   lat: 53.864248,
   lng: 10.513769,
 
-  offsetLat: 53.864100,
-  offsetLng: 10.513540,
+offsetLat: 53.863650,
+offsetLng: 10.512850,
 
   text: 'Freilauffläche für Hunde.'
 },
@@ -185,8 +185,8 @@ const places = [
   lat: 53.870957,
   lng: 10.516943,
 
-  offsetLat: 53.871060,
-  offsetLng: 10.516690,
+offsetLat: 53.871300,
+offsetLng: 10.515700,
 
   text: 'Ev. Kindertagesstätte Arche Noah.',
   link: 'https://www.kita-kirche-ps.de/ev.-luth.-kita-arche-noah-in-zarpen.html'
@@ -197,8 +197,8 @@ const places = [
   lat: 53.871673,
   lng: 10.518307,
 
-  offsetLat: 53.871820,
-  offsetLng: 10.518480,
+offsetLat: 53.872350,
+offsetLng: 10.519000,
 
   text: 'Villa Kunterbunt – DRK Stormarn.',
   link: 'https://www.drk-stormarn.de/angebote/kindertagesstaetten/kita-villa-kunterbunt-zarpen.html'
@@ -237,23 +237,24 @@ if (
   place.offsetLng !== undefined
 ) {
   // Gestrichelte Verbindung zum tatsächlichen Standort
-  L.polyline(
-    [
-      [place.lat, place.lng],
-      [markerLat, markerLng]
-    ],
-    {
-      color: "#555",
-      weight: 2,
-      opacity: 0.9,
-      dashArray: "5,5",
-      interactive: false
-    }
-  ).addTo(map);
+ L.polyline(
+  [
+    [place.lat, place.lng],
+    [markerLat, markerLng]
+  ],
+  {
+    color: "#333333",
+    weight: 3,
+    opacity: 1,
+    dashArray: "8,6",
+    lineCap: "round",
+    interactive: false
+  }
+).addTo(map);
 
   // Kleiner Punkt am tatsächlichen Standort
   L.circleMarker([place.lat, place.lng], {
-    radius: 4,
+    radius: 5,
     color: "#ffffff",
     weight: 2,
     fillColor: "#555",
