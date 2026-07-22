@@ -1,3 +1,151 @@
 {
-  "id": "allee"
+  "id": "allee",
+  "title": "Durch die Allee",
+  "subtitle": "Abwechslungsreiche Runde durch eine schöne Lindenallee mit Blick auf das Dorf.",
+
+  "gpx": "gpx/allee.gpx",
+
+  "start": {
+    "lat": 53.870530,
+    "lng": 10.517432,
+    "zoom": 15
+  },
+
+  "facts": {
+    "distance": "2,29 km",
+    "duration": "ca. 35 Min.",
+    "speed": "3,9 km/h",
+    "difficulty": "leicht",
+    "elevation": "10 m hoch / 10 m runter",
+    "surface": "Asphalt und begrünter Feldweg"
+  },
+
+  "description": [
+    "Diese abwechslungsreiche Runde führt etwas aus dem Dorf hinaus. Vorbei an Weidetieren, einem regionalen Hofladen und einer idyllischen Allee erleben wir Zarpen von seiner ländlichen Seite.",
+    "Unterwegs eröffnen sich immer wieder schöne Ausblicke auf das Dorf und die umliegenden Felder. Eine ideale Tour für alle, die Ruhe, Natur und Landschaft genießen möchten."
+  ],
+
+  "overviewMarkers": [
+    "Marktplatz Zarpen",
+    "Wunderschöne Lindenallee"
+  ],
+
+  "places": [
+    {
+      "name": "Marktplatz Zarpen",
+      "type": "start",
+      "lat": 53.871249,
+      "lng": 10.517969,
+      "text": "Start- und Zielpunkt der Tour. Von hier hat man einen schönen Blick auf die Dorfkirche."
+    },
+    {
+      "name": "Wegweiser-Schild",
+      "type": "service",
+      "lat": 53.871213,
+      "lng": 10.518067,
+      "image": "bilder/wegweiser.jpg",
+      "text": "Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen."
+    },
+    {
+      "name": "Schaukasten SPD",
+      "type": "service",
+      "lat": 53.871170,
+      "lng": 10.518207,
+      "text": "Schaukasten der SPD Zarpen.",
+      "link": "https://spd-zarpen.de/content/index.php"
+    },
+    {
+      "name": "Schaukasten FKW",
+      "type": "service",
+      "lat": 53.870733,
+      "lng": 10.518173,
+      "text": "Schaukasten der FKW Zarpen.",
+      "link": "https://www.fkw-zarpen.de/"
+    },
+    {
+      "name": "Kirche Zarpen",
+      "type": "sehenswuerdigkeit",
+      "lat": 53.870548,
+      "lng": 10.517290,
+      "image": "bilder/kirche-zarpen.jpg",
+      "text": "Die über 800 Jahre alte Dorfkirche prägt den Ortskern.",
+      "story": "Die Zarpener Kirche wurde bereits 1221 gegründet und zählt heute zu den ältesten Bauwerken im Kreis Stormarn. Der backsteingotische Bau entstand im 13. Jahrhundert und steht unter Denkmalschutz. Im Inneren befinden sich unter anderem eine Kanzel aus dem frühen 17. Jahrhundert sowie eine Glocke aus dem Jahr 1464, die bis heute erhalten ist.",
+      "link": "https://www.kirche-ps.de/zarpen/"
+    },
+    {
+      "name": "Landgasthof EckKrug",
+      "type": "gastronomie",
+      "lat": 53.870307,
+      "lng": 10.518309,
+      "text": "Traditionsreicher Landgasthof im Ortskern.",
+      "link": "https://zum-eckkrug.de/"
+    },
+    {
+      "name": "Heilsau",
+      "type": "natur",
+      "lat": 53.869246,
+      "lng": 10.521122,
+      "image": "bilder/heilsau.jpg",
+      "text": "Von der Brücke hat man einen schönen Blick über die Heilsau-Wiesen und weidende Kühe."
+    },
+    {
+      "name": "Schaukasten SoVD",
+      "type": "service",
+      "lat": 53.868087,
+      "lng": 10.520323,
+      "text": "Schaukasten des Sozialverbandes Zarpen.",
+      "link": "https://www.sovd-stormarn.de/tag/zarpen/"
+    },
+    {
+      "name": "Ziegen & Pferde",
+      "type": "natur",
+      "lat": 53.867836,
+      "lng": 10.521183,
+      "text": "Mit etwas Glück sieht man hier einige Tiere auf der Weide."
+    },
+    {
+      "name": "Achtung: Straße überqueren",
+      "type": "warnung",
+      "lat": 53.867208,
+      "lng": 10.522208,
+      "text": "Es gibt keine gesicherte Querung. Bitte besonders auf den Verkehr achten."
+    },
+    {
+      "name": "Hofladen Rath",
+      "type": "gastronomie",
+      "lat": 53.867137,
+      "lng": 10.522509,
+      "text": "Regionale Produkte direkt vom Bauernhof."
+    },
+    {
+      "name": "Sitzbank im Grünen",
+      "type": "rast",
+      "lat": 53.866556,
+      "lng": 10.522814,
+      "text": "Sitzmöglichkeit mit Blick auf die Felder."
+    },
+    {
+      "name": "Achtung: Straße überqueren",
+      "type": "warnung",
+      "lat": 53.864984,
+      "lng": 10.526821,
+      "text": "Es gibt keine gesicherte Querung. Bitte besonders auf den Verkehr achten."
+    },
+    {
+      "name": "Wunderschöne Lindenallee",
+      "type": "natur",
+      "lat": 53.866714,
+      "lng": 10.527757,
+      "image": "bilder/allee1.jpg",
+      "text": "Der Weg durch die Allee wird von landwirtschaftlichem Verkehr genutzt. Bitte achten Sie darauf und gewähren Sie immer Vorfahrt."
+    },
+    {
+      "name": "Schöner Ausblick in das Dorf",
+      "type": "natur",
+      "lat": 53.867958,
+      "lng": 10.528204,
+      "image": "bilder/strassehorst2.jpg",
+      "text": "Blick über Felder und Wiesen auf das Dorf-Panorama."
+    }
+  ]
 }
