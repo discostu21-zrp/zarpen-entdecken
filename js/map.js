@@ -117,6 +117,10 @@ offsetLng: 10.517150,
 offsetLat: 53.871900,
 offsetLng: 10.518400,
 
+  image: 'bilder/wegweiser.jpg',
+
+   image: 'bilder/kirche-zarpen.jpg',
+
   text: 'Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen.'
 },
 {
@@ -134,7 +138,7 @@ offsetLng: 10.519300,
   { name: 'Schaukasten FKW', type: 'service', lat: 53.870733, lng: 10.518173, text: 'Schaukasten der FKW Zarpen.', link: 'https://www.fkw-zarpen.de/' },
   { name: 'Kirche Zarpen', type: 'sehenswuerdigkeit', lat: 53.870548, lng: 10.517290, offsetLat: 53.870750, offsetLng: 10.515950, text: 'Die über 800 Jahre alte Dorfkirche prägt den Ortskern.', link: 'https://www.kirche-ps.de/zarpen/' },
   { name: 'Landgasthof EckKrug', type: 'gastronomie', lat: 53.870307, lng: 10.518309, text: 'Traditionsreicher Landgasthof im Ortskern.', link: 'https://zum-eckkrug.de/' },
-  { name: 'Heilsau', type: 'natur', lat: 53.869246, lng: 10.521122, text: 'Über die Heilsaubrücke geht es in Richtung Redder.' },
+  { name: 'Heilsau', type: 'natur', lat: 53.869246, lng: 10.521122, image: 'bilder/heilsau.jpg', text: 'Über die Heilsaubrücke geht es in Richtung Redder.' },
  {
   name: 'Achtung: Straße überqueren',
   type: 'warnung',
@@ -149,7 +153,7 @@ offsetLng: 10.521450,
   { name: 'Schaukasten SoVD', type: 'service', lat: 53.868087, lng: 10.520323, text: 'Schaukasten des Sozialverbandes Zarpen.',link: 'https://www.sovd-stormarn.de/tag/zarpen/' },
   { name: 'Sitzbank im Grünen', type: 'rast', lat: 53.864012, lng: 10.517699, text: 'Rastmöglichkeit im Redder mit Blick ins Grüne.' },
   { name: 'Mülleimer & Hundekotbeutel-Station', type: 'hund', lat: 53.863603, lng: 10.515461, text: 'Zugang zur Hundewiese.' },
-  { name: 'Holzbrücke', type: 'bruecke', lat: 53.864732, lng: 10.514596, text: 'Die Bürgerverein-Holzbrücke.' },
+  { name: 'Holzbrücke', type: 'bruecke', lat: 53.864732, lng: 10.514596, image: 'bilder/holzbruecke.jpg', text: 'Die Bürgerverein-Holzbrücke.' },
 {
   name: 'Sitzbank im Grünen',
   type: 'rast',
