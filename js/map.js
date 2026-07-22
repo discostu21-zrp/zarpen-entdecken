@@ -7,8 +7,7 @@ const mode = window.ZARPEN_MODE || "detail";
 const isDetail = mode === "detail";
 const overviewMarkerNames = [
   "Marktplatz Zarpen",
-  "Hundespielwiese",
-  "Achtung: Straße überqueren"
+  "Hundespielwiese"
 ];
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
@@ -165,16 +164,18 @@ if (place.offsetLat && place.offsetLng) {
 }
 
 const marker = L.marker([markerLat, markerLng], {
-    icon: makeIcon(place.type)
-})
-  .addTo(map)
-.bindPopup(`
-  <div class="popup-card">
-    <div class="popup-title">${place.name}</div>
-    <div class="popup-text">${place.text}</div>
-    ${linkButton}
-  </div>
-`);
+  icon: makeIcon(place.type)
+}).addTo(map);
+
+if (isDetail) {
+  marker.bindPopup(`
+    <div class="popup-card">
+      <div class="popup-title">${place.name}</div>
+      <div class="popup-text">${place.text}</div>
+      ${linkButton}
+    </div>
+  `);
+}
 
   if (!markerLayers[place.type]) {
     markerLayers[place.type] = [];
