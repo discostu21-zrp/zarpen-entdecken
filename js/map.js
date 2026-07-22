@@ -101,7 +101,7 @@ const places = [
   { name: 'Wegweiser-Schild', type: 'service', lat: 53.871213, lng: 10.518067, text: 'Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen.' },
   { name: 'Schaukasten SPD', type: 'service', lat: 53.871170, lng: 10.518207, text: 'Schaukasten des SPD-Ortsvereins.', link: 'https://spd-zarpen.de/content/index.php' },
   { name: 'Schaukasten FKW', type: 'service', lat: 53.870733, lng: 10.518173, text: 'Schaukasten der FKW Zarpen.', link: 'https://www.fkw-zarpen.de/' },
-  { name: 'Kirche Zarpen', type: 'sehenswuerdigkeit', lat: 53.870548, lng: 10.517290, offsetLat:53.87072, offsetLng:10.51702, text: 'Die über 800 Jahre alte Dorfkirche prägt den Ortskern.', link: 'https://www.kirche-ps.de/zarpen/' },
+  { name: 'Kirche Zarpen', type: 'sehenswuerdigkeit', lat: 53.870548, lng: 10.517290, offsetLat: 53.870850, offsetLng: 10.516850, text: 'Die über 800 Jahre alte Dorfkirche prägt den Ortskern.', link: 'https://www.kirche-ps.de/zarpen/' },
   { name: 'Landgasthof EckKrug', type: 'gastronomie', lat: 53.870307, lng: 10.518309, text: 'Traditionsreicher Landgasthof im Ortskern.', link: 'https://zum-eckkrug.de/' },
   { name: 'Heilsau', type: 'natur', lat: 53.869246, lng: 10.521122, text: 'Über die Heilsaubrücke geht es in Richtung Redder.' },
   { name: 'Achtung: Straße überqueren', type: 'warnung', lat: 53.868123, lng: 10.520449, text: 'An der Kreuzung Lübecker Straße / Redder gibt es keine gesicherte Querung. Bitte besonders auf den Verkehr achten.' },
@@ -148,19 +148,35 @@ const linkButton = place.link
 const markerLat = place.offsetLat || place.lat;
 const markerLng = place.offsetLng || place.lng;
 
-if (place.offsetLat && place.offsetLng) {
+if (
+  isDetail &&
+  place.offsetLat !== undefined &&
+  place.offsetLng !== undefined
+) {
+  // Gestrichelte Verbindung zum tatsächlichen Standort
   L.polyline(
     [
       [place.lat, place.lng],
       [markerLat, markerLng]
     ],
     {
-      color: "#777",
-      weight: 1,
-      opacity: 0.8,
-      dashArray: "4,4"
+      color: "#555",
+      weight: 2,
+      opacity: 0.9,
+      dashArray: "5,5",
+      interactive: false
     }
   ).addTo(map);
+
+  // Kleiner Punkt am tatsächlichen Standort
+  L.circleMarker([place.lat, place.lng], {
+    radius: 4,
+    color: "#ffffff",
+    weight: 2,
+    fillColor: "#555",
+    fillOpacity: 1,
+    interactive: false
+  }).addTo(map);
 }
 
 const marker = L.marker([markerLat, markerLng], {
