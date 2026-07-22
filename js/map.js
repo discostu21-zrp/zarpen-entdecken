@@ -235,7 +235,10 @@ const iconUrl = `icons/${iconData.file}`;
 
 const popupTitle = `
   <img class="popup-title-icon" src="${iconUrl}" alt="">
-  <span>${place.name}</span>
+  <div class="popup-title-content">
+    <span class="popup-title-name">${place.name}</span>
+    <span class="popup-type-label">${typeLabel}</span>
+  </div>
 `;
 
 const popupHeader = place.image
