@@ -230,9 +230,28 @@ const linkButton = place.link
   ? `<a class="popup-link" href="${place.link}" target="_blank" rel="noopener">Webseite öffnen</a>`
   : "";
   
-const popupImage = place.image
-  ? `<img class="popup-image" src="${place.image}" alt="${place.name}">`
-  : "";
+const iconData = icons[place.type] || icons.service;
+const iconUrl = `icons/${iconData.file}`;
+
+const popupTitle = `
+  <img class="popup-title-icon" src="${iconUrl}" alt="">
+  <span>${place.name}</span>
+`;
+
+const popupHeader = place.image
+  ? `
+    <div class="popup-header">
+      <img class="popup-image" src="${place.image}" alt="${place.name}">
+      <div class="popup-title-overlay">
+        ${popupTitle}
+      </div>
+    </div>
+  `
+  : `
+    <div class="popup-title">
+      ${popupTitle}
+    </div>
+  `;
   
 const markerLat = place.offsetLat || place.lat;
 const markerLng = place.offsetLng || place.lng;
@@ -277,24 +296,15 @@ if (isDetail) {
   marker.bindPopup(`
     <div class="popup-card">
 
-  <div class="popup-header">
+      ${popupHeader}
 
-    ${popupImage}
+      <div class="popup-text">
+        ${place.text}
+      </div>
 
-<div class="popup-title-overlay">
-  <img class="popup-title-icon" src="${iconUrl}" alt="">
-  <span>${place.name}</span>
-</div>
+      ${linkButton}
 
-  </div>
-
-  <div class="popup-text">
-    ${place.text}
-  </div>
-
-  ${linkButton}
-
-</div>
+    </div>
   `);
 }
 
