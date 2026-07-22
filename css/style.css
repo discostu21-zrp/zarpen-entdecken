@@ -296,6 +296,16 @@ html, body {
 
     text-shadow:0 1px 3px rgba(0,0,0,.5);
 }
+.popup-title{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    font-size:20px;
+    font-weight:700;
+
+    margin-bottom:12px;
+}
 .popup-title-icon{
     width:24px;
     height:24px;
