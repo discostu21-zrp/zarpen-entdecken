@@ -262,3 +262,12 @@ html, body {
 .popup-link:hover{
   background:#119b35;
 }
+.popup-image {
+    display: block;
+    width: 100%;
+    max-width: 220px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 8px auto 10px auto;
+}
