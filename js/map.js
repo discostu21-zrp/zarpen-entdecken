@@ -281,9 +281,10 @@ if (isDetail) {
 
     ${popupImage}
 
-    <div class="popup-title-overlay">
-      ${place.name}
-    </div>
+<div class="popup-title-overlay">
+  <img class="popup-title-icon" src="${iconUrl}" alt="">
+  <span>${place.name}</span>
+</div>
 
   </div>
 
