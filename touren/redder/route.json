@@ -1,3 +1,225 @@
 {
-  "id": "redder"
+  "id": "redder",
+  "title": "Redder & Hundewiese",
+  "subtitle": "Zarpen entdecken – Spaziergang",
+
+  "gpx": "gpx/redder-hundewiese.gpx",
+
+  "start": {
+    "lat": 53.870530,
+    "lng": 10.517432,
+    "zoom": 15
+  },
+
+  "facts": {
+    "distance": "2,92 km",
+    "duration": "ca. 36 Min.",
+    "difficulty": "leicht",
+    "elevation": "10 m"
+  },
+
+  "description": [
+    "Abwechslungsreiche Runde durch den Redder, über die Hundespielwiese und zurück ins Dorf."
+  ],
+
+  "overviewMarkers": [
+    "Marktplatz Zarpen",
+    "Hundespielwiese"
+  ],
+
+  "places": [
+    {
+      "name": "Marktplatz Zarpen",
+      "type": "start",
+      "lat": 53.871249,
+      "lng": 10.517969,
+      "offsetLat": 53.871900,
+      "offsetLng": 10.517150,
+      "text": "Start- und Zielpunkt der Tour. Von hier hat man einen schönen Blick auf die Dorfkirche."
+    },
+    {
+      "name": "Wegweiser-Schild",
+      "type": "service",
+      "lat": 53.871213,
+      "lng": 10.518067,
+      "offsetLat": 53.871900,
+      "offsetLng": 10.518400,
+      "image": "bilder/wegweiser.jpg",
+      "text": "Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen."
+    },
+    {
+      "name": "Schaukasten SPD",
+      "type": "service",
+      "lat": 53.871170,
+      "lng": 10.518207,
+      "offsetLat": 53.871350,
+      "offsetLng": 10.519300,
+      "text": "Schaukasten des SPD-Ortsvereins.",
+      "link": "https://spd-zarpen.de/content/index.php"
+    },
+    {
+      "name": "Schaukasten FKW",
+      "type": "service",
+      "lat": 53.870733,
+      "lng": 10.518173,
+      "text": "Schaukasten der FKW Zarpen.",
+      "link": "https://www.fkw-zarpen.de/"
+    },
+    {
+      "name": "Kirche Zarpen",
+      "type": "sehenswuerdigkeit",
+      "lat": 53.870548,
+      "lng": 10.517290,
+      "offsetLat": 53.870750,
+      "offsetLng": 10.515950,
+      "image": "bilder/kirche-zarpen.jpg",
+      "text": "Die über 800 Jahre alte Dorfkirche prägt den Ortskern.",
+      "story": "Die Zarpener Kirche wurde bereits 1221 gegründet und zählt heute zu den ältesten Bauwerken im Kreis Stormarn. Der backsteingotische Bau entstand im 13. Jahrhundert und steht unter Denkmalschutz. Im Inneren befinden sich unter anderem eine Kanzel aus dem frühen 17. Jahrhundert sowie eine Glocke aus dem Jahr 1464, die bis heute erhalten ist.",
+      "link": "https://www.kirche-ps.de/zarpen/"
+    },
+    {
+      "name": "Landgasthof EckKrug",
+      "type": "gastronomie",
+      "lat": 53.870307,
+      "lng": 10.518309,
+      "text": "Traditionsreicher Landgasthof im Ortskern.",
+      "link": "https://zum-eckkrug.de/"
+    },
+    {
+      "name": "Heilsau",
+      "type": "natur",
+      "lat": 53.869246,
+      "lng": 10.521122,
+      "image": "bilder/heilsau.jpg",
+      "text": "Über die Heilsaubrücke geht es in Richtung Redder."
+    },
+    {
+      "name": "Achtung: Straße überqueren",
+      "type": "warnung",
+      "lat": 53.868123,
+      "lng": 10.520449,
+      "offsetLat": 53.868550,
+      "offsetLng": 10.521450,
+      "text": "An der Kreuzung Lübecker Straße / Redder gibt es keine gesicherte Querung. Bitte besonders auf den Verkehr achten."
+    },
+    {
+      "name": "Schaukasten SoVD",
+      "type": "service",
+      "lat": 53.868087,
+      "lng": 10.520323,
+      "text": "Schaukasten des Sozialverbandes Zarpen.",
+      "link": "https://www.sovd-stormarn.de/tag/zarpen/"
+    },
+    {
+      "name": "Sitzbank im Grünen",
+      "type": "rast",
+      "lat": 53.864012,
+      "lng": 10.517699,
+      "text": "Rastmöglichkeit im Redder mit Blick ins Grüne."
+    },
+    {
+      "name": "Mülleimer & Hundekotbeutel-Station",
+      "type": "hund",
+      "lat": 53.863603,
+      "lng": 10.515461,
+      "text": "Zugang zur Hundewiese."
+    },
+    {
+      "name": "Holzbrücke",
+      "type": "bruecke",
+      "lat": 53.864732,
+      "lng": 10.514596,
+      "image": "bilder/holzbruecke.jpg",
+      "text": "Die Bürgerverein-Holzbrücke.",
+      "story": "Die Holzbrücke wurde in den Jahren 2010/2011 vom Bürgerverein Zarpen finanziert und in Eigenleistung errichtet. Sie verbindet den Redder mit der Hundespielwiese und macht die beliebte Spazierroute für Familien, Hundebesitzer und Naturfreunde sicher und bequem passierbar."
+    },
+    {
+      "name": "Sitzbank im Grünen",
+      "type": "rast",
+      "lat": 53.864819,
+      "lng": 10.514596,
+      "offsetLat": 53.865350,
+      "offsetLng": 10.515100,
+      "text": "Sitzgelegenheit nahe der Holzbrücke."
+    },
+    {
+      "name": "Insektenhotel",
+      "type": "natur",
+      "lat": 53.864562,
+      "lng": 10.513940,
+      "text": "Schönes Insektenhotel auf der Hundespielwiese."
+    },
+    {
+      "name": "Hundespielwiese",
+      "type": "hund",
+      "lat": 53.864248,
+      "lng": 10.513769,
+      "offsetLat": 53.863650,
+      "offsetLng": 10.512850,
+      "text": "Freilauffläche für Hunde."
+    },
+    {
+      "name": "Sitzbank im Grünen",
+      "type": "rast",
+      "lat": 53.863902,
+      "lng": 10.513556,
+      "text": "Weitere Sitzbank auf der Hundespielwiese."
+    },
+    {
+      "name": "Feldweg mit Blick ins Dorf",
+      "type": "natur",
+      "lat": 53.864808,
+      "lng": 10.511883,
+      "text": "Schöner Blick über die Felder in Richtung Kirche und Dorfmitte."
+    },
+    {
+      "name": "Mülleimer & Hundekotbeutel-Station",
+      "type": "hund",
+      "lat": 53.866325,
+      "lng": 10.508122,
+      "text": "Zugang zur Hundewiese Hauptstraße."
+    },
+    {
+      "name": "Baumschule Zarpen",
+      "type": "natur",
+      "lat": 53.867084,
+      "lng": 10.508363,
+      "text": "Vorbei an der Baumschule führt die Route zurück in den Ort."
+    },
+    {
+      "name": "Sitzbank",
+      "type": "rast",
+      "lat": 53.867974,
+      "lng": 10.513137,
+      "text": "Sitzmöglichkeit an der Teichstraße."
+    },
+    {
+      "name": "Freiwillige Feuerwehr Zarpen",
+      "type": "oeffentlich",
+      "lat": 53.870127,
+      "lng": 10.514563,
+      "text": "Gerätehaus der FF Zarpen.",
+      "link": "https://ffzarpen.de/"
+    },
+    {
+      "name": "Kindergarten Arche Noah",
+      "type": "oeffentlich",
+      "lat": 53.870957,
+      "lng": 10.516943,
+      "offsetLat": 53.871300,
+      "offsetLng": 10.515700,
+      "text": "Ev. Kindertagesstätte Arche Noah.",
+      "link": "https://www.kita-kirche-ps.de/ev.-luth.-kita-arche-noah-in-zarpen.html"
+    },
+    {
+      "name": "Kindergarten Villa Kunterbunt",
+      "type": "oeffentlich",
+      "lat": 53.871673,
+      "lng": 10.518307,
+      "offsetLat": 53.872350,
+      "offsetLng": 10.519000,
+      "text": "Villa Kunterbunt – DRK Stormarn.",
+      "link": "https://www.drk-stormarn.de/angebote/kindertagesstaetten/kita-villa-kunterbunt-zarpen.html"
+    }
+  ]
 }
