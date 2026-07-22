@@ -231,7 +231,11 @@ places.forEach(place => {
 const linkButton = place.link
   ? `<a class="popup-link" href="${place.link}" target="_blank" rel="noopener">Webseite öffnen</a>`
   : "";
-
+  
+const popupImage = place.image
+  ? `<img class="popup-image" src="${place.image}" alt="${place.name}">`
+  : "";
+  
 const markerLat = place.offsetLat || place.lat;
 const markerLng = place.offsetLng || place.lng;
 
@@ -275,6 +279,7 @@ if (isDetail) {
   marker.bindPopup(`
     <div class="popup-card">
       <div class="popup-title">${place.name}</div>
+      ${popupImage}
       <div class="popup-text">${place.text}</div>
       ${linkButton}
     </div>
