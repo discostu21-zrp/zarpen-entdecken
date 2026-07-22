@@ -97,30 +97,112 @@ function makeIcon(type) {
 }
 
 const places = [
-  { name: 'Marktplatz Zarpen', type: 'start', lat: 53.871249, lng: 10.517969, text: 'Start- und Zielpunkt der Tour. Von hier hat man einen schönen Blick auf die Dorfkirche.' },
-  { name: 'Wegweiser-Schild', type: 'service', lat: 53.871213, lng: 10.518067, text: 'Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen.' },
-  { name: 'Schaukasten SPD', type: 'service', lat: 53.871170, lng: 10.518207, text: 'Schaukasten des SPD-Ortsvereins.', link: 'https://spd-zarpen.de/content/index.php' },
+{
+  name: 'Marktplatz Zarpen',
+  type: 'start',
+  lat: 53.871249,
+  lng: 10.517969,
+
+  offsetLat: 53.871390,
+  offsetLng: 10.517780,
+
+  text: 'Start- und Zielpunkt der Tour. Von hier hat man einen schönen Blick auf die Dorfkirche.'
+},
+{
+  name: 'Wegweiser-Schild',
+  type: 'service',
+  lat: 53.871213,
+  lng: 10.518067,
+
+  offsetLat: 53.871340,
+  offsetLng: 10.518120,
+
+  text: 'Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen.'
+},
+{
+  name: 'Schaukasten SPD',
+  type: 'service',
+  lat: 53.871170,
+  lng: 10.518207,
+
+  offsetLat: 53.871120,
+  offsetLng: 10.518440,
+
+  text: 'Schaukasten des SPD-Ortsvereins.',
+  link: 'https://spd-zarpen.de/content/index.php'
+},
   { name: 'Schaukasten FKW', type: 'service', lat: 53.870733, lng: 10.518173, text: 'Schaukasten der FKW Zarpen.', link: 'https://www.fkw-zarpen.de/' },
   { name: 'Kirche Zarpen', type: 'sehenswuerdigkeit', lat: 53.870548, lng: 10.517290, offsetLat: 53.870850, offsetLng: 10.516850, text: 'Die über 800 Jahre alte Dorfkirche prägt den Ortskern.', link: 'https://www.kirche-ps.de/zarpen/' },
   { name: 'Landgasthof EckKrug', type: 'gastronomie', lat: 53.870307, lng: 10.518309, text: 'Traditionsreicher Landgasthof im Ortskern.', link: 'https://zum-eckkrug.de/' },
   { name: 'Heilsau', type: 'natur', lat: 53.869246, lng: 10.521122, text: 'Über die Heilsaubrücke geht es in Richtung Redder.' },
-  { name: 'Achtung: Straße überqueren', type: 'warnung', lat: 53.868123, lng: 10.520449, text: 'An der Kreuzung Lübecker Straße / Redder gibt es keine gesicherte Querung. Bitte besonders auf den Verkehr achten.' },
+ {
+  name: 'Achtung: Straße überqueren',
+  type: 'warnung',
+  lat: 53.868123,
+  lng: 10.520449,
+
+  offsetLat: 53.868250,
+  offsetLng: 10.520660,
+
+  text: 'An der Kreuzung Lübecker Straße / Redder gibt es keine gesicherte Querung. Bitte besonders auf den Verkehr achten.'
+},
   { name: 'Schaukasten SoVD', type: 'service', lat: 53.868087, lng: 10.520323, text: 'Schaukasten des Sozialverbandes Zarpen.',link: 'https://www.sovd-stormarn.de/tag/zarpen/' },
   { name: 'Sitzbank im Grünen', type: 'rast', lat: 53.864012, lng: 10.517699, text: 'Rastmöglichkeit im Redder mit Blick ins Grüne.' },
   { name: 'Mülleimer & Hundekotbeutel-Station', type: 'hund', lat: 53.863603, lng: 10.515461, text: 'Zugang zur Hundewiese.' },
   { name: 'Holzbrücke', type: 'bruecke', lat: 53.864732, lng: 10.514596, text: 'Die Bürgerverein-Holzbrücke.' },
-  { name: 'Sitzbank im Grünen', type: 'rast', lat: 53.864819, lng: 10.514596, text: 'Sitzgelegenheit nahe der Holzbrücke.' },
+{
+  name: 'Sitzbank im Grünen',
+  type: 'rast',
+  lat: 53.864819,
+  lng: 10.514596,
+
+  offsetLat: 53.864950,
+  offsetLng: 10.514760,
+
+  text: 'Sitzgelegenheit nahe der Holzbrücke.'
+},
   { name: 'Insektenhotel', type: 'natur', lat: 53.864562, lng: 10.513940, text: 'Schönes Insektenhotel auf der Hundespielwiese.' },
-  { name: 'Hundespielwiese', type: 'hund', lat: 53.864248, lng: 10.513769, text: 'Freilauffläche für Hunde.' },
+{
+  name: 'Hundespielwiese',
+  type: 'hund',
+  lat: 53.864248,
+  lng: 10.513769,
+
+  offsetLat: 53.864100,
+  offsetLng: 10.513540,
+
+  text: 'Freilauffläche für Hunde.'
+},
   { name: 'Sitzbank im Grünen', type: 'rast', lat: 53.863902, lng: 10.513556, text: 'Weitere Sitzbank auf der Hundespielwiese.' },
   { name: 'Feldweg mit Blick ins Dorf', type: 'natur', lat: 53.864808, lng: 10.511883, text: 'Schöner Blick über die Felder in Richtung Kirche und Dorfmitte.' },
   { name: 'Mülleimer & Hundekotbeutel-Station', type: 'hund', lat: 53.866325, lng: 10.508122, text: 'Zugang zur Hundewiese Hauptstraße.' },
   { name: 'Baumschule Zarpen', type: 'natur', lat: 53.867084, lng: 10.508363, text: 'Vorbei an der Baumschule führt die Route zurück in den Ort.' },
   { name: 'Sitzbank', type: 'rast', lat: 53.867974, lng: 10.513137, text: 'Sitzmöglichkeit an der Teichstraße.' },
   { name: 'Freiwillige Feuerwehr Zarpen', type: 'oeffentlich', lat: 53.870127, lng: 10.514563, text: 'Gerätehaus der FF Zarpen.', link: 'https://ffzarpen.de/' },
-  { name: 'Kindergarten Arche Noah', type: 'oeffentlich', lat: 53.870957, lng: 10.516943, text: 'Ev. Kindertagesstätte Arche Noah.', link: 'https://www.kita-kirche-ps.de/ev.-luth.-kita-arche-noah-in-zarpen.html' },
-  { name: 'Kindergarten Villa Kunterbunt', type: 'oeffentlich', lat: 53.871673, lng: 10.518307, text: 'Villa Kunterbunt" DRK Stormarn.', link: 'https://www.drk-stormarn.de/angebote/kindertagesstaetten/kita-villa-kunterbunt-zarpen.html' }
-];
+  {
+  name: 'Kindergarten Arche Noah',
+  type: 'oeffentlich',
+  lat: 53.870957,
+  lng: 10.516943,
+
+  offsetLat: 53.871060,
+  offsetLng: 10.516690,
+
+  text: 'Ev. Kindertagesstätte Arche Noah.',
+  link: 'https://www.kita-kirche-ps.de/ev.-luth.-kita-arche-noah-in-zarpen.html'
+},
+  {
+  name: 'Kindergarten Villa Kunterbunt',
+  type: 'oeffentlich',
+  lat: 53.871673,
+  lng: 10.518307,
+
+  offsetLat: 53.871820,
+  offsetLng: 10.518480,
+
+  text: 'Villa Kunterbunt – DRK Stormarn.',
+  link: 'https://www.drk-stormarn.de/angebote/kindertagesstaetten/kita-villa-kunterbunt-zarpen.html'
+}
 
 const markerLayers = {};
 
