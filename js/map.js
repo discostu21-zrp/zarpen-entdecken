@@ -276,8 +276,8 @@ const marker = L.marker([markerLat, markerLng], {
 if (isDetail) {
   marker.bindPopup(`
     <div class="popup-card">
-      <div class="popup-title">${place.name}</div>
       ${popupImage}
+      <div class="popup-title">${place.name}</div>
       <div class="popup-text">${place.text}</div>
       ${linkButton}
     </div>
