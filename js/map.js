@@ -203,6 +203,7 @@ const places = [
   text: 'Villa Kunterbunt – DRK Stormarn.',
   link: 'https://www.drk-stormarn.de/angebote/kindertagesstaetten/kita-villa-kunterbunt-zarpen.html'
 }
+];
 
 const markerLayers = {};
 
