@@ -335,3 +335,21 @@ html, body {
 
     opacity:0.85;
 }
+.popup-story{
+    margin-top:16px;
+    padding-top:14px;
+    border-top:1px solid #e5e5e5;
+}
+
+.popup-story h4{
+    margin:0 0 8px;
+    font-size:15px;
+    color:#2e7d32;
+}
+
+.popup-story p{
+    margin:0;
+    font-size:14px;
+    line-height:1.5;
+    color:#444;
+}
