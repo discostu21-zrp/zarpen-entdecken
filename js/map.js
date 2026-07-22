@@ -134,7 +134,7 @@ offsetLng: 10.519300,
   link: 'https://spd-zarpen.de/content/index.php'
 },
   { name: 'Schaukasten FKW', type: 'service', lat: 53.870733, lng: 10.518173, text: 'Schaukasten der FKW Zarpen.', link: 'https://www.fkw-zarpen.de/' },
-  { name: 'Kirche Zarpen', type: 'sehenswuerdigkeit', lat: 53.870548, lng: 10.517290, offsetLat: 53.870750, offsetLng: 10.515950, image: 'bilder/kirche-zarpen.jpg', text: 'Die über 800 Jahre alte Dorfkirche prägt den Ortskern.', link: 'https://www.kirche-ps.de/zarpen/' },
+  { name: 'Kirche Zarpen', type: 'sehenswuerdigkeit', lat: 53.870548, lng: 10.517290, offsetLat: 53.870750, offsetLng: 10.515950, image: 'bilder/kirche-zarpen.jpg', text: 'Die über 800 Jahre alte Dorfkirche prägt den Ortskern.', story: 'Die Zarpener Kirche wurde bereits 1221 gegründet und zählt heute zu den ältesten Bauwerken im Kreis Stormarn. Der backsteingotische Bau entstand im 13. Jahrhundert und steht unter Denkmalschutz. Im Inneren befinden sich unter anderem eine Kanzel aus dem frühen 17. Jahrhundert sowie eine Glocke aus dem Jahr 1464, die bis heute erhalten ist.', link: 'https://www.kirche-ps.de/zarpen/' },
   { name: 'Landgasthof EckKrug', type: 'gastronomie', lat: 53.870307, lng: 10.518309, text: 'Traditionsreicher Landgasthof im Ortskern.', link: 'https://zum-eckkrug.de/' },
   { name: 'Heilsau', type: 'natur', lat: 53.869246, lng: 10.521122, image: 'bilder/heilsau.jpg', text: 'Über die Heilsaubrücke geht es in Richtung Redder.' },
  {
@@ -230,6 +230,15 @@ const linkButton = place.link
   ? `<a class="popup-link" href="${place.link}" target="_blank" rel="noopener">Webseite öffnen</a>`
   : "";
   
+  const storyBox = place.story
+  ? `
+    <div class="popup-story">
+      <h4>📖 Geschichte zum Weg</h4>
+      <p>${place.story}</p>
+    </div>
+  `
+  : "";
+  
 const iconData = icons[place.type] || icons.service;
 const iconUrl = `icons/${iconData.file}`;
 
@@ -302,10 +311,12 @@ if (isDetail) {
       ${popupHeader}
 
       <div class="popup-text">
-        ${place.text}
-      </div>
+  ${place.text}
+</div>
 
-      ${linkButton}
+${storyBox}
+
+${linkButton}
 
     </div>
   `);
