@@ -151,7 +151,7 @@ offsetLng: 10.521450,
   { name: 'Schaukasten SoVD', type: 'service', lat: 53.868087, lng: 10.520323, text: 'Schaukasten des Sozialverbandes Zarpen.',link: 'https://www.sovd-stormarn.de/tag/zarpen/' },
   { name: 'Sitzbank im Grünen', type: 'rast', lat: 53.864012, lng: 10.517699, text: 'Rastmöglichkeit im Redder mit Blick ins Grüne.' },
   { name: 'Mülleimer & Hundekotbeutel-Station', type: 'hund', lat: 53.863603, lng: 10.515461, text: 'Zugang zur Hundewiese.' },
-  { name: 'Holzbrücke', type: 'bruecke', lat: 53.864732, lng: 10.514596, image: 'bilder/holzbruecke.jpg', text: 'Die Bürgerverein-Holzbrücke.' },
+  { name: 'Holzbrücke', type: 'bruecke', lat: 53.864732, lng: 10.514596, image: 'bilder/holzbruecke.jpg', text: 'Die Bürgerverein-Holzbrücke.', story: 'Die Holzbrücke wurde in den Jahren 2010/2011 vom Bürgerverein Zarpen finanziert und größtenteils in Eigenleistung errichtet. Sie verbindet den Redder mit der Hundespielwiese und macht die beliebte Spazierroute für Familien, Hundebesitzer und Naturfreunde sicher und bequem passierbar.' },
 {
   name: 'Sitzbank im Grünen',
   type: 'rast',
