@@ -40,35 +40,35 @@
       "text": "Start- und Zielpunkt der Tour. Von hier hat man einen schönen Blick auf die Dorfkirche."
     },
     {
-  "name": "Wegweiser-Schild",
-  "type": "service",
-  "lat": 53.871213,
-  "lng": 10.518067,
-  "offsetLat": 53.871490,
-  "offsetLng": 10.517860,
-  "image": "bilder/wegweiser.jpg",
-  "text": "Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen."
-}
-  {
-  "name": "Schaukasten SPD",
-  "type": "service",
-  "lat": 53.871170,
-  "lng": 10.518207,
-  "offsetLat": 53.871230,
-  "offsetLng": 10.518520,
-  "text": "Schaukasten der SPD Zarpen.",
-  "link": "https://spd-zarpen.de/content/index.php"
-}
-{
-  "name": "Schaukasten FKW",
-  "type": "service",
-  "lat": 53.870733,
-  "lng": 10.518173,
-  "offsetLat": 53.870680,
-  "offsetLng": 10.518480,
-  "text": "Schaukasten der FKW Zarpen.",
-  "link": "https://www.fkw-zarpen.de/"
-}
+      "name": "Wegweiser-Schild",
+      "type": "service",
+      "lat": 53.871213,
+      "lng": 10.518067,
+      "offsetLat": 53.871490,
+      "offsetLng": 10.517860,
+      "image": "bilder/wegweiser.jpg",
+      "text": "Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen."
+    },
+    {
+      "name": "Schaukasten SPD",
+      "type": "service",
+      "lat": 53.871170,
+      "lng": 10.518207,
+      "offsetLat": 53.871230,
+      "offsetLng": 10.518520,
+      "text": "Schaukasten der SPD Zarpen.",
+      "link": "https://spd-zarpen.de/content/index.php"
+    },
+    {
+      "name": "Schaukasten FKW",
+      "type": "service",
+      "lat": 53.870733,
+      "lng": 10.518173,
+      "offsetLat": 53.870680,
+      "offsetLng": 10.518480,
+      "text": "Schaukasten der FKW Zarpen.",
+      "link": "https://www.fkw-zarpen.de/"
+    },
     {
       "name": "Kirche Zarpen",
       "type": "sehenswuerdigkeit",
