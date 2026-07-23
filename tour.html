@@ -26,14 +26,54 @@
 
 <body>
 
-  <div id="map"></div>
+  <div class="tour-page">
 
-  <div id="loading-message">
-    Tour wird geladen …
-  </div>
+    <section class="tour-info">
 
-  <div id="error-message" hidden>
-    Die Tour konnte nicht geladen werden.
+      <div class="tour-heading">
+
+        <div class="tour-heading-text">
+
+          <div class="tour-label">
+            Zarpen entdecken
+          </div>
+
+          <h1 id="tour-title">
+            Tour wird geladen …
+          </h1>
+
+          <p id="tour-subtitle"></p>
+
+        </div>
+
+      </div>
+
+      <div
+        id="tour-facts"
+        class="tour-facts"
+      ></div>
+
+      <div
+        id="tour-description"
+        class="tour-description"
+      ></div>
+
+    </section>
+
+    <section class="tour-map-section">
+
+      <div id="map"></div>
+
+      <div id="loading-message">
+        Tour wird geladen …
+      </div>
+
+      <div id="error-message" hidden>
+        Die Tour konnte nicht geladen werden.
+      </div>
+
+    </section>
+
   </div>
 
   <!-- Leaflet -->
