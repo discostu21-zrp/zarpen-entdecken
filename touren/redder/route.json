@@ -1,7 +1,8 @@
 {
   "id": "redder",
   "title": "Redder & Hundewiese",
-  "subtitle": "Zarpen entdecken – Spaziergang",
+  "subtitle": "Abwechslungsreiche Runde durch den Redder, über die Hundespielwiese und zurück ins Dorf.",
+  "heroImage": "bilder/herofeldweghundewiese.jpg",
 
   "gpx": "gpx/redder-hundewiese.gpx",
 
@@ -19,7 +20,7 @@
   },
 
   "description": [
-    "Abwechslungsreiche Runde durch den Redder, über die Hundespielwiese und zurück ins Dorf."
+    "Eine abwechslungsreiche Dorfrunde mit weitem Blick über die Felder und der beliebten Hundespielwiese. Ideal für den täglichen Spaziergang oder eine entspannte Runde mit dem Vierbeiner."
   ],
 
   "overviewMarkers": [
