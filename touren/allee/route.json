@@ -45,7 +45,7 @@
       "lat": 53.871213,
       "lng": 10.518067,
       "offsetLat": 53.868850,
-"offsetLng": 10.511900,
+      "offsetLng": 10.511900,
       "image": "bilder/wegweiser.jpg",
       "text": "Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen."
     },
@@ -55,7 +55,7 @@
       "lat": 53.871170,
       "lng": 10.518207,
       "offsetLat": 53.870250,
-"offsetLng": 10.514600,
+      "offsetLng": 10.514600,
       "text": "Schaukasten der SPD Zarpen.",
       "link": "https://spd-zarpen.de/content/index.php"
     },
@@ -120,8 +120,8 @@
       "type": "gastronomie",
       "lat": 53.867137,
       "lng": 10.522509,
-"offsetLat": 53.867137,
-"offsetLng": 10.522900,
+      "offsetLat": 53.867137,
+      "offsetLng": 10.522900,
       "text": "Regionale Produkte direkt vom Bauernhof."
     },
     {
