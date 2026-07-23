@@ -45,7 +45,7 @@
       "lat": 53.871213,
       "lng": 10.518067,
 "offsetLat": 53.871500,
-"offsetLng": 10.518250
+"offsetLng": 10.518250,
       "image": "bilder/wegweiser.jpg",
       "text": "Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen."
     },
@@ -55,7 +55,7 @@
       "lat": 53.871170,
       "lng": 10.518207,
 "offsetLat": 53.871170,
-"offsetLng": 10.518520
+"offsetLng": 10.518520,
       "text": "Schaukasten der SPD Zarpen.",
       "link": "https://spd-zarpen.de/content/index.php"
     },
