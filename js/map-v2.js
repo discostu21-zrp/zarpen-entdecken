@@ -464,10 +464,14 @@ window.initZarpenMap = function (routeData) {
   // 9. Seitentitel anpassen
   // --------------------------------------------------
 
-  if (routeData.title) {
-    document.title =
-      `${routeData.title} – Zarpen entdecken`;
-  }
+renderTourInformation(routeData);
+
+
+// Seitentitel des Browser-Tabs
+if (routeData.title) {
+  document.title =
+    `${routeData.title} – Zarpen entdecken`;
+}
 
 
   console.log(
@@ -479,6 +483,110 @@ window.initZarpenMap = function (routeData) {
   // 10. Fehlermeldung anzeigen
   // --------------------------------------------------
 
+  function renderTourInformation(data) {
+
+  const titleElement =
+    document.getElementById("tour-title");
+
+  const subtitleElement =
+    document.getElementById("tour-subtitle");
+
+  const factsElement =
+    document.getElementById("tour-facts");
+
+  const descriptionElement =
+    document.getElementById("tour-description");
+
+
+  // Titel
+  if (titleElement) {
+    titleElement.textContent =
+      data.title || "Tour durch Zarpen";
+  }
+
+
+  // Untertitel
+  if (subtitleElement) {
+
+    if (data.subtitle) {
+      subtitleElement.textContent =
+        data.subtitle;
+    } else {
+      subtitleElement.remove();
+    }
+
+  }
+
+
+  // Fakten
+  if (factsElement) {
+
+    const facts =
+      data.facts || {};
+
+    const factItems = [
+      {
+        label: "Strecke",
+        value: facts.distance
+      },
+      {
+        label: "Dauer",
+        value: facts.duration
+      },
+      {
+        label: "Höhenmeter",
+        value: facts.elevation
+      },
+      {
+        label: "Schwierigkeit",
+        value: facts.difficulty
+      }
+    ];
+
+    factsElement.innerHTML =
+      factItems
+        .filter(function (item) {
+          return item.value;
+        })
+        .map(function (item) {
+          return `
+            <div class="tour-fact">
+
+              <div class="tour-fact-label">
+                ${item.label}
+              </div>
+
+              <div class="tour-fact-value">
+                ${item.value}
+              </div>
+
+            </div>
+          `;
+        })
+        .join("");
+
+  }
+
+
+  // Beschreibung
+  if (descriptionElement) {
+
+    const description =
+      Array.isArray(data.description)
+        ? data.description
+        : [];
+
+    descriptionElement.innerHTML =
+      description
+        .map(function (paragraph) {
+          return `<p>${paragraph}</p>`;
+        })
+        .join("");
+
+  }
+
+}
+  
   function showMapError(message) {
 
     const errorMessage =
