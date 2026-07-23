@@ -353,3 +353,161 @@ html, body {
     line-height:1.5;
     color:#444;
 }
+/* ========================================
+   Gemeinsame Tour-Seite Version 2
+======================================== */
+
+.tour-page {
+  min-height: 100vh;
+  background: #f4f2ed;
+}
+
+.tour-info {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 24px 28px;
+}
+
+.tour-heading {
+  margin-bottom: 24px;
+}
+
+.tour-label {
+  margin-bottom: 8px;
+  color: #2e7d32;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+#tour-title {
+  margin: 0;
+  color: #243126;
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  line-height: 1.05;
+}
+
+#tour-subtitle {
+  max-width: 760px;
+  margin: 14px 0 0;
+  color: #566157;
+  font-size: 1.08rem;
+  line-height: 1.55;
+}
+
+.tour-facts {
+  display: grid;
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 26px 0;
+}
+
+.tour-fact {
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow:
+    0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+.tour-fact-label {
+  margin-bottom: 6px;
+  color: #778078;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.tour-fact-value {
+  color: #263228;
+  font-size: 1.12rem;
+  font-weight: 700;
+}
+
+.tour-description {
+  max-width: 850px;
+  color: #404a42;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.tour-description p {
+  margin: 0 0 14px;
+}
+
+.tour-map-section {
+  position: relative;
+  width: 100%;
+}
+
+.tour-map-section #map {
+  width: 100%;
+  height: 68vh;
+  min-height: 520px;
+}
+
+#loading-message,
+#error-message {
+  position: absolute;
+  z-index: 1000;
+  top: 20px;
+  left: 50%;
+  padding: 12px 18px;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 10px;
+  box-shadow:
+    0 4px 16px rgba(0, 0, 0, 0.15);
+  transform: translateX(-50%);
+}
+
+#error-message {
+  color: #a12622;
+  font-weight: 700;
+}
+
+@media (max-width: 900px) {
+
+  .tour-facts {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .tour-info {
+    padding: 24px 16px 20px;
+  }
+
+  #tour-title {
+    font-size: 2.15rem;
+  }
+
+  #tour-subtitle {
+    font-size: 1rem;
+  }
+
+  .tour-facts {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .tour-fact {
+    padding: 14px;
+  }
+
+  .tour-fact-value {
+    font-size: 1rem;
+  }
+
+  .tour-map-section #map {
+    height: 66vh;
+    min-height: 460px;
+  }
+
+}
