@@ -120,6 +120,8 @@
       "type": "gastronomie",
       "lat": 53.867137,
       "lng": 10.522509,
+"offsetLat": 53.867137,
+"offsetLng": 10.522900,
       "text": "Regionale Produkte direkt vom Bauernhof."
     },
     {
@@ -127,8 +129,6 @@
       "type": "rast",
       "lat": 53.866556,
       "lng": 10.522814,
-      "offsetLat": 53.867950,
-"offsetLng": 10.509650,
       "text": "Sitzmöglichkeit mit Blick auf die Felder."
     },
     {
@@ -151,7 +151,7 @@
       "type": "natur",
       "lat": 53.867958,
       "lng": 10.528204,
-      "image": "bilder/strassehorst2.jpg"
+      "image": "bilder/strassehorst2.jpg",
       "text": "Blick über Felder und Wiesen auf das Dorf-Panorama."
     }
   ]
