@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Zarpen entdecken</title>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+
+  <!-- Eigene Gestaltung -->
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+</head>
+
+<body>
+
+  <div id="map"></div>
+
+  <div id="loading-message">
+    Tour wird geladen …
+  </div>
+
+  <div id="error-message" hidden>
+    Die Tour konnte nicht geladen werden.
+  </div>
+
+  <!-- Leaflet -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  ></script>
+
+  <!-- Leaflet-GPX -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"
+  ></script>
+
+  <!-- Neue gemeinsame Kartenlogik -->
+  <script src="js/map-v2.js"></script>
+
+  <!-- Lädt die gewünschte Tour -->
+  <script src="js/loadTour.js"></script>
+
+</body>
+
+</html>
