@@ -483,7 +483,13 @@ if (routeData.title) {
   // 10. Fehlermeldung anzeigen
   // --------------------------------------------------
 
-  function renderTourInformation(data) {
+ function renderTourInformation(data) {
+
+  const heroElement =
+    document.getElementById("tour-hero");
+
+  const heroImageElement =
+    document.getElementById("tour-hero-image");
 
   const titleElement =
     document.getElementById("tour-title");
@@ -498,27 +504,63 @@ if (routeData.title) {
     document.getElementById("tour-description");
 
 
-  // Titel
-  if (titleElement) {
-    titleElement.textContent =
+  // --------------------------------------------------
+  // Hero-Bild
+  // --------------------------------------------------
+
+  if (heroImageElement && data.heroImage) {
+
+    heroImageElement.src =
+      data.heroImage;
+
+    heroImageElement.alt =
       data.title || "Tour durch Zarpen";
+
+  } else if (heroElement) {
+
+    heroElement.classList.add(
+      "tour-hero-without-image"
+    );
+
   }
 
 
+  // --------------------------------------------------
+  // Titel
+  // --------------------------------------------------
+
+  if (titleElement) {
+
+    titleElement.textContent =
+      data.title || "Tour durch Zarpen";
+
+  }
+
+
+  // --------------------------------------------------
   // Untertitel
+  // --------------------------------------------------
+
   if (subtitleElement) {
 
     if (data.subtitle) {
+
       subtitleElement.textContent =
         data.subtitle;
+
     } else {
+
       subtitleElement.remove();
+
     }
 
   }
 
 
-  // Fakten
+  // --------------------------------------------------
+  // Tour-Fakten
+  // --------------------------------------------------
+
   if (factsElement) {
 
     const facts =
@@ -526,18 +568,22 @@ if (routeData.title) {
 
     const factItems = [
       {
+        icon: "↔",
         label: "Strecke",
         value: facts.distance
       },
       {
+        icon: "◷",
         label: "Dauer",
         value: facts.duration
       },
       {
+        icon: "↗",
         label: "Höhenmeter",
         value: facts.elevation
       },
       {
+        icon: "◆",
         label: "Schwierigkeit",
         value: facts.difficulty
       }
@@ -549,37 +595,70 @@ if (routeData.title) {
           return item.value;
         })
         .map(function (item) {
+
           return `
             <div class="tour-fact">
 
-              <div class="tour-fact-label">
-                ${item.label}
+              <div
+                class="tour-fact-icon"
+                aria-hidden="true"
+              >
+                ${item.icon}
               </div>
 
-              <div class="tour-fact-value">
-                ${item.value}
+              <div class="tour-fact-content">
+
+                <div class="tour-fact-label">
+                  ${item.label}
+                </div>
+
+                <div class="tour-fact-value">
+                  ${item.value}
+                </div>
+
               </div>
 
             </div>
           `;
+
         })
         .join("");
 
   }
 
 
+  // --------------------------------------------------
   // Beschreibung
+  // --------------------------------------------------
+
   if (descriptionElement) {
 
-    const description =
-      Array.isArray(data.description)
-        ? data.description
-        : [];
+    let description = [];
+
+    if (Array.isArray(data.description)) {
+
+      description =
+        data.description;
+
+    } else if (
+      typeof data.description === "string" &&
+      data.description.trim() !== ""
+    ) {
+
+      description = [
+        data.description
+      ];
+
+    }
 
     descriptionElement.innerHTML =
       description
         .map(function (paragraph) {
-          return `<p>${paragraph}</p>`;
+
+          return `
+            <p>${paragraph}</p>
+          `;
+
         })
         .join("");
 
