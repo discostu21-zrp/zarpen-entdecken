@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Zarpen entdecken</title>
+
+  <!-- Leaflet -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  >
+
+  <!-- Eigene Gestaltung -->
+  <link
+    rel="stylesheet"
+    href="css/style.css"
+  >
+</head>
+
+<body>
+
+  <div class="tour-page">
+
+    <section class="tour-info">
+
+      <div class="tour-heading">
+
+        <div class="tour-heading-text">
+
+          <div class="tour-label">
+            Zarpen entdecken
+          </div>
+
+         <section class="tour-info">
+
+  <div
+    id="tour-hero"
+    class="tour-hero"
+  >
+
+    <img
+      id="tour-hero-image"
+      class="tour-hero-image"
+      src=""
+      alt=""
+    >
+
+    <div class="tour-hero-overlay">
+
+      <div class="tour-label">
+        Zarpen entdecken
+      </div>
+
+      <h1 id="tour-title">
+        Tour wird geladen …
+      </h1>
+
+      <p id="tour-subtitle"></p>
+
+    </div>
+
+  </div>
+
+  <div
+    id="tour-facts"
+    class="tour-facts"
+  ></div>
+
+  <div class="tour-description-wrapper">
+
+    <h2 class="tour-description-title">
+      Über diese Tour
+    </h2>
+
+    <div
+      id="tour-description"
+      class="tour-description"
+    ></div>
+
+  </div>
+
+</section>
+
+    <section class="tour-map-section">
+
+      <div id="map"></div>
+
+      <div id="loading-message">
+        Tour wird geladen …
+      </div>
+
+      <div id="error-message" hidden>
+        Die Tour konnte nicht geladen werden.
+      </div>
+
+    </section>
+
+  </div>
+
+  <!-- Leaflet -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  ></script>
+
+  <!-- Leaflet-GPX -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"
+  ></script>
+
+  <!-- Neue gemeinsame Kartenlogik -->
+  <script src="js/map-v2.js"></script>
+
+  <!-- Lädt die gewünschte Tour -->
+  <script src="js/loadTour.js"></script>
+
+</body>
+
+</html>
