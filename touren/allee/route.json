@@ -44,6 +44,8 @@
       "type": "service",
       "lat": 53.871213,
       "lng": 10.518067,
+      "offsetLat": 53.868850,
+"offsetLng": 10.511900,
       "image": "bilder/wegweiser.jpg",
       "text": "Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen."
     },
@@ -52,6 +54,8 @@
       "type": "service",
       "lat": 53.871170,
       "lng": 10.518207,
+      "offsetLat": 53.870250,
+"offsetLng": 10.514600,
       "text": "Schaukasten der SPD Zarpen.",
       "link": "https://spd-zarpen.de/content/index.php"
     },
@@ -123,6 +127,8 @@
       "type": "rast",
       "lat": 53.866556,
       "lng": 10.522814,
+      "offsetLat": 53.867950,
+"offsetLng": 10.509650,
       "text": "Sitzmöglichkeit mit Blick auf die Felder."
     },
     {
@@ -145,7 +151,7 @@
       "type": "natur",
       "lat": 53.867958,
       "lng": 10.528204,
-      "image": "bilder/strassehorst2.jpg",
+      "image": "bilder/strassehorst2.jpg"
       "text": "Blick über Felder und Wiesen auf das Dorf-Panorama."
     }
   ]
