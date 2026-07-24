@@ -2,21 +2,58 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zarpen entdecken – Redder & Hundewiese</title>
 
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-  <link rel="stylesheet" href="css/style.css">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Zarpen entdecken</title>
+
+  <link rel="stylesheet" href="css/touren.css">
 </head>
 
 <body>
-  <div id="map"></div>
 
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-gpx/1.7.0/gpx.min.js"></script>
-  <script>
-  window.ZARPEN_MODE = "detail";
-</script>
-  <script src="js/map.js"></script>
+  <header class="hero">
+    <div class="hero-overlay">
+      <p class="hero-label">Zarpen entdecken</p>
+
+      <h1>Die schönsten Wege rund um unser Dorf</h1>
+
+      <p class="hero-text">
+        Entdecke Zarpen zu Fuß oder mit dem Fahrrad.
+        Interaktive Touren mit Bildern, Geschichten
+        und besonderen Orten.
+      </p>
+    </div>
+  </header>
+
+  <main class="page-content">
+
+    <section class="intro">
+      <h2>Unsere Touren</h2>
+
+      <p>
+        Wähle eine Tour aus und entdecke die Strecke,
+        besondere Orte und interessante Geschichten
+        auf der interaktiven Karte.
+      </p>
+    </section>
+
+    <section
+      id="tour-list"
+      class="tour-list"
+      aria-live="polite"
+    >
+      <p class="loading-message">
+        Touren werden geladen …
+      </p>
+    </section>
+
+  </main>
+
+  <script src="js/touren.js"></script>
+
 </body>
 </html>
