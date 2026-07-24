@@ -1,1 +1,171 @@
-{}
+{
+  "id": "zarpenerwohld",
+  "title": "Struckteich & Zarpener Wohld",
+  "subtitle": "Abwechslungsreiche Wanderung durch das Landschaftsschutzgebiet, den Zarpener Wohld und mit weitem Blick bis nach Lübeck.",
+  "heroImage": "bilder/herozarpenerwohld.jpg",
+
+  "gpx": "gpx/zarpenerwohld.gpx",
+
+  "start": {
+    "lat": 53.871249,
+    "lng": 10.517969,
+    "zoom": 14
+  },
+
+  "facts": {
+    "distance": "6,55 km",
+    "duration": "ca. 1 Std. 45 Min.",
+    "speed": "ca. 3,7 km/h",
+    "difficulty": "mittel",
+    "elevation": "70 m hoch / 70 m runter",
+    "surface": "Asphalt, unbefestigter Waldweg und begrünter Feldweg"
+  },
+
+  "description": [
+    "Diese abwechslungsreiche Rundwanderung führt vom Zarpener Marktplatz über den Eichberg zum Struckteich. Anschließend verläuft die Strecke durch das Landschaftsschutzgebiet und weiter in den Zarpener Wohld.",
+    "Im Wald wartet eine längere Steigung. Nach dem Verlassen des Waldes eröffnet sich ein weiter Blick bis zur Hansestadt Lübeck mit ihren sieben Türmen. Über Feldwege und ruhige Straßen geht es anschließend zurück nach Zarpen.",
+    "Achtung: Ein etwa 400 Meter langer Abschnitt verläuft entlang der Rehhorster Straße ohne Gehweg."
+  ],
+
+  "overviewMarkers": [
+    "Marktplatz Zarpen",
+    "Struckteich",
+    "Zarpener Wohld"
+  ],
+
+  "places": [
+    {
+      "name": "Marktplatz Zarpen",
+      "type": "start",
+      "lat": 53.871249,
+      "lng": 10.517969,
+      "text": "Start- und Zielpunkt der Tour. Von hier hat man einen schönen Blick auf die Dorfkirche."
+    },
+    {
+      "name": "Wegweiser-Schild",
+      "type": "service",
+      "lat": 53.871213,
+      "lng": 10.518067,
+      "offsetLat": 53.871490,
+      "offsetLng": 10.517860,
+      "image": "bilder/wegweiser.jpg",
+      "text": "Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen."
+    },
+    {
+      "name": "Schaukasten SPD",
+      "type": "service",
+      "lat": 53.871170,
+      "lng": 10.518207,
+      "offsetLat": 53.871230,
+      "offsetLng": 10.518520,
+      "text": "Schaukasten des SPD-Ortsvereins Zarpen.",
+      "link": "https://spd-zarpen.de/content/index.php"
+    },
+    {
+      "name": "Kirche Zarpen",
+      "type": "sehenswuerdigkeit",
+      "lat": 53.870548,
+      "lng": 10.517290,
+      "image": "bilder/kirche-zarpen.jpg",
+      "text": "Die über 800 Jahre alte Dorfkirche prägt den Ortskern.",
+      "story": "Die Zarpener Kirche wurde bereits 1221 gegründet und zählt heute zu den ältesten Bauwerken im Kreis Stormarn. Der backsteingotische Bau entstand im 13. Jahrhundert und steht unter Denkmalschutz.",
+      "link": "https://www.kirche-ps.de/zarpen/"
+    },
+    {
+      "name": "Freiwillige Feuerwehr Zarpen",
+      "type": "oeffentliche-einrichtung",
+      "lat": 53.870127,
+      "lng": 10.514563,
+      "text": "Gerätehaus der Freiwilligen Feuerwehr Zarpen."
+    },
+    {
+      "name": "Struckteich-Aussicht",
+      "type": "natur",
+      "lat": 53.869798,
+      "lng": 10.505057,
+      "image": "bilder/struckaussicht1.jpg",
+      "text": "Schöne Aussicht über den gesamten Struckteich."
+    },
+    {
+      "name": "Achtung: Unebener Weg",
+      "type": "warnung",
+      "lat": 53.868218,
+      "lng": 10.502569,
+      "text": "Teilweise unebener Weg. Bitte vorsichtig gehen."
+    },
+    {
+      "name": "Achtung: Straßenabschnitt",
+      "type": "warnung",
+      "lat": 53.867037,
+      "lng": 10.500923,
+      "text": "Die Route verläuft hier etwa 400 Meter entlang der Straße ohne Gehweg. Bitte besonders auf den Verkehr achten."
+    },
+    {
+      "name": "Parkplatz & Aussicht",
+      "type": "natur",
+      "lat": 53.867684,
+      "lng": 10.496420,
+      "text": "Kleiner Sandparkplatz mit schönem Blick über Henken- und Struckteich."
+    },
+    {
+      "name": "Zarpener Wohld",
+      "type": "natur",
+      "lat": 53.871724,
+      "lng": 10.494251,
+      "text": "Ruhiger Waldabschnitt mitten im Zarpener Wohld."
+    },
+    {
+      "name": "Aussicht Richtung Lübeck",
+      "type": "natur",
+      "lat": 53.882586,
+      "lng": 10.492953,
+      "text": "Bei guter Sicht reicht der Blick über die Felder bis zur Hansestadt Lübeck mit ihren sieben Türmen."
+    },
+    {
+      "name": "Platz des Biikebrennens",
+      "type": "natur",
+      "lat": 53.880556,
+      "lng": 10.511641,
+      "text": "Hier veranstaltet der Bürgerverein Zarpen traditionell im Februar das Biikebrennen."
+    },
+    {
+      "name": "Spielplatz Zarpen",
+      "type": "spielplatz",
+      "lat": 53.874076,
+      "lng": 10.515300,
+      "image": "bilder/spielplatz1.jpg",
+      "text": "Spielplatz mit verschiedenen Geräten und Sitzgelegenheiten."
+    },
+    {
+      "name": "Schaukasten TSV Zarpen",
+      "type": "service",
+      "lat": 53.873916,
+      "lng": 10.515079,
+      "text": "Schaukasten des TSV Zarpen.",
+      "link": "https://www.tsv-zarpen.de/"
+    },
+    {
+      "name": "Otto-Dechert-Stadion",
+      "type": "sehenswuerdigkeit",
+      "lat": 53.874128,
+      "lng": 10.515849,
+      "image": "bilder/stadion1.jpg",
+      "text": "Fußballstadion des TSV Zarpen mit der Kult-Holztribüne."
+    },
+    {
+      "name": "Dörfergemeinschaftsschule Zarpen",
+      "type": "oeffentliche-einrichtung",
+      "lat": 53.874488,
+      "lng": 10.513890,
+      "text": "Die Dörfergemeinschaftsschule Zarpen."
+    },
+    {
+      "name": "Schaukasten SoVD",
+      "type": "service",
+      "lat": 53.871638,
+      "lng": 10.517954,
+      "text": "Schaukasten des Sozialverbandes Zarpen.",
+      "link": "https://www.sovd-stormarn.de/tag/zarpen/"
+    }
+  ]
+}
