@@ -1,1 +1,196 @@
-{}
+{
+  "id": "streuobstwiese",
+  "title": "Struckteich & Streuobstwiese",
+  "subtitle": "Eine abwechslungsreiche Runde zum Struckteich und über die Streuobstwiese des Bürgervereins.",
+  "heroImage": "bilder/herostreuobstwiese.jpg",
+
+  "gpx": "gpx/streuobstwiese.gpx",
+
+  "start": {
+    "lat": 53.871249,
+    "lng": 10.517969,
+    "zoom": 15
+  },
+
+  "facts": {
+    "distance": "2,05 km",
+    "duration": "ca. 33 Min.",
+    "speed": "ca. 3,7 km/h",
+    "difficulty": "leicht",
+    "elevation": "20 m hoch / 20 m runter",
+    "surface": "Asphalt, unbefestigter Waldweg und begrünter Feldweg"
+  },
+
+  "description": [
+    "Diese einfache Rundtour führt vom Zarpener Marktplatz über den Pöhlser Weg zum Struckteich und zur Streuobstwiese des Bürgervereins. Unterwegs erwarten uns der Spielplatz, das Otto-Dechert-Stadion, schöne Ausblicke über den Struckteich und mehrere ruhige Sitzgelegenheiten.",
+    "Die Wege sind überwiegend leicht begehbar. Ein Abschnitt führt über einen unbefestigten Weg am Struckteich entlang. Besondere Wanderkenntnisse sind für diese Tour nicht erforderlich.",
+    "Ein Höhepunkt ist die Streuobstwiese des Bürgervereins mit Obstbäumen, Insektenhotels, einer Benjeshecke und schattigen Rastplätzen. Jedes Jahr im Oktober findet hier das Obstwiesenfest statt."
+  ],
+
+  "overviewMarkers": [
+    "Marktplatz Zarpen",
+    "Struckteich",
+    "Streuobstwiese"
+  ],
+
+  "places": [
+    {
+      "name": "Marktplatz Zarpen",
+      "type": "start",
+      "lat": 53.871249,
+      "lng": 10.517969,
+      "text": "Start- und Zielpunkt der Tour. Von hier hat man einen schönen Blick auf die Dorfkirche."
+    },
+    {
+      "name": "Wegweiser-Schild",
+      "type": "service",
+      "lat": 53.871213,
+      "lng": 10.518067,
+      "offsetLat": 53.871490,
+      "offsetLng": 10.517860,
+      "image": "bilder/wegweiser.jpg",
+      "text": "Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen."
+    },
+    {
+      "name": "Schaukasten SPD",
+      "type": "service",
+      "lat": 53.871170,
+      "lng": 10.518207,
+      "offsetLat": 53.871230,
+      "offsetLng": 10.518520,
+      "text": "Schaukasten des SPD-Ortsvereins Zarpen.",
+      "link": "https://spd-zarpen.de/content/index.php"
+    },
+    {
+      "name": "Kirche Zarpen",
+      "type": "sehenswuerdigkeit",
+      "lat": 53.870548,
+      "lng": 10.517290,
+      "image": "bilder/kirche-zarpen.jpg",
+      "text": "Die über 800 Jahre alte Dorfkirche prägt den Ortskern.",
+      "story": "Die Zarpener Kirche wurde bereits 1221 gegründet und zählt heute zu den ältesten Bauwerken im Kreis Stormarn. Der backsteingotische Bau entstand im 13. Jahrhundert und steht unter Denkmalschutz. Im Inneren befinden sich unter anderem eine Kanzel aus dem frühen 17. Jahrhundert sowie eine Glocke aus dem Jahr 1464, die bis heute erhalten ist.",
+      "link": "https://www.kirche-ps.de/zarpen/"
+    },
+    {
+      "name": "Kindergarten Arche Noah",
+      "type": "oeffentliche-einrichtung",
+      "lat": 53.870957,
+      "lng": 10.516943,
+      "text": "Evangelische Kindertagesstätte Arche Noah."
+    },
+    {
+      "name": "Kindergarten Villa Kunterbunt",
+      "type": "oeffentliche-einrichtung",
+      "lat": 53.871673,
+      "lng": 10.518307,
+      "text": "Kindertagesstätte Villa Kunterbunt des DRK Stormarn."
+    },
+    {
+      "name": "Freiwillige Feuerwehr Zarpen",
+      "type": "oeffentliche-einrichtung",
+      "lat": 53.870127,
+      "lng": 10.514563,
+      "text": "Gerätehaus der Freiwilligen Feuerwehr Zarpen."
+    },
+    {
+      "name": "Bücher-Telefonzelle",
+      "type": "service",
+      "lat": 53.871655,
+      "lng": 10.518281,
+      "text": "Öffentliche Bücher-Tauschbörse zum Tauschen und Ausleihen von Büchern."
+    },
+    {
+      "name": "Schaukasten SoVD",
+      "type": "service",
+      "lat": 53.871638,
+      "lng": 10.517954,
+      "text": "Schaukasten des Sozialverbandes Zarpen.",
+      "link": "https://www.sovd-stormarn.de/tag/zarpen/"
+    },
+    {
+      "name": "Spielplatz Zarpen",
+      "type": "spielplatz",
+      "lat": 53.874076,
+      "lng": 10.515300,
+      "image": "bilder/spielplatz1.jpg",
+      "text": "Spielplatz mit verschiedenen Geräten und mehreren Sitzgelegenheiten."
+    },
+    {
+      "name": "Schaukasten TSV Zarpen",
+      "type": "service",
+      "lat": 53.873916,
+      "lng": 10.515079,
+      "text": "Schaukasten des TSV Zarpen.",
+      "link": "https://www.tsv-zarpen.de/"
+    },
+    {
+      "name": "Dörfergemeinschaftsschule Zarpen",
+      "type": "oeffentliche-einrichtung",
+      "lat": 53.874488,
+      "lng": 10.513890,
+      "text": "Die Dörfergemeinschaftsschule Zarpen ist die örtliche Grundschule."
+    },
+    {
+      "name": "Otto-Dechert-Stadion",
+      "type": "sehenswuerdigkeit",
+      "lat": 53.874128,
+      "lng": 10.515849,
+      "image": "bilder/stadion1.jpg",
+      "text": "Fußballstadion des TSV Zarpen mit der Kult-Holztribüne, der sogenannten Ballerbude."
+    },
+    {
+      "name": "Mülleimer & Hundekotbeutel-Station",
+      "type": "hunde-service",
+      "lat": 53.874032,
+      "lng": 10.511894,
+      "text": "Mülleimer und Hundekotbeutel-Station an der Straße hinunter zum Struckteich."
+    },
+    {
+      "name": "Blick auf den Struckteich",
+      "type": "rast",
+      "lat": 53.874067,
+      "lng": 10.511542,
+      "image": "bilder/blickteich1.jpg",
+      "text": "Sitzmöglichkeit mit einem schönen Blick hinunter auf den Struckteich und seine Tierwelt."
+    },
+    {
+      "name": "Bienenstöcke",
+      "type": "natur",
+      "lat": 53.873856,
+      "lng": 10.511691,
+      "image": "bilder/biene1.jpg",
+      "text": "Bunte Bienenstöcke in der Nähe des Struckteichs."
+    },
+    {
+      "name": "Streuobstwiese",
+      "type": "natur",
+      "lat": 53.871929,
+      "lng": 10.511168,
+      "image": "bilder/obstwiese1.jpg",
+      "text": "Ein Herzensprojekt des Bürgervereins mit Obstbäumen, Insektenhotels, Sitzgelegenheiten und einer Benjeshecke.",
+      "story": "Die Streuobstwiese wird vom Bürgerverein Zarpen gepflegt. Unter den Obstbäumen finden Besucher schattige Plätze und verschiedene Lebensräume für Insekten, Vögel und Kleintiere. Jedes Jahr im Oktober findet hier das Obstwiesenfest statt."
+    },
+    {
+      "name": "Sitzbank unter den Obstbäumen",
+      "type": "rast",
+      "lat": 53.872218,
+      "lng": 10.511302,
+      "image": "bilder/sitzbankobst.jpg",
+      "text": "Schattige Sitzbank unter den Obstbäumen der Streuobstwiese."
+    },
+    {
+      "name": "Aussicht über den Struckteich",
+      "type": "rast",
+      "lat": 53.872264,
+      "lng": 10.511788,
+      "text": "Sitzbank mit einem wunderschönen Ausblick über den Struckteich."
+    },
+    {
+      "name": "Storchennest am Löschteich",
+      "type": "natur",
+      "lat": 53.870473,
+      "lng": 10.514950,
+      "text": "Storchennest am Löschteich. Mit etwas Glück lassen sich hier Störche beobachten."
+    }
+  ]
+}
