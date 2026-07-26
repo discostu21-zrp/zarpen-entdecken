@@ -12,13 +12,13 @@
     "zoom": 15
   },
 
-  "facts": {
-    "distance": "2,92 km",
-    "duration": "ca. 45 Min.",
-    "difficulty": "leicht",
-    "elevation": "10 m / 10m",
-    "surface": "Asphalt und begrünter Feldweg"
-  },
+"facts": {
+  "distance": "2,92 km",
+  "duration": "ca. 45 Min.",
+  "difficulty": "leicht",
+  "elevation": "10 m / 10 m",
+  "surface": "Asphalt und begrünter Feldweg"
+},
 
   "description": [
     "Eine abwechslungsreiche Dorfrunde mit weitem Blick über die Felder und der beliebten Hundespielwiese. Ideal für den täglichen Spaziergang oder eine entspannte Runde mit dem Vierbeiner."
