@@ -1,13 +1,16 @@
 :root {
-  --green: #16833a;
-  --green-dark: #0f612b;
-  --green-light: #eaf5ed;
-  --text: #20251f;
-  --muted: #667066;
-  --background: #f5f3ee;
-  --card: #ffffff;
-  --border: #dfe5dd;
-  --shadow: 0 12px 30px rgba(31, 50, 35, 0.12);
+  --green: #064E3B;
+  --green-dark: #043B2D;
+  --green-light: #E7F3EF;
+
+  --text: #1F2937;
+  --muted: #5F6B67;
+
+  --background: #F8E7C9;
+  --card: #FFFDF9;
+
+  --border: #E6D8BC;
+  --shadow: 0 12px 30px rgba(6,78,59,.12);
   --radius: 18px;
 }
 
@@ -52,6 +55,9 @@ body {
   border-radius: var(--radius);
   background: rgba(18, 36, 22, 0.42);
   backdrop-filter: blur(2px);
+
+  border: 1px solid rgba(248, 231, 201, 0.28);
+  box-shadow: 0 18px 45px rgba(6, 78, 59, 0.35);
 }
 
 .hero-label {
@@ -83,14 +89,19 @@ body {
 }
 
 .intro {
-  max-width: 720px;
-  margin: 0 auto 45px;
+  max-width: 900px;
+  margin: 0 auto 55px;
+  padding: 40px;
   text-align: center;
+
+  background: #F8E7C9;
+  border-radius: var(--radius);
 }
 
 .intro h2 {
   margin: 0 0 12px;
   font-size: clamp(2rem, 4vw, 3rem);
+  color: #064E3B;
 }
 
 .intro p {
@@ -172,10 +183,13 @@ body {
   align-items: center;
   min-height: 34px;
   padding: 6px 12px;
-  color: var(--green-dark);
+
+  color: #064E3B;
   font-size: 0.9rem;
   font-weight: 700;
-  background: var(--green-light);
+
+  background: #E7F3EF;
+  border: 1px solid #C8DED6;
   border-radius: 999px;
 }
 
@@ -202,7 +216,7 @@ body {
   color: #ffffff;
   font-weight: 700;
   text-decoration: none;
-  background: var(--green);
+  background: #064E3B;
   border-radius: 999px;
   transition:
     background 160ms ease,
@@ -211,7 +225,7 @@ body {
 
 .tour-card-button:hover,
 .tour-card-button:focus-visible {
-  background: var(--green-dark);
+  background: #043B2D;
   transform: translateX(2px);
 }
 
