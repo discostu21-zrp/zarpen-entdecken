@@ -1,7 +1,7 @@
 {
   "id": "allee",
   "title": "Durch die Allee",
-  "subtitle": "Abwechslungsreiche Runde durch eine schöne Lindenallee mit Blick auf das Dorf.",
+  "subtitle": "Entspannte Runde durch eine schöne Lindenallee mit Blick auf das Dorf.",
   "heroImage": "bilder/heroallee1.jpg",
 
   "gpx": "gpx/allee.gpx",
@@ -17,12 +17,12 @@
     "duration": "ca. 35 Min.",
     "speed": "3,9 km/h",
     "difficulty": "leicht",
-    "elevation": "10 m hoch / 10 m runter",
+    "elevation": "10 m / 10 m",
     "surface": "Asphalt und begrünter Feldweg"
   },
 
   "description": [
-    "Diese abwechslungsreiche Runde führt etwas aus dem Dorf hinaus. Vorbei an Weidetieren, einem regionalen Hofladen und einer idyllischen Allee erleben wir Zarpen von seiner ländlichen Seite.",
+    "Diese schöne Runde führt etwas aus dem Dorf hinaus. Vorbei an Weidetieren, einem regionalen Hofladen und einer idyllischen Allee erleben wir Zarpen von seiner ländlichen Seite.",
     "Unterwegs eröffnen sich immer wieder schöne Ausblicke auf das Dorf und die umliegenden Felder. Eine ideale Tour für alle, die Ruhe, Natur und Landschaft genießen möchten."
   ],
 
