@@ -1,7 +1,7 @@
 {
   "id": "zarpenerwohld",
   "title": "Struckteich & Zarpener Wohld",
-  "subtitle": "Abwechslungsreiche Wanderung durch das Landschaftsschutzgebiet, den Zarpener Wohld und mit weitem Blick bis nach Lübeck.",
+  "subtitle": "Längere Wanderung durch das Landschaftsschutzgebiet, den Zarpener Wohld und mit weitem Blick bis nach Lübeck.",
   "heroImage": "bilder/herowald.jpg",
 
   "gpx": "gpx/zarpenerwohld.gpx",
@@ -17,13 +17,13 @@
     "duration": "ca. 1 Std. 45 Min.",
     "speed": "ca. 3,7 km/h",
     "difficulty": "mittel",
-    "elevation": "70 m hoch / 70 m runter",
+    "elevation": "70 m / 70 m",
     "surface": "Asphalt, unbefestigter Waldweg und begrünter Feldweg"
   },
 
   "description": [
-    "Diese abwechslungsreiche Rundwanderung führt vom Zarpener Marktplatz über den Eichberg zum Struckteich. Anschließend verläuft die Strecke durch das Landschaftsschutzgebiet und weiter in den Zarpener Wohld.",
-    "Im Wald wartet eine längere Steigung. Nach dem Verlassen des Waldes eröffnet sich ein weiter Blick bis zur Hansestadt Lübeck mit ihren sieben Türmen. Über Feldwege und ruhige Straßen geht es anschließend zurück nach Zarpen.",
+    "Diese Rundwanderung führt vom Zarpener Marktplatz über den Eichberg zum Struckteich. Anschließend verläuft die Strecke durch das Landschaftsschutzgebiet und weiter in den Zarpener Wohld.",
+    "Im Wald wartet eine längere Steigung. Nach dem Verlassen des Waldes eröffnet sich ein weiter Blick bis zur Hansestadt Lübeck mit ihren sieben Türmen. Über ruhige Straßen geht es anschließend zurück nach Zarpen.",
     "Achtung: Ein etwa 400 Meter langer Abschnitt verläuft entlang der Rehhorster Straße ohne Gehweg."
   ],
 
