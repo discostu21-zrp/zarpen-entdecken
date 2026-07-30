@@ -302,3 +302,72 @@ body {
     width: 100%;
   }
 }
+/* Hero-Buttons */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 48px;
+  padding: 12px 22px;
+
+  color: #ffffff;
+  font-weight: 700;
+  text-decoration: none;
+
+  background: var(--green);
+  border: 2px solid var(--green);
+  border-radius: 999px;
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+  background: var(--green-dark);
+  border-color: var(--green-dark);
+  transform: translateY(-2px);
+}
+
+.hero-button-secondary {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-button-secondary:hover,
+.hero-button-secondary:focus-visible {
+  color: var(--green-dark);
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.hero-button:focus-visible {
+  outline: 3px solid rgba(248, 231, 201, 0.6);
+  outline-offset: 3px;
+}
+
+@media (max-width: 560px) {
+  .hero-buttons {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+}
