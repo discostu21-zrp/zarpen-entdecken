@@ -33,12 +33,13 @@ body {
 /* Hero-Bereich */
 
 .hero {
-  min-height: 390px;
+  min-height: 320px;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 50px 24px;
   position: relative;
+
   background:
     linear-gradient(
       rgba(20, 40, 22, 0.58),
@@ -70,7 +71,7 @@ body {
 
 .hero h1 {
   margin: 0;
-  font-size: clamp(2.3rem, 5vw, 4.5rem);
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
   line-height: 1.05;
 }
 
@@ -249,7 +250,7 @@ body {
 
 @media (max-width: 850px) {
   .hero {
-    min-height: 330px;
+    min-height: 270px;
   }
 
   .hero-overlay {
@@ -267,11 +268,10 @@ body {
 
 /* Smartphone */
 
-@media (max-width: 560px) {
-  .hero {
-    min-height: 290px;
-    padding: 28px 16px;
-  }
+.hero {
+  min-height: auto;
+  padding: 28px 16px;
+}
 
   .hero-overlay {
     padding: 28px 20px;
