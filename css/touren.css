@@ -376,7 +376,7 @@ body {
 -------------------------- */
 
 .dorfkarte-teaser {
-  margin: 0 0 55px;
+  margin: 0 0 40px;
 }
 
 .dorfkarte-teaser-content {
@@ -385,7 +385,7 @@ body {
   align-items: center;
   gap: 24px;
 
-  padding: 30px 34px;
+  padding: 24px 30px;
 
   color: #ffffff;
   background:
