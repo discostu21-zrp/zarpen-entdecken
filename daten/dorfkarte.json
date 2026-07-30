@@ -1,0 +1,303 @@
+{
+  "map": {
+    "center": {
+      "lat": 53.870900,
+      "lng": 10.516000
+    },
+    "zoom": 14
+  },
+
+  "categories": [
+    {
+      "id": "gemeinde",
+      "label": "Gemeinde"
+    },
+    {
+      "id": "information",
+      "label": "Information"
+    },
+    {
+      "id": "sehenswuerdigkeit",
+      "label": "Sehenswürdigkeiten"
+    },
+    {
+      "id": "oeffentlich",
+      "label": "Öffentliche Einrichtungen"
+    },
+    {
+      "id": "freizeit",
+      "label": "Freizeit"
+    },
+    {
+      "id": "gesundheit",
+      "label": "Gesundheit"
+    },
+    {
+      "id": "entsorgung",
+      "label": "Entsorgung"
+    },
+    {
+      "id": "gastronomie",
+      "label": "Gastronomie"
+    },
+    {
+      "id": "einkaufen",
+      "label": "Einkaufen"
+    },
+    {
+      "id": "briefkasten",
+      "label": "Briefkasten"
+    }
+  ],
+
+  "places": [
+    {
+      "name": "Marktplatz Zarpen",
+      "category": "gemeinde",
+      "lat": 53.871249,
+      "lng": 10.517969,
+      "description": "Ortsmitte im Schatten unserer schönen Dorfkirche."
+    },
+    {
+      "name": "Kirche Zarpen",
+      "category": "sehenswuerdigkeit",
+      "lat": 53.870548,
+      "lng": 10.517290,
+      "description": "Über 800 Jahre alte Dorfkirche im Ortskern.",
+      "image": "bilder/kirche-zarpen.jpg",
+      "link": "https://www.kirche-ps.de/zarpen/",
+      "openingHours": "Freitag bis Sonntag 10:00–18:00 Uhr, Montag bis Donnerstag 10:00–16:00 Uhr"
+    },
+    {
+      "name": "Gemeindehaus Zarpen",
+      "category": "gemeinde",
+      "lat": 53.8710407899437,
+      "lng": 10.517060244947743,
+      "address": "Teichstraße 6, 23619 Zarpen",
+      "link": "https://www.kirche-ps.de/zarpen/",
+      "phone": "+49 4533 8384",
+      "openingHours": "Dienstag, Mittwoch und Freitag 10:00–12:00 Uhr, Donnerstag 15:00–17:00 Uhr"
+    },
+    {
+      "name": "Containerstandort Lübecker Straße",
+      "category": "entsorgung",
+      "lat": 53.86948088858643,
+      "lng": 10.520915389630028,
+      "description": "Entsorgung von Glasverpackungen, Altpapier und Altkleidern.",
+      "notice": "Bitte die zulässigen Einwurfzeiten beachten."
+    },
+    {
+      "name": "Containerstandort Pöhlser Weg",
+      "category": "entsorgung",
+      "lat": 53.875704143967674,
+      "lng": 10.51375462801508,
+      "description": "Entsorgung von Glasverpackungen, Altpapier und Altkleidern.",
+      "address": "Pöhlser Weg, 23619 Zarpen, an der Schule",
+      "image": "bilder/container2.jpg",
+      "notice": "Bitte die zulässigen Einwurfzeiten beachten."
+    },
+    {
+      "name": "Friedhof Zarpen",
+      "category": "gemeinde",
+      "lat": 53.87246678039572,
+      "lng": 10.518455648883839,
+      "description": "Friedhof der Gemeinde Zarpen.",
+      "address": "Hauptstraße 66, 23619 Zarpen"
+    },
+    {
+      "name": "Freiwillige Feuerwehr Zarpen",
+      "category": "gemeinde",
+      "lat": 53.87018319166851,
+      "lng": 10.514879753296304,
+      "description": "Gerätehaus der Freiwilligen Feuerwehr Zarpen.",
+      "address": "Teichstraße 18a, 23619 Zarpen",
+      "link": "http://ffzarpen.de/",
+      "phone": "04533 3191",
+      "notice": "Notruf: 112"
+    },
+    {
+      "name": "Dörfergemeinschaftsschule am Struckteich",
+      "category": "oeffentlich",
+      "lat": 53.874488,
+      "lng": 10.513890,
+      "description": "Grundschule in Zarpen.",
+      "address": "Pöhlser Weg 18, 23619 Zarpen",
+      "image": "bilder/dgs1.jpg",
+      "link": "http://schule.zarpen.de/",
+      "phone": "04533 1445"
+    },
+    {
+      "name": "Kindergarten Arche Noah",
+      "category": "oeffentlich",
+      "lat": 53.870957,
+      "lng": 10.516943,
+      "description": "Evangelische Kindertagesstätte Arche Noah.",
+      "address": "Teichstraße 8, 23619 Zarpen",
+      "phone": "04533 1635"
+    },
+    {
+      "name": "Kindergarten Villa Kunterbunt",
+      "category": "oeffentlich",
+      "lat": 53.871673,
+      "lng": 10.518307,
+      "description": "Kindertagesstätte Villa Kunterbunt des DRK Stormarn.",
+      "address": "Hauptstraße 62, 23619 Zarpen",
+      "link": "http://www.drk-stormarn.de/",
+      "phone": "04533 206858"
+    },
+    {
+      "name": "Otto-Dechert-Stadion",
+      "category": "freizeit",
+      "lat": 53.874128,
+      "lng": 10.515849,
+      "description": "Fußballstadion des TSV Zarpen e. V. mit der Kult-Holztribüne, der Ballerbude.",
+      "address": "Pöhlser Weg, 23619 Zarpen",
+      "image": "bilder/stadion1.jpg",
+      "link": "https://tsvzarpen.de/"
+    },
+    {
+      "name": "Bücher-Telefonzelle",
+      "category": "information",
+      "lat": 53.871655,
+      "lng": 10.518281,
+      "description": "Bücher tauschen und ausleihen in der Bücher-Telefonzelle der FKW Zarpen."
+    },
+    {
+      "name": "Wegweiser-Schild",
+      "category": "information",
+      "lat": 53.871213,
+      "lng": 10.518067,
+      "description": "Schilder mit verschiedenen Städten weltweit und ihrer Entfernung zu Zarpen.",
+      "image": "bilder/wegweiser.jpg"
+    },
+    {
+      "name": "Schaukasten SPD Zarpen",
+      "category": "information",
+      "lat": 53.871170,
+      "lng": 10.518207,
+      "description": "Schaukasten des SPD-Ortsvereins Zarpen."
+    },
+    {
+      "name": "Schaukasten SoVD am Marktplatz",
+      "category": "information",
+      "lat": 53.871638,
+      "lng": 10.517954,
+      "description": "Schaukasten des Sozialverbandes Zarpen."
+    },
+    {
+      "name": "Schaukasten SoVD an der Lübecker Straße",
+      "category": "information",
+      "lat": 53.868087,
+      "lng": 10.520323,
+      "description": "Schaukasten des Sozialverbandes Zarpen."
+    },
+    {
+      "name": "Schaukasten TSV Zarpen",
+      "category": "information",
+      "lat": 53.873916,
+      "lng": 10.515079,
+      "description": "Schaukasten des TSV Zarpen."
+    },
+    {
+      "name": "Spielplatz Pöhlser Weg",
+      "category": "freizeit",
+      "lat": 53.874076,
+      "lng": 10.515300,
+      "description": "Spielplatz mit verschiedenen Geräten und Sitzgelegenheiten.",
+      "address": "Pöhlser Weg, 23619 Zarpen",
+      "image": "bilder/spielplatz1.jpg"
+    },
+    {
+      "name": "Zahnarztpraxis",
+      "category": "gesundheit",
+      "lat": 53.87443473033449,
+      "lng": 10.519259929347093,
+      "description": "Kleine Zahnarztpraxis im Ort.",
+      "address": "Pöhlser Weg, 23619 Zarpen",
+      "openingHours": "Montag, Dienstag und Donnerstag 08:00–12:00 Uhr und 15:00–18:00 Uhr, Mittwoch und Freitag 08:00–12:00 Uhr"
+    },
+    {
+      "name": "Landgasthof Zum Eckkrug",
+      "category": "gastronomie",
+      "lat": 53.87021778824837,
+      "lng": 10.518269720935734,
+      "description": "Hotel und Landgasthof mit Ferienappartements und Monteurzimmern.",
+      "address": "Hauptstraße 50, 23619 Zarpen",
+      "link": "http://www.zum-eckkrug.de/",
+      "phone": "04533 8744"
+    },
+    {
+      "name": "Hundespielwiese",
+      "category": "freizeit",
+      "lat": 53.864248,
+      "lng": 10.513769,
+      "description": "Hundespielwiese im Grünen zwischen Redder und Feldern."
+    },
+    {
+      "name": "Gartenbau und Baumschule H.-J. Meyer",
+      "category": "einkaufen",
+      "lat": 53.86734702279572,
+      "lng": 10.508986858525528,
+      "description": "Gärtnerei, Gartenbau und Baumschule.",
+      "address": "Hauptstraße 10, 23619 Zarpen",
+      "link": "https://gartenbauer.io/zarpen/28485-h-j-meyer-%E2%80%93-gaertnerei-gartenbau--baumschule",
+      "phone": "04533 2395",
+      "openingHours": "Montag bis Samstag 08:00–12:00 Uhr und 14:00–18:00 Uhr"
+    },
+    {
+      "name": "Briefkasten der Deutschen Post",
+      "category": "briefkasten",
+      "lat": 53.871330473689476,
+      "lng": 10.518033023477281,
+      "description": "Öffentlicher Briefkasten der Deutschen Post.",
+      "address": "Am Marktplatz, 23619 Zarpen"
+    },
+    {
+      "name": "Hofladen Rath",
+      "category": "einkaufen",
+      "lat": 53.86712713445377,
+      "lng": 10.522512655957614,
+      "description": "Hofladen am Ortsausgang mit vielen regionalen Produkten.",
+      "address": "Lübecker Straße 27, 23619 Zarpen",
+      "link": "https://www.hof-rath.de/hofladen/",
+      "phone": "0152 38212885",
+      "openingHours": "Täglich etwa 06:45–20:00 Uhr",
+      "notice": "Selbstbedienung. Sieben Tage pro Woche und an Feiertagen geöffnet."
+    },
+    {
+      "name": "Eierhütte",
+      "category": "einkaufen",
+      "lat": 53.86945274051825,
+      "lng": 10.517861244505287,
+      "description": "Verkaufsstelle für täglich frische Eier.",
+      "address": "Hauptstraße 46a, 23619 Zarpen"
+    },
+    {
+      "name": "Ess.Punkt Döner, Bistro und Pizzeria",
+      "category": "gastronomie",
+      "lat": 53.87101608279193,
+      "lng": 10.518466729465064,
+      "description": "Döner, Pizza und Currywurst.",
+      "address": "Hauptstraße 54, 23619 Zarpen",
+      "phone": "04533 7889595"
+    },
+    {
+      "name": "Sportlerheim TSV Zarpen",
+      "category": "freizeit",
+      "lat": 53.87604522399332,
+      "lng": 10.517669926982444,
+      "description": "Vereinsheim des TSV Zarpen.",
+      "address": "Am Sportplatz 18, 23619 Zarpen",
+      "link": "http://www.tsvzarpen.de/"
+    },
+    {
+      "name": "Sporthallen Zarpen",
+      "category": "freizeit",
+      "lat": 53.87546415686917,
+      "lng": 10.514904214259234,
+      "description": "Zwei Sporthallen direkt an der Dörfergemeinschaftsschule Zarpen.",
+      "address": "Pöhlser Weg, 23619 Zarpen",
+      "notice": "Keine private Nutzung erlaubt."
+    }
+  ]
+}
