@@ -1,473 +1,312 @@
 :root {
-  --emerald: #064E3B;
-  --emerald-dark: #043B2D;
-  --emerald-light: #E7F3EF;
+  --green: #064E3B;
+  --green-dark: #043B2D;
+  --green-light: #E7F3EF;
 
   --champagne: #F8E7C9;
-  --champagne-light: #FFF8EC;
 
   --text: #1F2937;
   --muted: #5F6B67;
 
+  --background: #F8E7C9;
   --card: #FFFDF9;
-  --border: #E6D8BC;
 
-  --shadow: 0 12px 30px rgba(6, 78, 59, 0.12);
+  --border: #E6D8BC;
+  --shadow: 0 12px 30px rgba(6, 78, 59, .12);
+
   --radius: 18px;
 }
 
-/* Grundeinstellungen */
-
-* {
-  box-sizing: border-box;
+*{
+    box-sizing:border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+    scroll-behavior:smooth;
 }
 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  color: var(--text);
-  background: var(--champagne);
-  line-height: 1.5;
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:var(--background);
+    color:var(--text);
 }
 
-button,
-a {
-  font: inherit;
-}
+/* --------------------------
+   Hero
+-------------------------- */
 
-/* Kopfbereich */
+.hero{
 
-.dorfkarte-header {
-  padding: 54px 24px 46px;
-  text-align: center;
-  color: #ffffff;
-  background:
+    min-height:300px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:50px 24px;
+
+    background:
     linear-gradient(
-      rgba(6, 78, 59, 0.88),
-      rgba(4, 59, 45, 0.92)
-    );
+        rgba(6,78,59,.70),
+        rgba(6,78,59,.48)
+    ),
+    url("../bilder/blickteich1.jpg")
+    center center / cover no-repeat;
 }
 
-.dorfkarte-header-inner {
-  width: min(900px, 100%);
-  margin: 0 auto;
+.hero-overlay{
+
+    width:min(900px,100%);
+
+    padding:42px;
+
+    text-align:center;
+
+    color:white;
+
+    border-radius:var(--radius);
+
+    background:rgba(6,78,59,.34);
+
+    border:1px solid rgba(248,231,201,.30);
+
+    backdrop-filter:blur(3px);
+
+    box-shadow:0 18px 45px rgba(6,78,59,.35);
 }
 
-.dorfkarte-label {
-  margin: 0 0 10px;
-  color: var(--champagne);
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
+.hero-label{
+
+    margin:0 0 10px;
+
+    color:var(--champagne);
+
+    font-size:.85rem;
+
+    letter-spacing:.18em;
+
+    font-weight:700;
+
+    text-transform:uppercase;
 }
 
-.dorfkarte-header h1 {
-  margin: 0;
-  font-size: clamp(2.2rem, 5vw, 4rem);
-  line-height: 1.08;
+.hero h1{
+
+    margin:0;
+
+    font-size:clamp(2.3rem,5vw,4.4rem);
+
+    line-height:1.05;
 }
 
-.dorfkarte-header-text {
-  max-width: 720px;
-  margin: 20px auto 0;
-  color: rgba(255, 255, 255, 0.92);
-  font-size: clamp(1rem, 2vw, 1.18rem);
+.hero-text{
+
+    margin:24px auto 0;
+
+    max-width:700px;
+
+    font-size:1.15rem;
 }
 
-/* Hauptinhalt */
+/* --------------------------
+   Inhalt
+-------------------------- */
 
-.dorfkarte-content {
-  width: min(1280px, calc(100% - 40px));
-  margin: 0 auto;
-  padding: 46px 0 70px;
+.page-content{
+
+    width:min(1200px,calc(100% - 40px));
+
+    margin:auto;
+
+    padding:60px 0 80px;
 }
 
-/* Hinweisbereich */
+.intro{
 
-.dorfkarte-intro {
-  max-width: 920px;
-  margin: 0 auto 34px;
-  padding: 28px 32px;
-  text-align: center;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+    background:var(--card);
+
+    padding:35px;
+
+    border-radius:var(--radius);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    margin-bottom:30px;
 }
 
-.dorfkarte-intro h2 {
-  margin: 0 0 10px;
-  color: var(--emerald);
-  font-size: clamp(1.6rem, 3vw, 2.3rem);
+.intro h2{
+
+    margin-top:0;
+
+    color:var(--green);
 }
 
-.dorfkarte-intro p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 1.04rem;
+.intro p{
+
+    color:var(--muted);
+
+    line-height:1.6;
 }
 
-/* Filterbereich */
+/* --------------------------
+   Filter
+-------------------------- */
 
-.filter-section {
-  margin-bottom: 22px;
-  padding: 22px;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+.filter-bar{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-bottom:25px;
 }
 
-.filter-heading {
-  margin: 0 0 14px;
-  color: var(--emerald);
-  font-size: 1.1rem;
+.filter-button{
+
+    padding:10px 18px;
+
+    border:none;
+
+    border-radius:999px;
+
+    cursor:pointer;
+
+    background:var(--green-light);
+
+    color:var(--green);
+
+    font-weight:700;
+
+    transition:.2s;
 }
 
-.category-filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.filter-button:hover{
+
+    background:var(--green);
+    color:white;
 }
 
-.filter-button {
-  min-height: 42px;
-  padding: 9px 15px;
-  color: var(--emerald);
-  font-weight: 700;
-  cursor: pointer;
-  background: var(--emerald-light);
-  border: 1px solid #C8DED6;
-  border-radius: 999px;
-  transition:
-    color 160ms ease,
-    background 160ms ease,
-    border-color 160ms ease,
-    transform 160ms ease;
+.filter-button.active{
+
+    background:var(--green);
+
+    color:white;
 }
 
-.filter-button:hover,
-.filter-button:focus-visible {
-  color: var(--champagne);
-  background: var(--emerald);
-  border-color: var(--emerald);
-  transform: translateY(-1px);
+/* --------------------------
+   Karte
+-------------------------- */
+
+#map{
+
+    width:100%;
+
+    height:700px;
+
+    border-radius:var(--radius);
+
+    border:1px solid var(--border);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
 }
 
-.filter-button.active {
-  color: var(--champagne);
-  background: var(--emerald);
-  border-color: var(--emerald);
+/* --------------------------
+   Leaflet Popup
+-------------------------- */
+
+.leaflet-popup-content{
+
+    width:260px;
 }
 
-/* Kartenrahmen */
+.popup-image{
 
-.map-section {
-  overflow: hidden;
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+    width:100%;
+
+    border-radius:10px;
+
+    margin-bottom:10px;
 }
 
-.map-toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 18px;
-  padding: 16px 20px;
-  background: var(--card);
-  border-bottom: 1px solid var(--border);
+.popup-title{
+
+    margin:0 0 8px;
+
+    color:var(--green);
+
+    font-size:1.2rem;
 }
 
-.map-toolbar-text {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.94rem;
+.popup-row{
+
+    margin:6px 0;
+
+    font-size:.92rem;
 }
 
-.reset-map-button {
-  flex: 0 0 auto;
-  min-height: 40px;
-  padding: 8px 14px;
-  color: var(--champagne);
-  font-weight: 700;
-  cursor: pointer;
-  background: var(--emerald);
-  border: 0;
-  border-radius: 999px;
-  transition:
-    background 160ms ease,
-    transform 160ms ease;
+.popup-row strong{
+
+    color:var(--green);
 }
 
-.reset-map-button:hover,
-.reset-map-button:focus-visible {
-  background: var(--emerald-dark);
-  transform: translateY(-1px);
+.popup-link{
+
+    display:inline-block;
+
+    margin-top:10px;
+
+    color:var(--green);
+
+    font-weight:bold;
+
+    text-decoration:none;
 }
 
-/* Leaflet-Karte */
+.popup-link:hover{
 
-#dorfkarte {
-  width: 100%;
-  height: 680px;
-  background: #DDE9D8;
+    text-decoration:underline;
 }
 
-/* Lade- und Fehlermeldung */
+/* --------------------------
+   Smartphone
+-------------------------- */
 
-.map-message {
-  padding: 28px;
-  text-align: center;
-  color: var(--muted);
-  background: var(--card);
+@media(max-width:850px){
+
+    .hero{
+
+        min-height:250px;
+    }
+
+    #map{
+
+        height:550px;
+    }
+
 }
 
-.map-error {
-  color: #8B1E1E;
-  background: #FFF2F2;
-}
+@media(max-width:560px){
 
-/* Eigene Marker */
+    .page-content{
 
-.dorf-marker {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 38px;
-  height: 38px;
-  color: #ffffff;
-  font-size: 18px;
-  font-weight: 700;
-  background: var(--emerald);
-  border: 3px solid #ffffff;
-  border-radius: 50%;
-  box-shadow: 0 4px 12px rgba(31, 41, 55, 0.3);
-}
+        width:min(100% - 24px,1200px);
+    }
 
-.dorf-marker--gemeinde {
-  background: #064E3B;
-}
+    .hero-overlay{
 
-.dorf-marker--information {
-  background: #4B6470;
-}
+        padding:28px 20px;
+    }
 
-.dorf-marker--sehenswuerdigkeit {
-  background: #7A4935;
-}
+    #map{
 
-.dorf-marker--oeffentlich {
-  background: #245EA8;
-}
+        height:450px;
+    }
 
-.dorf-marker--freizeit {
-  background: #24843C;
-}
-
-.dorf-marker--gesundheit {
-  background: #B72434;
-}
-
-.dorf-marker--entsorgung {
-  background: #697269;
-}
-
-.dorf-marker--gastronomie {
-  background: #D85D0F;
-}
-
-.dorf-marker--einkaufen {
-  background: #8B2C83;
-}
-
-.dorf-marker--briefkasten {
-  color: #1F2937;
-  background: #F4C400;
-}
-
-/* Leaflet-Popups */
-
-.leaflet-popup-content-wrapper {
-  overflow: hidden;
-  color: var(--text);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  box-shadow: 0 12px 28px rgba(6, 78, 59, 0.2);
-}
-
-.leaflet-popup-content {
-  width: min(290px, calc(100vw - 80px)) !important;
-  margin: 0;
-  line-height: 1.45;
-}
-
-.leaflet-popup-tip {
-  background: var(--card);
-}
-
-.place-popup {
-  overflow: hidden;
-}
-
-.place-popup-image {
-  display: block;
-  width: 100%;
-  height: 165px;
-  object-fit: cover;
-}
-
-.place-popup-content {
-  padding: 18px;
-}
-
-.place-popup-category {
-  display: inline-flex;
-  margin: 0 0 9px;
-  padding: 4px 9px;
-  color: var(--emerald);
-  font-size: 0.76rem;
-  font-weight: 700;
-  background: var(--emerald-light);
-  border: 1px solid #C8DED6;
-  border-radius: 999px;
-}
-
-.place-popup-title {
-  margin: 0 0 8px;
-  color: var(--emerald);
-  font-size: 1.2rem;
-  line-height: 1.2;
-}
-
-.place-popup-description {
-  margin: 0 0 12px;
-}
-
-.place-popup-details {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.place-popup-details li {
-  margin-top: 8px;
-  padding-top: 8px;
-  font-size: 0.9rem;
-  border-top: 1px solid var(--border);
-}
-
-.place-popup-details strong {
-  color: var(--emerald-dark);
-}
-
-.place-popup-notice {
-  margin: 13px 0 0;
-  padding: 10px 12px;
-  color: #654D13;
-  font-size: 0.9rem;
-  background: #FFF3CD;
-  border: 1px solid #E9CF7B;
-  border-radius: 9px;
-}
-
-.place-popup-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 40px;
-  margin-top: 14px;
-  padding: 8px 14px;
-  color: var(--champagne) !important;
-  font-weight: 700;
-  text-decoration: none;
-  background: var(--emerald);
-  border-radius: 999px;
-}
-
-.place-popup-link:hover,
-.place-popup-link:focus-visible {
-  background: var(--emerald-dark);
-}
-
-/* Quellenhinweis von OpenStreetMap */
-
-.leaflet-control-attribution {
-  font-size: 10px;
-}
-
-/* Tablet */
-
-@media (max-width: 850px) {
-  .dorfkarte-content {
-    width: min(100% - 28px, 1280px);
-    padding-top: 34px;
-  }
-
-  #dorfkarte {
-    height: 590px;
-  }
-
-  .dorfkarte-intro {
-    padding: 25px;
-  }
-}
-
-/* Smartphone */
-
-@media (max-width: 560px) {
-  .dorfkarte-header {
-    padding: 38px 18px 34px;
-  }
-
-  .dorfkarte-content {
-    width: min(100% - 20px, 1280px);
-    padding: 25px 0 45px;
-  }
-
-  .dorfkarte-intro {
-    margin-bottom: 20px;
-    padding: 22px 18px;
-  }
-
-  .filter-section {
-    margin-bottom: 16px;
-    padding: 16px;
-  }
-
-  .category-filters {
-    gap: 8px;
-  }
-
-  .filter-button {
-    min-height: 40px;
-    padding: 8px 12px;
-    font-size: 0.88rem;
-  }
-
-  .map-toolbar {
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 10px;
-    padding: 14px 16px;
-  }
-
-  .reset-map-button {
-    width: 100%;
-  }
-
-  #dorfkarte {
-    height: 520px;
-  }
-
-  .place-popup-image {
-    height: 145px;
-  }
 }
