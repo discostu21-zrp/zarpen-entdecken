@@ -16,7 +16,8 @@ document.addEventListener("DOMContentLoaded", initDorfkarte);
 async function initDorfkarte() {
   const mapElement = document.getElementById("map");
   const filterElement = document.getElementById("category-filters");
-  const statusElement = document.getElementById("map-status");
+  const placeCountElement = document.getElementById("place-count");
+  const resetButton = document.getElementById("reset-map");
 
   if (!mapElement) {
     console.error('Das Element mit der ID "map" wurde nicht gefunden.');
@@ -24,7 +25,9 @@ async function initDorfkarte() {
   }
 
   try {
-    setStatus(statusElement, "Dorfkarte wird geladen …");
+    if (placeCountElement) {
+  placeCountElement.textContent = "Orte werden geladen …";
+}
 
     const response = await fetch("daten/dorfkarte.json");
 
@@ -38,9 +41,29 @@ async function initDorfkarte() {
 
     validateData(data);
 
-    const map = createMap(data.map);
-    const categoryLayers = createCategoryLayers(map, data.categories);
+const map = createMap(data.map);
+const categoryLayers = createCategoryLayers(map, data.categories);
 
+if (placeCountElement) {
+  const numberOfPlaces = data.places.length;
+
+  placeCountElement.textContent =
+    numberOfPlaces === 1
+      ? "1 Ort wird angezeigt"
+      : `${numberOfPlaces} Orte werden angezeigt`;
+}
+
+if (resetButton) {
+  resetButton.addEventListener("click", () => {
+    map.setView(
+      [
+        Number(data.map.center.lat),
+        Number(data.map.center.lng)
+      ],
+      Number(data.map.zoom) || 14
+    );
+  });
+}
     addPlacesToMap(
       map,
       data.places,
@@ -55,14 +78,13 @@ async function initDorfkarte() {
       filterElement
     );
 
-    setStatus(statusElement, "");
-  } catch (error) {
+   } catch (error) {
     console.error("Fehler beim Laden der Dorfkarte:", error);
 
-    setStatus(
-      statusElement,
-      "Die Dorfkarte konnte leider nicht geladen werden. Bitte prüfe die Datendatei."
-    );
+if (placeCountElement) {
+  placeCountElement.textContent =
+    "Die Orte konnten leider nicht geladen werden.";
+}
 
     showMapError(mapElement);
   }
