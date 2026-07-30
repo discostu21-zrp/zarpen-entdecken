@@ -684,3 +684,128 @@ box-shadow:0 12px 28px rgba(6,78,59,.10);
   }
 
 }
+/* --------------------------
+   Verweis zur Dorfkarte
+-------------------------- */
+
+.dorfkarte-teaser {
+  margin: 0 0 42px;
+}
+
+.dorfkarte-teaser-content {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 24px;
+
+  padding: 30px 34px;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      120deg,
+      rgba(6, 78, 59, 0.98),
+      rgba(4, 59, 45, 0.92)
+    );
+
+  border: 1px solid rgba(248, 231, 201, 0.35);
+  border-radius: 18px;
+
+  box-shadow: 0 12px 30px rgba(6, 78, 59, 0.18);
+}
+
+.dorfkarte-teaser-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 68px;
+  height: 68px;
+
+  background: rgba(248, 231, 201, 0.16);
+  border: 1px solid rgba(248, 231, 201, 0.35);
+  border-radius: 50%;
+
+  font-size: 2rem;
+}
+
+.dorfkarte-teaser-label {
+  margin: 0 0 6px;
+
+  color: #f8e7c9;
+
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.dorfkarte-teaser h2 {
+  margin: 0 0 8px;
+
+  color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+}
+
+.dorfkarte-teaser-text > p:last-child {
+  max-width: 680px;
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.55;
+}
+
+.dorfkarte-teaser-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 48px;
+  padding: 12px 20px;
+
+  color: #064e3b;
+  background: #f8e7c9;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.dorfkarte-teaser-button:hover {
+  background: #fff;
+  transform: translateY(-2px);
+}
+
+.dorfkarte-teaser-button:focus-visible {
+  outline: 3px solid rgba(248, 231, 201, 0.55);
+  outline-offset: 4px;
+}
+
+@media (max-width: 760px) {
+  .dorfkarte-teaser-content {
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    padding: 24px;
+  }
+
+  .dorfkarte-teaser-icon {
+    width: 56px;
+    height: 56px;
+
+    font-size: 1.6rem;
+  }
+
+  .dorfkarte-teaser-button {
+    width: 100%;
+  }
+}
