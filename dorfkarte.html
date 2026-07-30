@@ -10,7 +10,7 @@
 
   <meta
     name="description"
-    content="Interaktive Dorfkarte von Zarpen."
+    content="Interaktive Dorfkarte von Zarpen mit wichtigen Einrichtungen, Sehenswürdigkeiten und nützlichen Orten."
   >
 
   <title>Zarpen auf einen Blick</title>
@@ -19,8 +19,6 @@
   <link
     rel="stylesheet"
     href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIINfQ3ynXo2jMZc0Qwnj6d0N0q7rYjQ0wA="
-    crossorigin=""
   >
 
   <!-- Eigener Stil der Dorfkarte -->
@@ -41,7 +39,7 @@
       </h1>
 
       <p class="page-intro">
-        Auf dieser interaktiven Dorfkarte findest du 
+        Auf dieser interaktiven Dorfkarte findest du
         Einrichtungen, Sehenswürdigkeiten, Informationen
         und weitere nützliche Orte in Zarpen.
       </p>
@@ -120,7 +118,7 @@
       <div
         id="map"
         class="map"
-        role="application"
+        role="region"
         aria-label="Karte mit wichtigen Orten in Zarpen"
       ></div>
 
@@ -151,11 +149,7 @@
   </main>
 
   <!-- Leaflet-Kartenprogramm -->
-  <script
-    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""
-  ></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
   <!-- Eigenes Kartenprogramm -->
   <script src="js/dorfkarte.js"></script>
