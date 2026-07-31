@@ -117,9 +117,6 @@ body {
 
 .filter-button:focus-visible,
 .reset-button:focus-visible,
-.back-link:focus-visible {
-  outline: 3px solid rgba(6, 78, 59, 0.28);
-  outline-offset: 3px;
 }
 
 .filter-loading {
@@ -349,6 +346,7 @@ body {
 
 /* Smartphone */
 
+@media (max-width: 560px) {
   .page-content {
     width: calc(100% - 24px);
     padding: 28px 0 50px;
