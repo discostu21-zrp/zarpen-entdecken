@@ -157,7 +157,7 @@
     },
     {
       "name": "Bücher-Telefonzelle",
-      "category": "information",
+      "category": "Gemeinde",
       "lat": 53.871655,
       "lng": 10.518281,
       "description": "Bücher tauschen und ausleihen in der Bücher-Telefonzelle der FKW Zarpen."
@@ -177,6 +177,13 @@
       "lng": 10.518207,
       "description": "Schaukasten des SPD-Ortsvereins Zarpen."
     },
+    {
+  "name": "Schaukasten FKW",
+  "category": "information",
+  "lat": 53.870733,
+  "lng": 10.518173,
+  "description": "Schaukasten der FKW Zarpen."
+}
     {
       "name": "Schaukasten SoVD am Marktplatz",
       "category": "information",
