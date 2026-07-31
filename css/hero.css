@@ -1,0 +1,208 @@
+/* Gemeinsamer Kopfbereich für Tourenseite und Dorfkarte */
+
+.hero,
+.page-header {
+  min-height: 320px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 32px 24px;
+
+  position: relative;
+
+  background:
+    linear-gradient(
+      rgba(20, 40, 22, 0.58),
+      rgba(20, 40, 22, 0.58)
+    ),
+    url("../bilder/blickteich1.jpg") center / cover no-repeat;
+}
+
+.hero-overlay,
+.page-header-content {
+  width: min(900px, 100%);
+
+  padding: 34px 42px;
+
+  color: #ffffff;
+  text-align: center;
+
+  background: rgba(18, 36, 22, 0.42);
+
+  border: 1px solid rgba(248, 231, 201, 0.28);
+  border-radius: 18px;
+
+  backdrop-filter: blur(2px);
+
+  box-shadow: 0 18px 45px rgba(6, 78, 59, 0.35);
+}
+
+.hero-label,
+.page-label {
+  margin: 0 0 8px;
+
+  color: #f8e7c9;
+
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.hero h1,
+.page-header h1 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: clamp(2.2rem, 5vw, 4.2rem);
+  line-height: 1.05;
+}
+
+.hero-text,
+.page-intro {
+  max-width: 720px;
+
+  margin: 20px auto 0;
+
+  color: #ffffff;
+
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.5;
+}
+
+/* Zurück-Link auf der Dorfkartenseite */
+
+.back-link {
+  display: inline-block;
+
+  margin-top: 22px;
+
+  color: #ffffff;
+
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  text-decoration: underline;
+}
+
+/* Buttons auf der Touren-Startseite */
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 28px;
+}
+
+.hero-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-height: 48px;
+  padding: 12px 22px;
+
+  color: #ffffff;
+  background: #064e3b;
+
+  border: 2px solid #064e3b;
+  border-radius: 999px;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    transform 180ms ease;
+}
+
+.hero-button:hover,
+.hero-button:focus-visible {
+  background: #043b2d;
+  border-color: #043b2d;
+
+  transform: translateY(-2px);
+}
+
+.hero-button-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.hero-button-secondary:hover,
+.hero-button-secondary:focus-visible {
+  color: #043b2d;
+  background: #ffffff;
+  border-color: #ffffff;
+}
+
+.hero-button:focus-visible,
+.back-link:focus-visible {
+  outline: 3px solid rgba(248, 231, 201, 0.6);
+  outline-offset: 3px;
+}
+
+/* Tablet */
+
+@media (max-width: 850px) {
+  .hero,
+  .page-header {
+    min-height: 290px;
+    padding: 28px 20px;
+  }
+
+  .hero-overlay,
+  .page-header-content {
+    padding: 30px 28px;
+  }
+}
+
+/* Smartphone */
+
+@media (max-width: 560px) {
+  .hero,
+  .page-header {
+    min-height: auto;
+    padding: 24px 12px;
+  }
+
+  .hero-overlay,
+  .page-header-content {
+    padding: 26px 18px;
+  }
+
+  .hero h1,
+  .page-header h1 {
+    font-size: 2.25rem;
+  }
+
+  .hero-text,
+  .page-intro {
+    margin-top: 16px;
+    font-size: 1rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    gap: 12px;
+
+    margin-top: 22px;
+  }
+
+  .hero-button {
+    width: 100%;
+  }
+}
