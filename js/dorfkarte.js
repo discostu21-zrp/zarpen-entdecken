@@ -44,8 +44,9 @@ async function initDorfkarte() {
 const map = createMap(data.map);
 const categoryLayers = createCategoryLayers(map, data.categories);
 
-placeCountElement.textContent =
-  "Bitte wähle eine Kategorie aus.";
+if (placeCountElement) {
+  placeCountElement.textContent =
+    "Bitte wähle eine Kategorie aus.";
 }
 
 if (resetButton) {
@@ -489,6 +490,8 @@ updatePlaceCount(
   categoryLayers,
   placeCountElement
 );
+});
+}
       return;
     }
 
