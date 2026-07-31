@@ -30,56 +30,6 @@ body {
   line-height: 1.5;
 }
 
-/* Hero-Bereich */
-
-.hero {
-  min-height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 22px 24px;
-  position: relative;
-
-  background:
-    linear-gradient(
-      rgba(20, 40, 22, 0.58),
-      rgba(20, 40, 22, 0.58)
-    ),
-    url("../bilder/blickteich1.jpg") center / cover no-repeat;
-}
-
-.hero-overlay {
-  width: min(850px, 100%);
-  padding: 30px 42px;
-  text-align: center;
-  color: #ffffff;
-  border-radius: var(--radius);
-  background: rgba(18, 36, 22, 0.42);
-  backdrop-filter: blur(2px);
-
-  border: 1px solid rgba(248, 231, 201, 0.28);
-  box-shadow: 0 18px 45px rgba(6, 78, 59, 0.35);
-}
-
-.hero-label {
-  margin: 0 0 6px;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.hero h1 {
-  margin: 0;
-  font-size: clamp(2.2rem, 5vw, 4.2rem);
-  line-height: 1.05;
-}
-
-.hero-text {
-  max-width: 650px;
-  margin: 18px auto 0;
-  font-size: clamp(1rem, 2vw, 1.25rem);
-}
 
 /* Seiteninhalt */
 
@@ -248,15 +198,6 @@ body {
 
 /* Tablet */
 
-@media (max-width: 850px) {
-  .hero {
-    min-height: 270px;
-  }
-
-  .hero-overlay {
-    padding: 34px 28px;
-  }
-
   .tour-list {
     grid-template-columns: 1fr;
   }
@@ -267,15 +208,6 @@ body {
 }
 
 /* Smartphone */
-
-.hero {
-  min-height: auto;
-  padding: 28px 16px;
-}
-
-  .hero-overlay {
-    padding: 28px 20px;
-  }
 
   .page-content {
     width: min(100% - 24px, 1200px);
@@ -301,63 +233,6 @@ body {
   .tour-card-button {
     width: 100%;
   }
-}
-/* Hero-Buttons */
-
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 30px;
-}
-
-.hero-button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-
-  min-height: 48px;
-  padding: 12px 22px;
-
-  color: #ffffff;
-  font-weight: 700;
-  text-decoration: none;
-
-  background: var(--green);
-  border: 2px solid var(--green);
-  border-radius: 999px;
-
-  transition:
-    background-color 180ms ease,
-    border-color 180ms ease,
-    transform 180ms ease;
-}
-
-.hero-button:hover,
-.hero-button:focus-visible {
-  background: var(--green-dark);
-  border-color: var(--green-dark);
-  transform: translateY(-2px);
-}
-
-.hero-button-secondary {
-  color: #ffffff;
-  background: rgba(255, 255, 255, 0.1);
-  border-color: rgba(255, 255, 255, 0.85);
-}
-
-.hero-button-secondary:hover,
-.hero-button-secondary:focus-visible {
-  color: var(--green-dark);
-  background: #ffffff;
-  border-color: #ffffff;
-}
-
-.hero-button:focus-visible {
-  outline: 3px solid rgba(248, 231, 201, 0.6);
-  outline-offset: 3px;
 }
 
 @media (max-width: 560px) {
