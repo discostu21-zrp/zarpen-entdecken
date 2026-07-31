@@ -44,13 +44,8 @@ async function initDorfkarte() {
 const map = createMap(data.map);
 const categoryLayers = createCategoryLayers(map, data.categories);
 
-if (placeCountElement) {
-  const numberOfPlaces = data.places.length;
-
-  placeCountElement.textContent =
-    numberOfPlaces === 1
-      ? "1 Ort wird angezeigt"
-      : `${numberOfPlaces} Orte werden angezeigt`;
+placeCountElement.textContent =
+  "Bitte wähle eine Kategorie aus.";
 }
 
 if (resetButton) {
@@ -72,18 +67,19 @@ if (resetButton) {
     );
 
     createFilterButtons(
-      map,
-      data.categories,
-      categoryLayers,
-      filterElement
-    );
+  map,
+  data.categories,
+  categoryLayers,
+  filterElement,
+  placeCountElement
+);
 
    } catch (error) {
     console.error("Fehler beim Laden der Dorfkarte:", error);
 
 if (placeCountElement) {
   placeCountElement.textContent =
-    "Die Orte konnten leider nicht geladen werden.";
+    "Bitte wähle eine Kategorie aus.";
 }
 
     showMapError(mapElement);
@@ -440,7 +436,8 @@ function createFilterButtons(
   map,
   categories,
   categoryLayers,
-  filterElement
+  filterElement,
+  placeCountElement
 ) {
   if (!filterElement) {
     console.warn(
@@ -485,7 +482,13 @@ function createFilterButtons(
         categoryLayers,
         filterElement
       );
-
+      
+updatePlaceCount(
+  map,
+  categories,
+  categoryLayers,
+  placeCountElement
+);
       return;
     }
 
@@ -502,7 +505,12 @@ function createFilterButtons(
       filterElement,
       map
     );
-  });
+    updatePlaceCount(
+  map,
+  categories,
+  categoryLayers,
+  placeCountElement
+);
 }
 
 /*
@@ -625,6 +633,45 @@ function updateAllButton(
   Ändert Aussehen und barrierefreien Status eines Buttons.
 */
 
+/*
+  Aktualisiert die Anzahl der aktuell sichtbaren Orte.
+*/
+
+function updatePlaceCount(
+  map,
+  categories,
+  categoryLayers,
+  placeCountElement
+) {
+  if (!placeCountElement) {
+    return;
+  }
+
+  let visiblePlaces = 0;
+
+  categories.forEach((category) => {
+    const layer = categoryLayers[category.id];
+
+    if (!layer || !map.hasLayer(layer)) {
+      return;
+    }
+
+    visiblePlaces += layer.getLayers().length;
+  });
+
+  if (visiblePlaces === 0) {
+    placeCountElement.textContent =
+      "Bitte wähle eine Kategorie aus.";
+
+    return;
+  }
+
+  placeCountElement.textContent =
+    visiblePlaces === 1
+      ? "1 Ort wird angezeigt"
+      : `${visiblePlaces} Orte werden angezeigt`;
+}
+  
 function setButtonState(button, active) {
   button.classList.toggle("is-active", active);
 
