@@ -496,13 +496,6 @@ function createFilterButtons(
       categoryLayers,
       button
     );
-    const allButton = document.querySelector(
-  '[data-category="all"]'
-);
-
-if (allButton) {
-  setButtonState(allButton, false);
-}
 
     updateAllButton(
       categories,
@@ -575,26 +568,32 @@ function activateAllCategories(
   categoryLayers,
   filterElement
 ) {
+  const anyCategoryVisible = categories.some((category) => {
+    const layer = categoryLayers[category.id];
+    return layer && map.hasLayer(layer);
+  });
+
   categories.forEach((category) => {
     const layer = categoryLayers[category.id];
 
-    if (layer && !map.hasLayer(layer)) {
+    if (!layer) {
+      return;
+    }
+
+    if (anyCategoryVisible) {
+      map.removeLayer(layer);
+    } else {
       layer.addTo(map);
     }
   });
 
-  cconst buttons =
-  filterElement.querySelectorAll(".filter-button");
+  const buttons =
+    filterElement.querySelectorAll(".filter-button");
 
-buttons.forEach((button) => {
-
-  if (button.dataset.category === "all") {
-    setButtonState(button, true);
-  } else {
-    setButtonState(button, false);
-  }
-
-});
+  buttons.forEach((button) => {
+    setButtonState(button, !anyCategoryVisible);
+  });
+}
 
 /*
   Aktualisiert den Button "Alle".
