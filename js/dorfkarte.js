@@ -164,7 +164,6 @@ function createCategoryLayers(map, categories) {
   categories.forEach((category) => {
     const layerGroup = L.layerGroup();
 
-    layerGroup.addTo(map);
     categoryLayers[category.id] = layerGroup;
   });
 
@@ -455,7 +454,7 @@ function createFilterButtons(
   const allButton = createFilterButton(
     "Alle Orte",
     "all",
-    true
+    false
   );
 
   filterElement.appendChild(allButton);
@@ -464,7 +463,7 @@ function createFilterButtons(
     const button = createFilterButton(
       category.label,
       category.id,
-      true
+      false
     );
 
     filterElement.appendChild(button);
