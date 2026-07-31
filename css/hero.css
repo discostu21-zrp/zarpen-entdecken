@@ -73,24 +73,6 @@
   line-height: 1.5;
 }
 
-/* Zurück-Link auf der Dorfkartenseite */
-
-.back-link {
-  display: inline-block;
-
-  margin-top: 22px;
-
-  color: #ffffff;
-
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.back-link:hover,
-.back-link:focus-visible {
-  text-decoration: underline;
-}
-
 /* Buttons auf der Touren-Startseite */
 
 .hero-buttons {
@@ -149,7 +131,6 @@
 }
 
 .hero-button:focus-visible,
-.back-link:focus-visible {
   outline: 3px solid rgba(248, 231, 201, 0.6);
   outline-offset: 3px;
 }
