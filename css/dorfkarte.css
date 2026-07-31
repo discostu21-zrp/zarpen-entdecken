@@ -31,81 +31,6 @@ body {
   color: var(--text);
 }
 
-/* Kopfbereich */
-
-.page-header {
-  min-height: 320px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 50px 24px;
-
-  background:
-    linear-gradient(
-      rgba(6, 78, 59, 0.72),
-      rgba(6, 78, 59, 0.5)
-    ),
-    url("../bilder/blickteich1.jpg")
-      center center / cover no-repeat;
-}
-
-.page-header-content {
-  width: min(900px, 100%);
-  padding: 42px;
-
-  color: #fff;
-  text-align: center;
-
-  border: 1px solid rgba(248, 231, 201, 0.3);
-  border-radius: var(--radius);
-
-  background: rgba(6, 78, 59, 0.38);
-  backdrop-filter: blur(3px);
-
-  box-shadow: 0 18px 45px rgba(6, 78, 59, 0.35);
-}
-
-.page-label {
-  margin: 0 0 12px;
-
-  color: var(--champagne);
-
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-}
-
-.page-header h1 {
-  margin: 0;
-
-  font-size: clamp(2.2rem, 5vw, 4.2rem);
-  line-height: 1.05;
-}
-
-.page-intro {
-  max-width: 720px;
-  margin: 24px auto 0;
-
-  font-size: 1.15rem;
-  line-height: 1.6;
-}
-
-.back-link {
-  display: inline-block;
-  margin-top: 24px;
-
-  color: #fff;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.back-link:hover,
-.back-link:focus-visible {
-  text-decoration: underline;
-}
-
 /* Seiteninhalt */
 
 .page-content {
@@ -422,38 +347,7 @@ body {
   color: var(--green);
 }
 
-/* Tablet */
-
-@media (max-width: 850px) {
-  .page-header {
-    min-height: 270px;
-  }
-
-  .map,
-  #map {
-    height: 550px;
-  }
-}
-
 /* Smartphone */
-
-@media (max-width: 560px) {
-  .page-header {
-    min-height: auto;
-    padding: 28px 12px;
-  }
-
-  .page-header-content {
-    padding: 26px 18px;
-  }
-
-  .page-header h1 {
-    font-size: 2.25rem;
-  }
-
-  .page-intro {
-    font-size: 1rem;
-  }
 
   .page-content {
     width: calc(100% - 24px);
