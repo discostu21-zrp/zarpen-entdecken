@@ -468,52 +468,53 @@ function createFilterButtons(
   });
 
   filterElement.addEventListener("click", (event) => {
-    const button = event.target.closest(".filter-button");
+  const button = event.target.closest(".filter-button");
 
-    if (!button) {
-      return;
-    }
+  if (!button) {
+    return;
+  }
 
-    const categoryId = button.dataset.category;
+  const categoryId = button.dataset.category;
 
-    if (categoryId === "all") {
-      activateAllCategories(
-        map,
-        categories,
-        categoryLayers,
-        filterElement
-      );
-      
-updatePlaceCount(
+  if (categoryId === "all") {
+    activateAllCategories(
+      map,
+      categories,
+      categoryLayers,
+      filterElement
+    );
+
+    updatePlaceCount(
+      map,
+      categories,
+      categoryLayers,
+      placeCountElement
+    );
+
+    return;
+  }
+
+  toggleCategory(
+    map,
+    categoryId,
+    categoryLayers,
+    button
+  );
+
+  updateAllButton(
+    categories,
+    categoryLayers,
+    filterElement,
+    map
+  );
+
+ updatePlaceCount(
   map,
   categories,
   categoryLayers,
   placeCountElement
 );
 });
-}
-      return;
-    }
-
-    toggleCategory(
-      map,
-      categoryId,
-      categoryLayers,
-      button
-    );
-
-    updateAllButton(
-      categories,
-      categoryLayers,
-      filterElement,
-      map
-    );
-    updatePlaceCount(
-  map,
-  categories,
-  categoryLayers,
-  placeCountElement
-);
 }
 
 /*
