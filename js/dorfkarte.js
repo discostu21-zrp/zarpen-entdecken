@@ -453,7 +453,7 @@ function createFilterButtons(
   filterElement.innerHTML = "";
 
   const allButton = createFilterButton(
-    "Alle",
+    "Alle Orte",
     "all",
     true
   );
@@ -496,6 +496,13 @@ function createFilterButtons(
       categoryLayers,
       button
     );
+    const allButton = document.querySelector(
+  '[data-category="all"]'
+);
+
+if (allButton) {
+  setButtonState(allButton, false);
+}
 
     updateAllButton(
       categories,
@@ -576,13 +583,18 @@ function activateAllCategories(
     }
   });
 
-  const buttons =
-    filterElement.querySelectorAll(".filter-button");
+  cconst buttons =
+  filterElement.querySelectorAll(".filter-button");
 
-  buttons.forEach((button) => {
+buttons.forEach((button) => {
+
+  if (button.dataset.category === "all") {
     setButtonState(button, true);
-  });
-}
+  } else {
+    setButtonState(button, false);
+  }
+
+});
 
 /*
   Aktualisiert den Button "Alle".
