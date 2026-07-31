@@ -147,6 +147,37 @@ function createMap(mapSettings) {
     }
   ).addTo(map);
 
+map.on("popupopen", (event) => {
+  const popup = event.popup;
+
+  window.setTimeout(() => {
+    popup.update();
+  }, 50);
+
+  const popupElement = popup.getElement();
+
+  if (!popupElement) {
+    return;
+  }
+
+  const images = popupElement.querySelectorAll("img");
+
+  images.forEach((image) => {
+    if (image.complete) {
+      popup.update();
+      return;
+    }
+
+    image.addEventListener(
+      "load",
+      () => {
+        popup.update();
+      },
+      { once: true }
+    );
+  });
+});
+  
   return map;
 }
 
@@ -210,13 +241,17 @@ function addPlacesToMap(
       }
     );
 
-    marker.bindPopup(
-      createPopupContent(place, category),
-      {
-        maxWidth: 340,
-        minWidth: 230
-      }
-    );
+marker.bindPopup(
+  createPopupContent(place, category),
+  {
+    maxWidth: 340,
+    minWidth: 230,
+    autoPan: true,
+    keepInView: true,
+    autoPanPaddingTopLeft: [30, 80],
+    autoPanPaddingBottomRight: [30, 30]
+  }
+);
 
     marker.addTo(categoryLayers[place.category]);
   });
