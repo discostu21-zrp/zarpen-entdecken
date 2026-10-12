@@ -38,11 +38,25 @@ body {
   margin: 0 auto;
   padding: 60px 0 80px;
 }
+.page-title{
+    margin:0 0 12px;
+    font-size:2.4rem;
+    color:var(--green);
+    text-align:center;
+}
 
+.page-subtitle{
+    max-width:850px;
+    margin:0 auto 45px;
+    text-align:center;
+    color:var(--muted);
+    line-height:1.7;
+    font-size:1.08rem;
+}
 .map-introduction,
 .map-section,
 .map-notice {
-  padding: 32px;
+  padding: 34px;
 
   background: var(--card);
   border: 1px solid var(--border);
@@ -116,14 +130,52 @@ body {
 }
 
 .filter-button:focus-visible,
-.reset-button:focus-visible,
+.reset-button:focus-visible{
+    outline:3px solid rgba(6,78,59,.25);
+    outline-offset:2px;
 }
 
 .filter-loading {
   margin: 0;
   color: var(--muted);
 }
+.map-legend{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+    margin:20px 0 30px;
+}
 
+.legend-item{
+
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    padding:10px 16px;
+
+    background:white;
+
+    border:1px solid var(--border);
+
+    border-radius:999px;
+
+    transition:.2s;
+
+}
+
+.legend-item:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 6px 16px rgba(0,0,0,.08);
+
+}
+
+.legend-icon{
+    width:18px;
+    text-align:center;
+}
 /* Werkzeugleiste */
 
 .map-toolbar {
@@ -172,7 +224,7 @@ body {
 .map,
 #map {
   width: 100%;
-  height: 650px;
+  height: 720px;
 
   overflow: hidden;
 
@@ -207,12 +259,14 @@ body {
   background: #fff;
 }
 
-.dorf-popup-image {
-  display: block;
-  width: 100%;
-  height: 165px;
+.dorf-popup-image{
 
-  object-fit: cover;
+    width:100%;
+    height:185px;
+
+    object-fit:cover;
+    display:block;
+
 }
 
 .dorf-popup-content {
@@ -275,20 +329,24 @@ body {
   line-height: 1.45;
 }
 
-.dorf-popup-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
+.dorf-popup-link{
 
-  margin-top: 14px;
+    display:inline-flex;
+    align-items:center;
 
-  color: var(--green);
-  font-weight: 700;
-  text-decoration: none;
+    margin-top:10px;
+
+    color:var(--green);
+
+    font-weight:bold;
+
+    text-decoration:none;
 }
 
-.dorf-popup-link:hover {
-  text-decoration: underline;
+.dorf-popup-link:hover{
+
+    text-decoration:underline;
+
 }
 
 /* Eigene Marker */
@@ -298,26 +356,32 @@ body {
   border: 0;
 }
 
-.dorf-marker {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.dorf-marker{
 
-  width: 42px;
-  height: 42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-  color: #fff;
-  background: var(--marker-color);
+    width:44px;
+    height:44px;
 
-  border: 3px solid #fff;
-  border-radius: 50% 50% 50% 10%;
+    background:var(--marker-color);
+    color:white;
 
-  font-size: 19px;
-  font-weight: 700;
+    border:3px solid white;
+    border-radius:50% 50% 50% 8%;
 
-  transform: rotate(-45deg);
+    transform:rotate(-45deg);
 
-  box-shadow: 0 4px 12px rgba(31, 41, 55, 0.28);
+    box-shadow:
+        0 6px 18px rgba(0,0,0,.28);
+
+    transition:.2s;
+}
+.dorf-marker:hover{
+    transform:rotate(-45deg) scale(1.12);
+    box-shadow:
+        0 10px 25px rgba(0,0,0,.35);
 }
 
 .dorf-marker span {
@@ -391,4 +455,76 @@ body {
   .dorf-popup-image {
     height: 135px;
   }
+}
+.dorf-popup{
+    overflow:hidden;
+    border-radius:14px;
+}
+
+.dorf-popup-content{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+.dorf-popup-address{
+
+    font-size:.92rem;
+    color:var(--muted);
+
+}
+
+.dorf-popup-opening{
+
+    background:#F7F7F7;
+    padding:10px 12px;
+    border-radius:10px;
+
+    font-size:.92rem;
+
+}
+
+.dorf-popup-phone{
+
+    color:var(--green);
+    text-decoration:none;
+
+}
+
+.dorf-popup-phone:hover{
+
+    text-decoration:underline;
+
+}
+.leaflet-popup{
+
+    animation:popupfade .18s ease;
+
+}
+
+@keyframes popupfade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(10px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+@media(max-width:560px){
+
+.dorf-marker{
+
+    width:36px;
+    height:36px;
+
+}
+
 }
