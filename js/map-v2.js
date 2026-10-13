@@ -1,4 +1,5 @@
-// Gemeinsame Kartenlogik für „Zarpen entdecken“
+
+ // Gemeinsame Kartenlogik für „Zarpen entdecken“
 
 window.initZarpenMap = function (routeData) {
 
@@ -325,7 +326,7 @@ window.initZarpenMap = function (routeData) {
 
 
     // ----------------------------------------------
-    // Überschrift im Popup
+    // Popup: Titel und Kopfbereich
     // ----------------------------------------------
 
     const popupTitle = `
@@ -333,30 +334,23 @@ window.initZarpenMap = function (routeData) {
         class="popup-title-icon"
         src="${iconUrl}"
         alt=""
+        aria-hidden="true"
       >
-
-      <span>${place.name}</span>
+      <span class="popup-title-name">${place.name || "Unbenannter Ort"}</span>
     `;
-
-
-    // ----------------------------------------------
-    // Kopfbereich mit oder ohne Bild
-    // ----------------------------------------------
 
     const popupHeader = place.image
       ? `
         <div class="popup-header">
-
           <img
             class="popup-image"
             src="${place.image}"
-            alt="${place.name}"
+            alt="${place.name || "Bild zum Ort"}"
+            loading="lazy"
           >
-
           <div class="popup-title-overlay">
             ${popupTitle}
           </div>
-
         </div>
       `
       : `
@@ -367,7 +361,7 @@ window.initZarpenMap = function (routeData) {
 
 
     // ----------------------------------------------
-    // Kategorie
+    // Popup: Kategorie
     // ----------------------------------------------
 
     const categoryLabel = `
@@ -378,7 +372,7 @@ window.initZarpenMap = function (routeData) {
 
 
     // ----------------------------------------------
-    // Text
+    // Popup: Beschreibung
     // ----------------------------------------------
 
     const popupText = place.text
@@ -391,7 +385,7 @@ window.initZarpenMap = function (routeData) {
 
 
     // ----------------------------------------------
-    // Geschichte
+    // Popup: Geschichte / Zusatzinformationen
     // ----------------------------------------------
 
     const storyBox = place.story
@@ -404,7 +398,7 @@ window.initZarpenMap = function (routeData) {
 
 
     // ----------------------------------------------
-    // Link zur Webseite
+    // Popup: Link zur Webseite
     // ----------------------------------------------
 
     const linkButton = place.link
@@ -413,9 +407,10 @@ window.initZarpenMap = function (routeData) {
           class="popup-link"
           href="${place.link}"
           target="_blank"
-          rel="noopener"
+          rel="noopener noreferrer"
         >
           Webseite öffnen
+          <span aria-hidden="true">↗</span>
         </a>
       `
       : "";
@@ -435,44 +430,41 @@ window.initZarpenMap = function (routeData) {
 
 
     // ----------------------------------------------
-    // Popup an Marker binden
+    // Kompaktes Popup an Marker binden
     // ----------------------------------------------
 
     marker.bindPopup(`
-      <div class="popup-card">
-
+      <article class="popup-card">
         ${popupHeader}
 
-        ${categoryLabel}
-
-        ${popupText}
-
-        ${storyBox}
-
-        ${linkButton}
-
-      </div>
+        <div class="popup-content">
+          ${categoryLabel}
+          ${popupText}
+          ${storyBox}
+          ${linkButton}
+        </div>
+      </article>
     `, {
-      maxWidth: 340,
-      minWidth: 240
+      maxWidth: 320,
+      minWidth: 240,
+      autoPanPadding: [18, 18],
+      closeButton: true,
+      className: "zarpen-map-popup"
     });
 
   });
 
 
   // --------------------------------------------------
-  // 9. Seitentitel anpassen
+  // 9. Seitentitel und Tourinformationen
   // --------------------------------------------------
 
-renderTourInformation(routeData);
+  renderTourInformation(routeData);
 
-
-// Seitentitel des Browser-Tabs
-if (routeData.title) {
-  document.title =
-    `${routeData.title} – Zarpen entdecken`;
-}
-
+  if (routeData.title) {
+    document.title =
+      `${routeData.title} – Zarpen entdecken`;
+  }
 
   console.log(
     `Tour „${routeData.title || routeData.id}“ wurde geladen.`
@@ -480,192 +472,182 @@ if (routeData.title) {
 
 
   // --------------------------------------------------
-  // 10. Fehlermeldung anzeigen
+  // 10. Tourinformationen anzeigen
   // --------------------------------------------------
 
- function renderTourInformation(data) {
+  function renderTourInformation(data) {
 
-  const heroElement =
-    document.getElementById("tour-hero");
+    const heroElement =
+      document.getElementById("tour-hero");
 
-  const heroImageElement =
-    document.getElementById("tour-hero-image");
+    const heroImageElement =
+      document.getElementById("tour-hero-image");
 
-  const titleElement =
-    document.getElementById("tour-title");
+    const titleElement =
+      document.getElementById("tour-title");
 
-  const subtitleElement =
-    document.getElementById("tour-subtitle");
+    const subtitleElement =
+      document.getElementById("tour-subtitle");
 
-  const factsElement =
-    document.getElementById("tour-facts");
+    const factsElement =
+      document.getElementById("tour-facts");
 
-  const descriptionElement =
-    document.getElementById("tour-description");
-
-
-  // --------------------------------------------------
-  // Hero-Bild
-  // --------------------------------------------------
-
-  if (heroImageElement && data.heroImage) {
-
-    heroImageElement.src =
-      data.heroImage;
-
-    heroImageElement.alt =
-      data.title || "Tour durch Zarpen";
-
-  } else if (heroElement) {
-
-    heroElement.classList.add(
-      "tour-hero-without-image"
-    );
-
-  }
+    const descriptionElement =
+      document.getElementById("tour-description");
 
 
-  // --------------------------------------------------
-  // Titel
-  // --------------------------------------------------
+    // Hero-Bild
+    if (heroImageElement && data.heroImage) {
 
-  if (titleElement) {
+      heroImageElement.src =
+        data.heroImage;
 
-    titleElement.textContent =
-      data.title || "Tour durch Zarpen";
+      heroImageElement.alt =
+        data.title || "Tour durch Zarpen";
 
-  }
+    } else if (heroElement) {
 
-
-  // --------------------------------------------------
-  // Untertitel
-  // --------------------------------------------------
-
-  if (subtitleElement) {
-
-    if (data.subtitle) {
-
-      subtitleElement.textContent =
-        data.subtitle;
-
-    } else {
-
-      subtitleElement.remove();
+      heroElement.classList.add(
+        "tour-hero-without-image"
+      );
 
     }
 
-  }
+
+    // Titel
+    if (titleElement) {
+
+      titleElement.textContent =
+        data.title || "Tour durch Zarpen";
+
+    }
 
 
-  // --------------------------------------------------
-  // Tour-Fakten
-  // --------------------------------------------------
+    // Untertitel
+    if (subtitleElement) {
 
-  if (factsElement) {
+      if (data.subtitle) {
 
-    const facts =
-      data.facts || {};
+        subtitleElement.textContent =
+          data.subtitle;
 
-    const factItems = [
-      {
-        icon: "↔",
-        label: "Strecke",
-        value: facts.distance
-      },
-      {
-        icon: "◷",
-        label: "Dauer",
-        value: facts.duration
-      },
-      {
-        icon: "↗",
-        label: "Höhenmeter",
-        value: facts.elevation
-      },
-      {
-        icon: "◆",
-        label: "Schwierigkeit",
-        value: facts.difficulty
+      } else {
+
+        subtitleElement.remove();
+
       }
-    ];
 
-    factsElement.innerHTML =
-      factItems
-        .filter(function (item) {
-          return item.value;
-        })
-        .map(function (item) {
-
-          return `
-            <div class="tour-fact">
-
-              <div
-                class="tour-fact-icon"
-                aria-hidden="true"
-              >
-                ${item.icon}
-              </div>
-
-              <div class="tour-fact-content">
-
-                <div class="tour-fact-label">
-                  ${item.label}
-                </div>
-
-                <div class="tour-fact-value">
-                  ${item.value}
-                </div>
-
-              </div>
-
-            </div>
-          `;
-
-        })
-        .join("");
-
-  }
+    }
 
 
-  // --------------------------------------------------
-  // Beschreibung
-  // --------------------------------------------------
+    // Tour-Fakten
+    if (factsElement) {
 
-  if (descriptionElement) {
+      const facts =
+        data.facts || {};
 
-    let description = [];
-
-    if (Array.isArray(data.description)) {
-
-      description =
-        data.description;
-
-    } else if (
-      typeof data.description === "string" &&
-      data.description.trim() !== ""
-    ) {
-
-      description = [
-        data.description
+      const factItems = [
+        {
+          icon: "↔",
+          label: "Strecke",
+          value: facts.distance
+        },
+        {
+          icon: "◷",
+          label: "Dauer",
+          value: facts.duration
+        },
+        {
+          icon: "↗",
+          label: "Höhenmeter",
+          value: facts.elevation
+        },
+        {
+          icon: "◆",
+          label: "Schwierigkeit",
+          value: facts.difficulty
+        }
       ];
 
+      factsElement.innerHTML =
+        factItems
+          .filter(function (item) {
+            return item.value;
+          })
+          .map(function (item) {
+
+            return `
+              <div class="tour-fact">
+
+                <div
+                  class="tour-fact-icon"
+                  aria-hidden="true"
+                >
+                  ${item.icon}
+                </div>
+
+                <div class="tour-fact-content">
+
+                  <div class="tour-fact-label">
+                    ${item.label}
+                  </div>
+
+                  <div class="tour-fact-value">
+                    ${item.value}
+                  </div>
+
+                </div>
+
+              </div>
+            `;
+
+          })
+          .join("");
+
     }
 
-    descriptionElement.innerHTML =
-      description
-        .map(function (paragraph) {
 
-          return `
-            <p>${paragraph}</p>
-          `;
+    // Beschreibung
+    if (descriptionElement) {
 
-        })
-        .join("");
+      let description = [];
+
+      if (Array.isArray(data.description)) {
+
+        description =
+          data.description;
+
+      } else if (
+        typeof data.description === "string" &&
+        data.description.trim() !== ""
+      ) {
+
+        description = [
+          data.description
+        ];
+
+      }
+
+      descriptionElement.innerHTML =
+        description
+          .map(function (paragraph) {
+
+            return `
+              <p>${paragraph}</p>
+            `;
+
+          })
+          .join("");
+
+    }
 
   }
 
-}
-  
+
+  // --------------------------------------------------
+  // 11. Fehlermeldung anzeigen
+  // --------------------------------------------------
+
   function showMapError(message) {
 
     const errorMessage =
