@@ -219,146 +219,248 @@ html, body {
   }
 
 }
-.popup-card{
-  min-width:210px;
-  max-width:260px;
+/* ========================================
+   Popup-Design – Zarpen entdecken
+   Einheitlich, kompakt und responsiv
+======================================== */
+
+/* Leaflet-Popup-Rahmen */
+.leaflet-popup-content-wrapper {
+  padding: 0;
+  overflow: hidden;
+  border-radius: 14px;
+  background: #fffdf9;
+  box-shadow: 0 12px 32px rgba(6, 78, 59, 0.22);
 }
 
-.popup-title{
-  font-size:17px;
-  font-weight:700;
-  color:#1b5e20;
-  margin-bottom:3px;
+.leaflet-popup-content {
+  width: 290px;
+  max-width: calc(100vw - 72px);
+  margin: 0;
+  line-height: 1.45;
 }
 
-.popup-category{
-  display:inline-block;
-  font-size:12px;
-  color:#fff;
-  background:#17c945;
-  padding:3px 8px;
-  border-radius:999px;
-  margin-bottom:8px;
+.leaflet-popup-tip {
+  background: #fffdf9;
+  box-shadow: 3px 3px 8px rgba(6, 78, 59, 0.08);
 }
 
-.popup-text{
-  font-size:14px;
-  line-height:1.4;
-  color:#333;
-  margin-bottom:10px;
+.leaflet-popup-close-button {
+  z-index: 5;
+  top: 8px !important;
+  right: 8px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px !important;
+  height: 28px !important;
+  padding: 0 !important;
+  border-radius: 50%;
+  background: rgba(255, 253, 249, 0.96);
+  color: #064e3b !important;
+  font: 22px/28px Arial, Helvetica, sans-serif !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.18);
 }
 
-.popup-link{
-  display:inline-block;
-
-  background:#064E3B;
-
-  color:#F8E7C9 !important;
-
-  text-decoration:none;
-  font-weight:700;
-
-  padding:7px 11px;
-
-  border-radius:999px;
-
-  font-size:13px;
+.popup-card {
+  width: 290px;
+  max-width: calc(100vw - 72px);
+  overflow: hidden;
+  color: #263228;
+  background: #fffdf9;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-.popup-link:hover{
-    background:#043B2D;
-}
-.popup-header{
-    position:relative;
-    margin:-12px -12px 12px -12px;
-}
-
-.popup-image{
-    display:block;
-    width:100%;
-    height:180px;
-    object-fit:cover;
-
-    border-radius:12px 12px 0 0;
-}
-.popup-title-overlay{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:0;
-
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    padding:12px 14px;
-
-    background:rgba(0,0,0,.55);
-
-    color:#fff;
-
-    font-size:20px;
-    font-weight:700;
-
-    text-shadow:0 1px 3px rgba(0,0,0,.5);
-}
-.popup-title{
-    display:flex;
-    align-items:center;
-    gap:10px;
-
-    font-size:20px;
-    font-weight:700;
-
-    margin-bottom:12px;
-}
-.popup-title-icon{
-    width:24px;
-    height:24px;
-    flex-shrink:0;
-
-    filter:
-        drop-shadow(0 1px 2px rgba(0,0,0,.5));
-}
-.popup-title-content{
-    display:flex;
-    flex-direction:column;
-    min-width:0;
+/* Bildkopf */
+.popup-header {
+  position: relative;
+  height: 148px;
+  margin: 0;
+  overflow: hidden;
+  background: #064e3b;
 }
 
-.popup-title-name{
-    display:block;
-    line-height:1.2;
+.popup-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.popup-type-label{
-    display:block;
-    margin-top:2px;
-
-    font-size:12px;
-    font-weight:500;
-    line-height:1.2;
-
-    opacity:0.85;
-}
-.popup-story{
-    margin-top:16px;
-    padding-top:14px;
-    border-top:1px solid #e5e5e5;
+.popup-header::after {
+  position: absolute;
+  inset: 35% 0 0;
+  content: "";
+  pointer-events: none;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.72) 100%
+  );
 }
 
-.popup-story h4{
-    margin:0 0 8px;
-    font-size:15px;
-    color:#2e7d32;
+.popup-title-overlay {
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 30px 15px 13px;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
-.popup-story p{
-    margin:0;
-    font-size:14px;
-    line-height:1.5;
-    color:#444;
+.popup-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0;
+  padding: 16px 16px 10px;
+  color: #064e3b;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
 }
+
+.popup-title-icon {
+  display: block;
+  flex: 0 0 22px;
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  filter: brightness(0) invert(1);
+}
+
+.popup-title .popup-title-icon {
+  filter: none;
+}
+
+/* Inhalt unter dem Bild */
+.popup-content {
+  padding: 12px 16px 16px;
+}
+
+.popup-type-label {
+  display: inline-flex;
+  align-items: center;
+  margin: 0 0 9px;
+  padding: 4px 9px;
+  border-radius: 999px;
+  background: #e7f0e8;
+  color: #064e3b;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.025em;
+}
+
+.popup-text {
+  margin: 0;
+  color: #354139;
+  font-size: 13px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.popup-text p {
+  margin: 0 0 8px;
+}
+
+.popup-text p:last-child {
+  margin-bottom: 0;
+}
+
+.popup-story {
+  margin-top: 12px;
+  padding-top: 11px;
+  border-top: 1px solid #e5e8e1;
+  color: #4b554d;
+  font-size: 12.5px;
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.popup-story h3,
+.popup-story h4 {
+  margin: 0 0 5px;
+  color: #064e3b;
+  font-size: 13px;
+  line-height: 1.35;
+}
+
+.popup-story p {
+  margin: 0 0 7px;
+}
+
+.popup-story p:last-child {
+  margin-bottom: 0;
+}
+
+.popup-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 13px;
+  padding: 8px 12px;
+  border: 1px solid #064e3b;
+  border-radius: 999px;
+  background: #064e3b;
+  color: #fffdf9 !important;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.popup-link:hover,
+.popup-link:focus-visible {
+  border-color: #043b2d;
+  background: #043b2d;
+}
+
+.popup-link:focus-visible {
+  outline: 3px solid rgba(6, 78, 59, 0.25);
+  outline-offset: 2px;
+}
+
+/* Kleine Displays */
+@media (max-width: 480px) {
+  .leaflet-popup-content {
+    width: min(270px, calc(100vw - 72px));
+  }
+
+  .popup-card {
+    width: min(270px, calc(100vw - 72px));
+  }
+
+  .popup-header {
+    height: 128px;
+  }
+
+  .popup-title-overlay {
+    padding: 26px 12px 11px;
+    font-size: 16px;
+  }
+
+  .popup-title {
+    padding: 14px 13px 8px;
+    font-size: 16px;
+  }
+
+  .popup-content {
+    padding: 10px 13px 13px;
+  }
+}
+
 /* ========================================
    Gemeinsame Tour-Seite Version 2
 ======================================== */
